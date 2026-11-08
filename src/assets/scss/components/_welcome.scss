@@ -1,0 +1,88 @@
+.welcome {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 20;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba($black, 0.4);
+
+  &__page {
+    width: 40%;
+    margin: auto;
+    padding: 4rem;
+    border-radius: 0.4rem;
+    height: fit-content;
+    text-align: center;
+    background: $white;
+    font-size: 1.4rem;
+    @include responsive(930px) {
+      width: 60%;
+    }
+    @include responsive(600px) {
+      width: 80%;
+      font-size: 1.3rem;
+    }
+    @include responsive(426px) {
+      width: 90%;
+      font-size: 1.2rem;
+    }
+    @include responsive(375px) {
+      padding: 4rem 1.5rem;
+    }
+
+    .message {
+      margin: 1rem 0;
+    }
+
+    &__name {
+      font-size: 2.4rem;
+      font-weight: 700;
+      @include responsive(426px) {
+        font-size: 1.8rem;
+      }
+
+      .name {
+        color: $lemon;
+        font-size: 2.8rem;
+        @include responsive(426px) {
+          font-size: 2.2rem;
+        }
+      }
+    }
+
+    .verify__account {
+      color: $red3;
+      font-size: 1.2rem;
+    }
+
+    .welcome__btns {
+      width: 80%;
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      align-items: center;
+      margin: auto;
+      margin-top: 2rem;
+
+      .close__welcome,
+      a {
+        flex: 1;
+        border-radius: 4px;
+        padding: 1rem 0;
+        background: $grey1;
+      }
+
+      .verify__account__btn {
+        background: $lemon;
+        color: $white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+  }
+}

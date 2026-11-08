@@ -1,0 +1,92 @@
+.myAccount {
+  flex: 1;
+  &__wrap {
+    margin-top: 1rem;
+    padding: 3.5rem 4.5rem;
+    background: $white;
+    border-radius: 1rem;
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--navtab-bg);
+    @include responsive(600px) {
+      flex-wrap: wrap;
+      gap: 3rem;
+    }
+    @include responsive(500px) {
+      padding: 3rem 2rem;
+    }
+
+    .edit__btnn {
+      display: flex;
+      gap: 1rem;
+      align-items: center;
+      border: 1px solid #7bb20e;
+      padding: 0.5rem 2.5rem;
+      border-radius: .4rem;
+      margin-right: 2rem;
+      color: #7bb20e;
+      font-weight: 500;
+      @include responsive(790px) {
+        font-size: 1.3rem;
+      }
+      .iconn {
+        width: 1.8rem;
+      }
+    }
+  }
+
+  &__card {
+    padding: 0 0 3rem 0;
+    display: flex;
+    gap: 5rem;
+    align-items: center;
+    @include responsive(790px) {
+      gap: 3.5rem;
+    }
+    @include responsive(500px) {
+      gap: 3rem;
+    }
+
+    &Main {
+      .details {
+        font-size: 1.6rem;
+        font-weight: 500;
+        color: #555555;
+        color: var(--account-text);
+        @include responsive(790px) {
+          font-size: 1.3rem;
+        }
+      }
+    }
+  }
+
+  // for account not verified red text
+  .verify {
+    margin-top: .8rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    cursor: pointer;
+    color: #ff7344;
+    &__text {
+      font-size: 1.5rem;
+      font-weight: 600;
+      font-style: italic;
+      @include responsive(790px) {
+        font-size: 1.3rem;
+      }
+      @include responsive(500px) {
+        font-size: 1rem;
+      }
+    }
+    ion-icon {
+      font-size: 2.2rem;
+      @include responsive(790px) {
+        font-size: 1.3rem;
+      }
+      @include responsive(500px) {
+        font-size: 1rem;
+      }
+    }
+  }
+}

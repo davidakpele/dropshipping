@@ -1,0 +1,200 @@
+.contact {
+  // display: flex;
+  // flex-direction: column;
+  // align-items: center;
+  margin: 7rem 10rem 5rem;
+  @include responsive(620px) {
+    margin: 7rem 7rem 8rem;
+  }
+  @include responsive(650px) {
+    margin: 7rem 0;
+  }
+  @include responsive(275px) {
+  }
+
+  &__title {
+    font-size: 2.8rem;
+    font-weight: 700;
+    color: #7bb20e;
+    text-align: center;
+    @include responsive(620px) {
+      font-size: 2.5rem;
+    }
+  }
+
+  &__body {
+    margin-top: 3rem;
+    display: flex;
+    gap: 5rem;
+    justify-content: center;
+    @include responsive(885px) {
+      display: block;
+      width: 100%;
+    }
+  }
+
+  &__details {
+    flex: 1.5;
+    @include responsive(1182px) {
+      flex: 3;
+    }
+
+    .displaying {
+      display: flex;
+      gap: 2rem;
+
+      .inputs__names {
+        width: 50%;
+      }
+
+      .namess {
+        background-color: #ffffff;
+        margin-top: 0.5rem;
+        background: var(--input-bg);
+      }
+    }
+
+    label {
+      font-size: 1.2rem;
+      font-weight: 400;
+      // padding: 2rem 0;
+      // margin: 1rem 0 2rem 0;
+    }
+
+    input {
+      display: block;
+      width: 100%;
+      padding: 1.5rem;
+      font-size: 1.6rem;
+      font-weight: 400;
+      color: #b4b4b4;
+      margin-bottom: 1.5rem;
+      border-radius: 0.6rem;
+      border: 1.5px solid #dddcdc;
+      border: 1.5px solid var(--contact-border);
+      @include responsive(550px) {
+        font-size: 1.3rem;
+        padding: 1.3rem;
+      }
+    }
+
+    .mail {
+      background-color: #ffffff;
+      margin-top: 0.5rem;
+      background: var(--input-bg);
+    }
+
+    .phone {
+      &__inputt {
+        display: flex;
+        background-color: #ffffff;
+        border: 1.5px solid #dddcdc;
+        border-radius: 0.6rem;
+        margin-bottom: 1.5rem;
+        margin-top: 0.5rem;
+        border: 1.5px solid var(--contact-border);
+        // padding: 1rem;
+        @include responsive(550px) {
+          align-items: center;
+        }
+      }
+
+      &__select {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        padding: 1.5rem 0 1.5rem 1.5rem;
+        background: #ffffff;
+        border-top-left-radius: 0.5rem;
+        border-bottom-left-radius: 0.5rem;
+        cursor: pointer;
+        width: 20%;
+        background: var(--input-bg);
+        @include responsive(575px) {
+          width: 25%;
+        }
+        @include responsive(275px) {
+          width: 30%;
+        }
+      }
+
+      &__figure {
+        width: 100%;
+        font-size: 1.5rem;
+        font-weight: 400;
+        color: #b4b4b4;
+
+        .numberr {
+          background-color: #ffffff;
+          margin-bottom: 0;
+          border-top-left-radius: 0;
+          border-bottom-left-radius: 0;
+          border-top-right-radius: 0.5rem;
+          border-bottom-right-radius: 0.5rem;
+          border: none;
+          background: var(--input-bg);
+        }
+      }
+    }
+
+    textarea {
+      // display: block;
+      width: 100%;
+      margin-bottom: 1.5rem;
+      margin-top: 0.5rem;
+      outline: none;
+      background: #ffffff;
+      border-radius: 0.6rem;
+      border: 1.5px solid #dddcdc;
+      padding: 1.5rem;
+      background: var(--input-bg);
+      border: 1.5px solid var(--contact-border);
+    }
+
+    .btn__send {
+      margin-top: 5rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      @include responsive(500px) {
+        margin-top: 4rem;
+      }
+
+      .sendd {
+        font-size: 1.5rem;
+        font-weight: 500;
+        color: #ffffff;
+        background-color: #7bb20e;
+        padding: 1.5rem 6rem;
+        border-radius: 0.4rem;
+        @include responsive(480px) {
+          padding: 1.3rem 7rem;
+        }
+
+        .disablePay {
+          pointer-events: none;
+          background: #b4b4b4;
+        }
+      }
+    }
+  }
+
+  &__facess {
+    @include responsive(980px) {
+      display: none;
+    }
+    @include responsive(1182px) {
+      flex: 2;
+    }
+    flex: 1.5;
+    .facce {
+      width: 95%;
+      @include responsive(1182px) {
+        width: 100%;
+      }
+      @include responsive(1px) {
+        width: 100%;
+      }
+    }
+  }
+}

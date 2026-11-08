@@ -1,0 +1,118 @@
+.terms {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 8rem 12rem 9rem 12rem;
+  @include responsive(1150px) {
+    padding: 6rem 11rem 8.5rem 11rem;
+  }
+  @include responsive(1045px) {
+    padding: 6rem 11rem 8rem 11rem;
+  }
+  @include responsive(955px) {
+    padding: 6rem 9rem 8rem 9rem;
+  }
+  @include responsive(885px) {
+    padding: 6rem 8.5rem 8rem 8.5rem;
+  }
+  @include responsive(865px) {
+    padding: 6rem 8rem 8rem 8rem;
+  }
+  @include responsive(800px) {
+    padding: 6rem 0rem 6rem 0rem;
+  }
+  @include responsive(600px) {
+    padding: 5rem 0rem 4.5rem 0rem;
+  }
+  @include responsive(450px) {
+    padding: 4rem 0rem 3rem 0rem;
+  }
+  @include responsive(300px) {
+    padding: 3rem 0rem 1.5rem 0rem;
+  }
+
+  &__title {
+    font-size: 2.8rem;
+    font-weight: 700;
+    color: #7bb20e;
+    @include responsive(955px) {
+      font-size: 2.6rem;
+    }
+    @include responsive(500px) {
+      font-size: 2.4rem;
+    }
+    @include responsive(400px) {
+      font-size: 2rem;
+    }
+    @include responsive(300px) {
+      font-size: 1.8rem;
+    }
+  }
+
+  &__body {
+    background-color: #ffffff;
+    border-radius: 0.4rem;
+    margin-top: 2.5rem;
+    padding: 3.5rem 5rem 16rem 5rem;
+    background: var(--navtab-bg);
+
+    @include responsive(1045px) {
+      padding: 3rem 4rem 15rem 4rem;
+    }
+    @include responsive(970px) {
+      padding: 2.8rem 3.5rem 13rem 3.5rem;
+    }
+    @include responsive(860px) {
+      padding: 2.8rem 3.5rem 9rem 3.5rem;
+    }
+    @include responsive(665px) {
+      padding: 2.8rem 3rem 7rem 3rem;
+    }
+    @include responsive(600px) {
+      padding: 2rem 2rem 6rem 2rem;
+      margin-top: 2rem;
+    }
+    @include responsive(450px) {
+      padding: 2rem 1.5rem 2rem 1.5rem;
+    }
+  }
+
+  &__text {
+    font-size: 2.4rem;
+    font-weight: 600;
+    color: #141414;
+    color: var(--chev-btn);
+    @include responsive(800px) {
+      font-size: 2.2rem;
+    }
+    @include responsive(600px) {
+      font-size: 2rem;
+    }
+    @include responsive(450px) {
+      // font-size: 1.8rem;
+    }
+  }
+
+  ul {
+    padding-left: 3rem;
+    @include responsive(515px) {
+      padding-left: 2.5rem;
+    }
+  }
+
+  .condition {
+    padding-top: 2rem;
+    font-size: 1.8rem;
+    font-weight: 400;
+    list-style-type: disc;
+    color: #545454;
+    // text-align: justify;
+    color: var(--terms-text);
+    @include responsive(600px) {
+      font-size: 1.6rem;
+    }
+    @include responsive(450px) {
+      padding-top: 1.6rem;
+    }
+  }
+}

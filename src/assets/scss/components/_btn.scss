@@ -1,0 +1,134 @@
+.btn {
+  padding: 0.8rem 2rem;
+  border-radius: 0.4rem;
+  font-weight: 600;
+  cursor: pointer;
+  outline: none;
+
+  &-primary {
+    background-color: $lemon;
+    color: $white;
+
+    & ion-icon {
+      display: block;
+      width: 1.8rem;
+      height: 1.8rem;
+    }
+
+    &-outline {
+      border: 1.8px solid $lemon;
+      color: $lemon;
+      background-color: var(--btn-bg);
+    }
+  }
+
+  &-block {
+    display: block;
+    width: 100%;
+  }
+
+  &-light {
+    font-family: inherit;
+    border: none;
+    background-color: $btnLight;
+    border-radius: 0.3rem;
+    padding: 1.2rem 2.4rem;
+    cursor: pointer;
+  }
+
+  &-grey {
+    font-family: inherit;
+    border: none;
+    background-color: $btnGrey;
+    color: $white;
+    border-radius: 0.3rem;
+    padding: 1.2rem 2.4rem;
+    cursor: pointer;
+  }
+
+  &-lightgrey {
+    background-color: #efefef;
+  }
+
+  &-blue {
+    &-outline {
+      font-size: 1.35rem;
+      border: 1.8px solid $blue;
+      color: $blue;
+    }
+  }
+}
+
+.button-primary {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+
+  font-family: inherit;
+  border: none;
+  background-color: $lemon;
+  color: $white;
+  border-radius: 0.3rem;
+  padding: 1.2rem 2.4rem;
+  cursor: pointer;
+}
+
+.button-danger {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+
+  font-family: inherit;
+  border: none;
+  background-color: $red3;
+  color: $white;
+  border-radius: 0.3rem;
+  padding: 1.2rem 2.4rem;
+  cursor: pointer;
+
+  & ion-icon {
+    display: block;
+    width: 1.8rem;
+    height: 1.8rem;
+  }
+}
+
+.button-primary-outline {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+
+  font-family: inherit;
+  border: none;
+  border: 1px solid $lemon;
+  color: $lemon;
+  background-color: transparent;
+  border-radius: 0.3rem;
+  padding: 1.2rem 2.4rem;
+  cursor: pointer;
+
+  & ion-icon {
+    display: block;
+    width: 1.8rem;
+    height: 1.8rem;
+  }
+
+  &:hover {
+    background-color: $lemon;
+    color: $white;
+  }
+}
+
+.disabled {
+  background-color: $grey2 !important;
+  pointer-events: none;
+  color: $white;
+}
+
+.enabled {
+  background-color: #7bb20e;
+  color: $white;
+}

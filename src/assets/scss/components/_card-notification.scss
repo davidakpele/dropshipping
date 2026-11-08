@@ -1,0 +1,45 @@
+.cartnotify {
+  position: fixed;
+  z-index: 1000;
+  top: 18%;
+  left: 0;
+  right: 0;
+  transition: all 2s ease-in-out;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  @include responsive(1440px) {
+    top: 17%;
+  }
+  @include responsive(1150px) {
+    top: 13%;
+  }
+  @include responsive(750px) {
+    top: 20%;
+  }
+
+  &__text {
+    font-size: 1.5rem;
+    font-weight: 500;
+    border-radius: 5px;
+    padding: 1rem 20rem;
+    @include responsive(600px) {
+      padding: 1rem 6rem;
+    }
+    @include responsive(375px) {
+      padding: 1rem 4rem;
+    }
+  }
+
+  .success__notify {
+    color: #20b20e;
+    background-color: #eafde7;
+    border: 2px solid #20b20e;
+  }
+
+  .error__notify {
+    color: #b2650e;
+    background-color: #fdece7;
+    border: 2px solid #b26b0e;
+  }
+}

@@ -1,0 +1,20 @@
+@keyframes placeHolderShimmer {
+  0% {
+    background-position: -468px 0;
+  }
+  100% {
+    background-position: 468px 0;
+  }
+}
+
+@keyframes loaderVBars {
+  0% {
+    top: 0.8rem;
+    height: 6.4rem;
+  }
+  50%,
+  100% {
+    top: 2.4rem;
+    height: 3.2rem;
+  }
+}

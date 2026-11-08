@@ -1,0 +1,39 @@
+.paginate {
+  background: inherit;
+  z-index: 500;
+  position: sticky;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  margin-top: auto;
+  padding-bottom: 2rem;
+  padding-top: 1rem;
+  gap: 5px;
+  background: #efefef;
+  background: var(--order-bg);
+
+  span {
+    width: 3.5rem;
+    height: 3.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border: 1px solid $grey2;
+    border-radius: 0.4rem;
+    cursor: pointer;
+  }
+
+  .active__page {
+    border-color: $primary;
+  }
+
+  .more {
+    border: none;
+    padding: 0.5rem;
+  }
+
+  .display__none {
+    display: none;
+  }
+}

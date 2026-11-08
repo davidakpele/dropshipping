@@ -1,0 +1,86 @@
+/*
+* ft: footer
+* pry: primary
+* bg: background-color
+* txt: text
+* btn: button
+* cat: category
+* img: image
+*/
+
+// $uiMode: dark;
+// $body-bg: if($uiMode == light, "#efefef", "#0F241A");
+// $text-color: if($uiMode == light, "#2B2B2B", "#D9D9D9");
+// $header-bg: if($uiMode == light, "#FFF", "#0F241A");
+
+// :root {
+//   --body-bg: #{$body-bg};
+//   --text-color: #{$text-color};
+//   --header-bg: #{$header-bg};
+// }
+
+// new color codes
+$black: #000;
+$blackPopularCat: #333333;
+$btnDisabled: #bcbcbc;
+$btnGrey: #b4b4b4;
+$btnLight: #eaeaee;
+$blue: #2950b2;
+$discountBg: #fce6e4;
+$discountTxt: #f64f25;
+$ftBlackPry: #262626;
+$ftBlackSec: #141414;
+$featuresBlack: #545454;
+$lemon: #7bb20e;
+$primary: #3b7f04;
+$prodImgBg: #f7f7f7;
+$ratingsYellow: #ffc416;
+$white: #fff;
+
+$red1: #ff784b;
+$red2: #f64f25;
+$red3: #e22b23;
+$green1: #4a9f05;
+$grey1: #efefef;
+$grey2: #d9d9d9;
+$grey3: #909090;
+$grey4: #d9d9d9;
+$grey8: #bdbdbd;
+$grey9: #d8d8d8;
+$grey10: #bebecb;
+$balck1: #333333;
+$black4: #545454;
+
+// Dashboard colors
+$progress-yellow: #ffcc00;
+$inactive-tab: #f2f2f2;
+$confirmed-order: #2c2c58;
+$wallet-gray: #fcfcfc;
+$inactive-tab: #f2f2f2;
+$confirmed-order: #2c2c58;
+$wallet-gray: #fcfcfc;
+$red-signout: #ff2828;
+$processing-bkg: #fcdecf;
+$processing-left-border: #f47b3c;
+$pending-bkg: #fbf4d0;
+$pending-left-border: #efd445;
+$shipped-bkg: #cce0ff;
+$shipped-left-border: #0066ff;
+$delivered-bkg: #e1ffcc;
+$delivered-left-border: #55cc00;
+$cancelled-bkg: #fdf2f1;
+$cancelled-left-border: #e22b23;
+$delivery-order: #eaeaea;
+$orderdetails-card-text: #7c7c7c;
+$order-bottom-border: #e6e6e6;
+$order-price-bkg: #edf2fa;
+$sidebar-user-bkg: #7bb20e;
+$sidebar-user: #459405;
+$inactive-tab: #f2f2f2;
+$confirmed-order: #2c2c58;
+$wallet-gray: #fcfcfc;
+$red-signout: #ff2828;
+$default-address-bkg: #edf2fa;
+$default-address: #808080;
+$change-address-btn: #2c6ed1;
+$delete-address: #d1672c;

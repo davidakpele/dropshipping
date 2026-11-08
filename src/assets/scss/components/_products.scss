@@ -1,0 +1,125 @@
+.product {
+  margin-top: 2rem;
+
+  &__body {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+    &::-webkit-scrollbar {
+      display: none;
+    }
+    @include responsive(500px) {
+      flex-wrap: nowrap;
+      overflow-x: scroll;
+    }
+  }
+
+  &__part {
+    width: calc((100% - 3rem) / 6);
+    background-color: $white;
+    border: 1px solid $grey9;
+    border-radius: 0.7rem;
+    height: auto;
+    margin-bottom: 2rem;
+    overflow: hidden;
+    position: relative;
+    @include responsive(950px) {
+      width: calc((100% - 2.5rem) / 4);
+    }
+    @include responsive(590px) {
+      width: calc((100% - 1.8rem) / 3);
+    }
+    @include responsive(500px) {
+      min-width: 20rem;
+    }
+  }
+
+  &__imgWrap {
+    width: 100%;
+    background: $prodImgBg;
+    position: relative;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+
+  &__new::before {
+    content: "NEW IN";
+    background-color: $red1;
+    padding: 2rem 4rem 1rem 4rem;
+    position: absolute;
+    transform: rotateZ(-45deg) translate(-2.5rem, -3.5rem);
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: $white;
+    z-index: 2;
+  }
+
+  &__discount {
+    background-color: $discountBg;
+    color: $discountTxt;
+    padding: 0.5rem;
+    position: absolute;
+    font-size: 1rem;
+    font-weight: 700;
+    border-radius: 0.5rem;
+    right: 3%;
+    top: 3%;
+    z-index: 2;
+  }
+
+  &__img {
+    width: 100%;
+    height: auto;
+    border-top-left-radius: 7px;
+    border-top-right-radius: 7px;
+  }
+
+  &__details {
+    padding: 1.5rem;
+  }
+
+  &__name {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: $ftBlackSec;
+    transition: all 0.5s;
+    margin-bottom: 1rem;
+
+    &:hover {
+      color: $lemon;
+    }
+  }
+
+  &__price {
+    font-size: 1rem;
+    font-weight: 700;
+    color: #ff784b;
+    text-decoration: line-through;
+  }
+
+  &__pricee {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: $ftBlackSec;
+  }
+
+  .swiper-pagination {
+    position: absolute !important;
+    background-color: $white;
+    bottom: -0.3rem !important;
+    left: 0 !important;
+  }
+
+  .swiper-pagination-bullet {
+    width: 16px !important;
+    height: 5px !important;
+    border-radius: 4px !important;
+  }
+  .swiper-pagination-bullet-active {
+    background: $primary !important;
+  }
+}

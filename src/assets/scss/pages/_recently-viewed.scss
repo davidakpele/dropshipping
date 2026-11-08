@@ -1,0 +1,28 @@
+.recentlyViewed {
+  width: 100%;
+
+  .product__body {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 0.8rem;
+    overflow: hidden;
+    @include responsive(1520px) {
+      grid-template-columns: repeat(5, 1fr);
+    }
+    @include responsive(1325px) {
+      grid-template-columns: repeat(4, 1fr);
+    }
+    @include responsive(1126px) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+    @include responsive(930px) {
+      grid-template-columns: repeat(4, 1fr);
+    }
+    @include responsive(720px) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+    @include responsive(564px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+}

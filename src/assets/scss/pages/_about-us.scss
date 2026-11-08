@@ -1,0 +1,290 @@
+.about {
+  padding: 3rem 6rem 0;
+  // padding: 1rem 4rem;
+  display: grid;
+  @include responsive(1550px) {
+    // width: 80%;
+    // margin: auto;
+  }
+  @include responsive(870px) {
+    padding: 1rem 5rem 0;
+  }
+  @include responsive(518px) {
+    padding: 1rem 3rem 0;
+  }
+  @include responsive(485px) {
+    padding: 1rem 2rem 0;
+  }
+  @include responsive(426px) {
+    padding: 1rem 1.5rem 0;
+  }
+  @include responsive(403px) {
+    padding: 1rem 1rem 0;
+  }
+  @include responsive(320px) {
+    padding: 1rem 0 0;
+  }
+
+  // .center {
+  //   margin: 0 auto 5rem;
+  //   @include responsive(1070px) {
+  //     margin-bottom: 0;
+  //   }
+  // }
+
+  &__wrap {
+    margin: 7rem 9rem 7rem;
+    // margin: 8rem auto;
+    @include responsive(1185px) {
+      margin: 7rem 8rem 7rem;
+    }
+    @include responsive(1105px) {
+      margin: 7rem 6rem 7rem;
+    }
+    @include responsive(1087px) {
+      margin: 6rem auto;
+    }
+    @include responsive(928px) {
+      margin: 5rem auto;
+    }
+  }
+
+  &__title {
+    text-align: center;
+    font-size: 2.8rem;
+    font-weight: 700;
+    color: #7bb20e;
+    margin-bottom: 2rem;
+  }
+
+  // &__body {
+  //   margin-top: 3rem;
+  // }
+
+  &__part {
+    display: flex;
+    // justify-content: space-between;
+    // align-items: center;
+    gap: 6rem;
+    margin: 3rem 0;
+    @include responsive(1185px) {
+      gap: 5rem;
+    }
+    @include responsive(1160px) {
+      gap: 3rem;
+    }
+    @include responsive(930px) {
+      flex-direction: column;
+    }
+
+    .know {
+      &__img {
+        flex: 1.5;
+        @include responsive(1185px) {
+          flex: 2.2;
+        }
+        @include responsive(1126px) {
+          flex: 2.5;
+        }
+      }
+
+      &__about {
+        flex: 1;
+        padding-top: 3rem;
+        @include responsive(1185px) {
+          flex: 1.5;
+          padding-top: 0;
+        }
+        @include responsive(1051px) {
+          padding-top: 1.5rem;
+        }
+        @include responsive(1126px) {
+          flex: 1.8;
+        }
+        @include responsive(1104px) {
+          flex: 2.2;
+        }
+        @include responsive(967px) {
+          padding-top: 0;
+        }
+
+        .heading {
+          font-size: 2.4rem;
+          font-weight: 700;
+          color: #141414;
+          color: var(--chev-btn);
+          @include responsive(1185px) {
+            font-size: 2.2rem;
+          }
+          @include responsive(930px) {
+            font-size: 2.4rem;
+          }
+          @include responsive(595px) {
+            font-size: 2rem;
+          }
+          @include responsive(415px) {
+            font-size: 1.8rem;
+          }
+          @include responsive(320px) {
+            font-size: 1.6rem;
+          }
+        }
+
+        .textt {
+          font-weight: 500;
+          color: #545454;
+          padding: 1.5rem 0 3rem 0;
+          font-size: 1.5rem;
+          color: var(--about-text);
+          @include responsive(1185px) {
+            padding: 1rem 0 2rem 0;
+            font-size: 1.3rem;
+          }
+          @include responsive(930px) {
+            font-size: 1.5rem;
+          }
+          @include responsive(928px) {
+            font-size: 1.8rem;
+          }
+          @include responsive(595px) {
+            font-size: 1.5rem;
+          }
+          @include responsive(415px) {
+            font-size: 1.3rem;
+          }
+        }
+      }
+    }
+  }
+
+  &__features {
+    margin: 8rem 0;
+    padding: 0 4rem;
+    @include responsive(1020px) {
+      padding: 0;
+    }
+
+    .feature {
+      &__text {
+        font-size: 2.4rem;
+        font-weight: 600;
+        text-align: center;
+        @include responsive(315px) {
+          font-size: 2.2rem;
+        }
+
+        span {
+          border-bottom: 3px solid #7bb20e;
+        }
+      }
+
+      &__part {
+        margin-top: 3rem;
+        display: flex;
+        gap: 2rem;
+        @include responsive(820px) {
+          flex-wrap: wrap;
+        }
+        @include responsive(400px) {
+          gap: 1rem;
+        }
+        @include responsive(320px) {
+          display: block;
+        }
+      }
+
+      &__listed {
+        background-color: #ffffff;
+        border-radius: 0.3rem;
+        padding: 3.2rem 2rem 3.5rem 2rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        box-shadow: 0.4rem 0.2rem 1rem #cccccc4d;
+        background: var(--navtab-bg);
+        box-shadow: 0.4rem 0.2rem 1rem var(--about-shadow);
+
+        @include responsive(820px) {
+          flex: 1 0 calc(50% - 2rem);
+          padding: 3.5rem 2.5 4rem 2.5rem;
+        }
+        @include responsive(320px) {
+          margin-bottom: 2rem;
+        }
+
+        .iconn {
+          width: 4rem;
+        }
+
+        .list {
+          &__title {
+            font-size: 1.6rem;
+            font-weight: 600;
+            padding-top: 1.2rem;
+            color: #141414;
+            color: var(--chev-btn);
+            @include responsive(849px) {
+              font-size: 1.5rem;
+            }
+          }
+
+          &__text {
+            font-size: 1.3rem;
+            font-weight: 500;
+            color: #909090;
+            padding-top: 0.8rem;
+            // color: var(--about-list);
+          }
+        }
+      }
+    }
+  }
+
+  &__client {
+    margin: 5rem 4rem 0;
+    @include responsive(540px) {
+      margin: 0;
+    }
+
+    .client {
+      // margin-bottom: 1rem;
+      &__text {
+        font-size: 2.4rem;
+        font-weight: 600;
+        text-align: center;
+        span {
+          border-bottom: 3px solid #7bb20e;
+        }
+      }
+
+      &__part {
+        margin-top: 4rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .name {
+          font-size: 2rem;
+          font-weight: 600;
+          padding-top: 2rem;
+        }
+
+        .position {
+          font-size: 1.4rem;
+          font-weight: 400;
+          color: #909090;
+          padding-top: 3px;
+        }
+
+        .saying {
+          font-size: 1.6rem;
+          font-weight: 600;
+          color: #909090;
+          text-align: center;
+          padding-top: 0.6rem;
+        }
+      }
+    }
+  }
+}

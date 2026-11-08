@@ -1,0 +1,487 @@
+.cart {
+  margin-top: 0rem;
+  margin-bottom: 3rem;
+  overflow-x: hidden;
+  @include responsive(1050px) {
+    padding: 0;
+  }
+
+  &__troy {
+    display: flex;
+    gap: 1.5rem;
+    margin-top: 1rem;
+    @include responsive(1050px) {
+      flex-direction: column;
+    }
+
+    &.empty-cart {
+      @include responsive(1050px) {
+        gap: 5rem;
+      }
+      @include responsive(620px) {
+        gap: 3rem;
+      }
+    }
+  }
+
+  &__part {
+    flex: 2;
+    border-radius: 0.3rem;
+    text-align: center;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--navtab-bg);
+    min-height: 60vh;
+
+    &.empty-cart {
+      @include responsive(1050px) {
+        padding: 7rem 2rem;
+      }
+    }
+  }
+
+  &__itms {
+    flex: 1 1;
+    @include responsive(1100px) {
+      flex: 1.5 1.5;
+    }
+    @include responsive(1050px) {
+      flex: 1;
+      align-items: unset;
+      margin-bottom: 2rem;
+    }
+  }
+
+  &__header {
+    display: flex;
+    gap: 1.5rem;
+    font-weight: 700;
+    @include responsive(895px) {
+      display: none;
+    }
+  }
+
+  &__itm {
+    display: flex;
+    align-items: center;
+    padding: 1.6rem 2.5rem;
+    border-radius: 0.5rem;
+    background: $white;
+    margin-bottom: 1rem;
+    overflow-x: hidden;
+    gap: 1.5rem;
+    overflow-x: scroll;
+    background-color: var(--navtab-bg);
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+
+  &__itm2 {
+    flex: 1.5;
+    content: "";
+  }
+
+  .itmms {
+    flex: 1;
+  }
+
+  &__itmm {
+    display: flex;
+    justify-content: space-between;
+    width: 70%;
+  }
+
+  &__prod {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+
+    .imgWrap {
+      flex: 1.5;
+      height: 8rem;
+      width: 8rem;
+
+      img {
+        height: 100%;
+        width: 100%;
+        object-fit: contain;
+      }
+    }
+
+    .imgCaption {
+      flex: 2;
+      @include responsive(700px) {
+        flex: 3;
+      }
+      @include responsive(350px) {
+        flex: 4;
+      }
+    }
+
+    .cap {
+      &__name {
+        font-weight: 600;
+        @include responsive(886px) {
+          font-size: 1.3rem;
+          font-weight: 700;
+        }
+      }
+
+      &__type {
+        display: inline-block;
+        padding: 0 0.3rem;
+        font-size: 1.4rem;
+        font-weight: 400;
+
+        .typee {
+          color: $lemon;
+        }
+      }
+    }
+
+    .product__text {
+      font-size: 1.8rem;
+      font-weight: 600;
+      text-transform: uppercase;
+    }
+  }
+
+  &__quality {
+    display: flex;
+    width: 60%;
+    gap: 10rem;
+    justify-content: space-between;
+
+    .product__text {
+      font-size: 1.8rem;
+      font-weight: 600;
+      text-transform: uppercase;
+    }
+  }
+
+  &__qualities {
+    display: flex;
+    width: 60%;
+    gap: 1.5rem;
+    align-items: center;
+    justify-content: space-between;
+    @include responsive(700px) {
+      justify-content: flex-end;
+      align-items: end;
+      flex-direction: column-reverse;
+      gap: 1rem;
+      flex: 1;
+    }
+
+    .price__text {
+      font-size: 1.6rem;
+      font-weight: 500;
+    }
+
+    .quan__control {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+      height: 3rem;
+      overflow: hidden;
+      border-radius: 0.5rem;
+      background-color: #ffffff;
+      background-color: var(--cart-btn);
+      @include responsive(700px) {
+        gap: 1rem;
+      }
+
+      .subtract__btn,
+      .cancel__btn,
+      .add__btn {
+        font-size: 3rem;
+        background-color: #ffffff;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .subtract__btn,
+      .add__btn {
+        padding: 0 0.5rem;
+        color: $white;
+        background: $lemon;
+        border-radius: 0.5rem;
+        @include responsive(700px) {
+          padding: 0.3rem;
+        }
+      }
+    }
+  }
+
+  &__parts {
+    flex-basis: 70%;
+  }
+
+  &__img {
+    display: flex;
+    justify-content: center;
+  }
+
+  &__roll {
+    width: 18rem;
+  }
+
+  &__text {
+    font-size: 2.6rem;
+    font-weight: 700;
+    padding-top: 3rem;
+    @include responsive(1050px) {
+      font-size: 2.3rem;
+    }
+    @include responsive(820px) {
+      font-size: 2rem;
+    }
+    @include responsive(650px) {
+      font-size: 1.8rem;
+    }
+  }
+
+  &__browse {
+    font-weight: 400;
+    color: #141414;
+    padding-top: 0.5rem;
+    color: var(--chev-btn);
+    @include responsive(650px) {
+      font-size: 1.5rem;
+    }
+  }
+
+  &__btn {
+    padding-top: 2rem;
+    @include responsive(650px) {
+      padding-top: 1.5rem;
+    }
+
+    .click {
+      font-weight: 600;
+      color: $white;
+      background-color: $lemon;
+      padding: 1rem 8.3rem;
+      border-radius: 5px;
+      @include responsive(650px) {
+        font-size: 1.5rem;
+      }
+    }
+  }
+
+  &__del {
+    .cancel__btn {
+      color: red;
+    }
+  }
+
+  &__price,
+  &__total {
+    @include responsive(700px) {
+      display: none;
+    }
+  }
+}
+
+.items {
+  font-size: 2.6rem;
+  font-weight: 700;
+  color: $ftBlackSec;
+  margin-bottom: 2rem;
+  flex-basis: 70%;
+  color: var(--chev-btn);
+  @include responsive(1050px) {
+    display: none;
+  }
+  @include responsive(820px) {
+    font-size: 2.3rem;
+    margin-bottom: 2rem;
+  }
+  @include responsive(650px) {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  &__details {
+    table {
+      width: 100%;
+
+      thead {
+        text-align: left;
+        margin-bottom: 5rem;
+      }
+
+      td:first-child {
+        padding: 1.4rem 0 1rem 1.8rem;
+      }
+    }
+  }
+}
+
+.item {
+  background-color: $white;
+  border-radius: 0.5rem;
+
+  &__headd {
+    display: flex;
+    align-items: center;
+
+    .detail {
+      padding-left: 1.5rem;
+
+      .name {
+        font-size: 1.6rem;
+        font-weight: 600;
+      }
+
+      .color {
+        font-size: 1.4rem;
+        font-weight: 400;
+
+        .spann {
+          color: $lemon;
+        }
+      }
+    }
+  }
+
+  &__prices {
+    .amount {
+      font-size: 1.6rem;
+      font-weight: 500;
+    }
+  }
+
+  &__icons {
+    display: block;
+    border: 0.1rem solid #dddddd;
+    border-radius: 0.5rem;
+    background-color: $white;
+    justify-content: space-between;
+    display: flexxct;
+
+    .icon {
+      cursor: pointer;
+
+      &__num {
+        margin: 0 1.2rem;
+        font-size: 1.6rem;
+        font-weight: 500;
+      }
+    }
+  }
+
+  &_img {
+    width: 8rem;
+  }
+}
+
+.order {
+  flex: 0.4 0.4;
+  background-color: $white;
+  border-radius: 0.3rem;
+  align-self: flex-start;
+  padding: 2rem 2rem 10rem 2rem;
+  background-color: var(--navtab-bg);
+  @include responsive(1050px) {
+    flex: 1;
+    align-self: unset;
+  }
+
+  &.empty-cart {
+    @include responsive(1050px) {
+      display: none;
+    }
+  }
+
+  &__summary {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+    padding: 1.8rem 1.4rem 0.8rem 1.4rem;
+    align-items: center;
+  }
+
+  &__text,
+  .coupon__grand {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #141414;
+    color: var(--chev-btn);
+    @include responsive(820px) {
+      font-size: 1.6rem;
+    }
+  }
+
+  &__text {
+    border-bottom: 1.3px solid #e6e6e6;
+    padding-bottom: 0.5rem;
+    color: var(--chev-btn);
+    border-bottom: 1.3px solid var(--cart-border);
+  }
+
+  &__check {
+    text-align: center;
+    padding-top: 3rem;
+
+    .checkout {
+      background-color: #bcbcbc;
+      color: $white;
+      font-size: 1.6rem;
+      font-weight: 500;
+      padding: 1.2rem 9.5rem;
+      border-radius: 0.4rem;
+      cursor: not-allowed;
+    }
+
+    .checkoutt {
+      background-color: $lemon;
+      color: $white;
+      font-size: 1.6rem;
+      font-weight: 500;
+      padding: 1.2rem 9.5rem;
+      border-radius: 0.4rem;
+    }
+
+    .checked {
+      background-color: $lemon;
+      color: $white;
+      font-size: 1.6rem;
+      font-weight: 500;
+      padding: 1.2rem 9.5rem;
+      border-radius: 0.4rem;
+    }
+  }
+}
+
+.coupon {
+  font-size: 1.4rem;
+  font-weight: 500;
+  color: #141414;
+  color: var(--chev-btn);
+
+  &__code {
+    border: 1px solid #e6e6e6;
+    padding: 1rem;
+    border-radius: 0.4rem;
+  }
+
+  &__grand {
+    padding-top: 1rem;
+  }
+}
+
+.summary__order {
+  padding-bottom: 1rem;
+  border-bottom: 1.3px solid #e6e6e6;
+  border-radius: 0.4rem;
+  border-bottom: 1.3px solid var(--cart-border);
+}

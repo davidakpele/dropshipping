@@ -1,0 +1,434 @@
+.delivery__address {
+  // this style with left some padding on the right in case of overflow
+  // margin-right: 10px;
+  // margin-right: 1rem;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  flex: 1;
+
+  .default {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: $default-address-bkg;
+    padding: 2rem;
+    border-radius: 0.8rem;
+    font-size: 1.4rem;
+    background: var(--delivery-address);
+    @include responsive(1020px) {
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+      gap: 1rem;
+    }
+    @include responsive(930px) {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+    }
+    @include responsive(660px) {
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+      gap: 1rem;
+    }
+
+    &__address {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      &__headline {
+        color: $sidebar-user;
+        font-weight: 700;
+      }
+
+      &__info {
+        display: flex;
+        font-weight: 600;
+        padding: 0.5rem 0;
+        @include responsive(425px) {
+          flex-direction: column;
+          justify-content: flex-start;
+          align-items: flex-start;
+          gap: 0.5px;
+        }
+
+        &__name {
+          margin-right: 3rem;
+        }
+      }
+
+      &__street {
+        color: $default-address;
+      }
+
+      &__btn {
+        padding: 0.5rem 1.5rem;
+        border-radius: 0.4rem;
+        color: $white;
+      }
+    }
+    .disabled__delivery {
+      pointer-events: none;
+      background: $grey2;
+      // background: var(--change-default);
+    }
+    .active__change__delivery {
+      background: $change-address-btn;
+      // background: var(--change-default);
+    }
+  }
+}
+
+//   this search and sort section repeating here
+.search__sort__address {
+  margin: 2rem 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.4rem;
+  @include responsive(1100px) {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  @include responsive(930px) {
+    flex-direction: row;
+    align-items: center;
+  }
+  @include responsive(735px) {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .sort__with__custom {
+    width: 50%;
+    @include responsive(480px) {
+      width: 100%;
+    }
+  }
+
+  .delivery__search,
+  .delivery__search__available {
+    display: flex;
+    align-items: center;
+    max-width: 70%;
+    @include responsive(1100px) {
+      min-width: 50%;
+      max-width: 100%;
+      margin-bottom: 1rem;
+    }
+    @include responsive(930px) {
+      margin-bottom: 0;
+    }
+    @include responsive(735px) {
+      margin-bottom: 1rem;
+    }
+    @include responsive(480px) {
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+      gap: 1rem;
+      width: 100%;
+    }
+
+    .search__delivery {
+      width: 100%;
+      background: $white;
+      display: flex;
+      align-items: center;
+      padding: 0.5rem 1rem;
+      border-radius: 0.4rem;
+      background: var(--input-bg);
+
+      input {
+        width: 100%;
+        margin-left: 1rem;
+      }
+    }
+
+    .filter__delivery {
+      margin-left: 2rem;
+      display: flex;
+      align-items: center;
+      @include responsive(480px) {
+        margin-left: 0;
+      }
+
+      select {
+        padding: 0.5rem 1rem;
+        border-radius: 0.4rem;
+        margin-left: 1rem;
+      }
+    }
+  }
+  .delivery__search__available {
+    width: 40%;
+  }
+
+  .add__new__address {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+
+    @include responsive(768px) {
+      .add__new__plus {
+        width: 20%;
+      }
+    }
+    .add__new {
+      color: $green1;
+      font-size: 1.6rem;
+    }
+  }
+
+  .new__delivery {
+    display: flex;
+    align-items: center;
+    background: $sidebar-user-bkg;
+    color: $white;
+    padding: 0.5rem 1.5rem;
+    border-radius: 0.4rem;
+
+    ion-icon {
+      margin-right: 1rem;
+    }
+  }
+
+  .disabled {
+    pointer-events: none;
+    background: $grey2;
+  }
+}
+
+.addresses {
+  font-size: 1.4rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-bottom: 3rem;
+  @include responsive(1030px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @include responsive(930px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  @include responsive(760px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @include responsive(500px) {
+    grid-template-columns: 1fr;
+  }
+
+  &__item {
+    height: 15rem;
+    padding: 2rem;
+    border-radius: 0.8rem;
+    display: flex;
+    align-items: flex-start;
+    background-color: $white;
+    justify-content: space-between;
+    background: var(--navtab-bg);
+
+    &__details {
+      display: flex;
+      gap: 1rem;
+      flex-direction: column;
+
+      span {
+        font-weight: 600;
+      }
+    }
+
+    .delete__icon {
+      cursor: pointer;
+    }
+  }
+}
+
+// Available Addresses styles..
+.show__available__address {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  background: rgba($black, 0.4);
+  z-index: 3000;
+
+  .available__address {
+    background: $grey1;
+    border-radius: 0.8rem;
+    width: 70%;
+    min-height: 50%;
+    max-height: 70%;
+    overflow-y: auto;
+    max-height: 80%;
+    margin: 8rem auto;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    background: var(--choose-bg);
+    @include responsive(768px) {
+      width: 80%;
+    }
+    @include responsive(400px) {
+      width: 90%;
+    }
+
+    .add__pad__available {
+      padding: 0 4rem;
+    .available__address__sticky {
+      margin: 0 -4rem;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      background: $grey1;
+      padding: 0 4rem;
+      padding-top: 2rem;
+      border-bottom: 1px solid $grey10;
+      margin-bottom: 1rem;
+      background: var(--choose-bg);
+      border-bottom: 1px solid var(--delivery-border);
+
+      .search__sort__address {
+        margin-bottom: 1rem;
+      }
+
+      ion-icon {
+        cursor: pointer;
+        font-size: 2.4rem;
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-end;
+        margin-left: auto;
+      }
+
+      .address__title {
+        text-align: center;
+
+        h3 {
+          font-weight: 600;
+          font-size: 2rem;
+        }
+      }
+    }
+
+    .available {
+      // overflow-y: auto;
+      grid-template-columns: repeat(3, 1fr);
+      @include responsive(1440px) {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      @include responsive(930px) {
+        grid-template-columns: 1fr;
+      }
+
+      .addresses__item {
+        justify-content: flex-start;
+        height: 15rem;
+        background: #ffffff;
+        background: var(--pay-bg);
+
+        .delete__icon {
+          height: 3rem;
+          width: 3rem;
+        }
+      }
+
+      p {
+        margin-top: 1rem;
+        color: #808080;
+      }
+
+      .addresses__item {
+        flex-direction: column;
+      }
+      .select__address__details {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .address__info {
+          display: flex;
+          flex-direction: column;
+          gap: 1rem;
+          color: #141414;
+          color: var(--chev-btn);
+        }
+      }
+
+      .select__address {
+        text-transform: capitalize;
+        width: fit-content;
+        background: $lemon;
+        padding: 0.7rem 1.5rem;
+        border-radius: 0.4rem;
+        color: white;
+        @include responsive(320px) {
+          padding: 0.5rem 1.2rem;
+        }
+      }
+    }
+  }
+  }
+
+  .available__address::-webkit-scrollbar {
+    width: 0.5rem;
+    background: inherit;
+  }
+
+  .available__address::-webkit-scrollbar-thumb {
+    border-radius: 0.5rem;
+    background-color: $grey3;
+  }
+}
+
+// style for loading
+.loading__spin__address {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  margin-top: 10%;
+  .loader {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    display: inline-block;
+    border-top: 3px solid $green1;
+    border-right: 3px solid transparent;
+    box-sizing: border-box;
+    animation: rotation 1s linear infinite;
+  }
+
+  @keyframes rotation {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+}
+
+// confirm delete style
+
+.yes__confirm,
+.no__confirm {
+  padding: 1rem 3rem;
+  border-radius: 4px;
+  color: $white;
+  background: $red3;
+}
+
+.yes__confirm {
+  background: #228e20;
+  margin-right: 1rem;
+}

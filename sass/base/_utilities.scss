@@ -1,0 +1,68 @@
+.container {
+  width: 100%;
+  max-width: 150rem;
+  margin: auto;
+
+  padding-left: 2.4rem;
+  padding-right: 2.4rem;
+}
+
+.container-sm {
+  width: 100%;
+  max-width: 130rem;
+  margin: auto;
+
+  padding-left: 2.4rem;
+  padding-right: 2.4rem;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  gap: 4.8rem;
+}
+
+.mt-medium {
+  margin-top: 4.8rem;
+}
+
+.mb-0 {
+  margin-bottom: 0 !important;
+}
+
+.pt-medium {
+  padding-top: 3.6rem;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.placeholder {
+  background: var(--loader);
+  background: linear-gradient(
+    to right,
+    var(--loader-light) 10%,
+    var(--loader-dark) 18%,
+    var(--loader-light) 33%
+  );
+  background-size: 800px 104px;
+  color: transparent;
+  animation-duration: 1.25s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
+  animation-name: placeHolderShimmer;
+  animation-timing-function: linear;
+}
+
+.br-50 {
+  border-radius: 50%;
+}
+
+.color-none {
+  background-color: transparent !important;
+}
+
+.mb-1 {
+  margin-bottom: 1.5rem !important;
+}

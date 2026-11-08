@@ -1,0 +1,115 @@
+.modal {
+  display: block;
+  position: fixed;
+  z-index: 20000;
+  background-color: rgba($color: #000000, $alpha: 0.8);
+  width: 100%;
+  height: 100vh;
+  overflow: auto;
+  left: 0;
+  top: 0;
+
+  @include responsive(767px) {
+    display: none;
+  }
+  .modal-content {
+    position: relative;
+    margin: auto;
+    max-width: 40%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    @include responsive(1024px) {
+      max-width: 60%;
+    }
+
+    @include responsive(768px) {
+      max-width: 70%;
+    }
+
+    .close {
+      color: $white;
+      font-size: 30px;
+      font-weight: bold;
+      transition: all 0.5 ease-in;
+      cursor: pointer;
+      margin-left: auto;
+      margin-bottom: 10px;
+    }
+    .close:hover {
+      color: $green1;
+    }
+    .modal-slide {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      .next-prev {
+        z-index: 1;
+        .next,
+        .prev {
+          position: absolute;
+          top: 43%;
+          cursor: pointer;
+          color: $white;
+          font-size: 5rem;
+          font-weight: 700;
+        }
+        .prev:hover {
+          color: $green1;
+        }
+        .next {
+          right: -20px;
+        }
+        .prev {
+          left: -20px;
+        }
+      }
+      .prodImgSlides {
+        width: 100%;
+        height: auto;
+        border-radius: 10px;
+      }
+    }
+
+    .modalImages {
+      display: flex;
+      gap: 1.5rem;
+      justify-content: center;
+      align-items: center;
+      margin-top: 30px;
+      .borderAround {
+        border: 2px solid $green1;
+        opacity: 0.7;
+      }
+      .modalProdImages {
+        width: 10%;
+        height: auto;
+        border-radius: 7px;
+      }
+      .modalProdImages:hover {
+        opacity: 0.7;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .modal {
+    .modal-content {
+      .modal-slide {
+        .next-prev {
+          .next,
+          .prev {
+            top: 46%;
+          }
+        }
+      }
+    }
+  }
+}

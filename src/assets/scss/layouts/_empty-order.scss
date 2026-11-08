@@ -1,0 +1,30 @@
+.empty__order {
+  background: $white;
+  text-align: center;
+  margin-top: 8rem;
+  padding-top: 2rem;
+
+  .order__placed {
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+    width: 50%;
+
+    .no__order {
+      font-weight: 600;
+      font-size: 2rem;
+      margin: 1rem 0;
+    }
+
+    .start__shopping {
+      width: 80%;
+      margin: 2rem auto;
+      background: $lemon;
+      color: $white;
+      border-radius: 0.4rem;
+      padding: 1rem 0;
+    }
+  }
+}

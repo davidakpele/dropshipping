@@ -1,0 +1,393 @@
+.help {
+  // margin: 2rem 0 10rem;
+  padding: 3rem 6rem 0;
+  @include responsive(870px) {
+    padding: 1rem 5rem 0;
+  }
+
+  @include responsive(1175px) {
+    // width: 90%;
+  }
+  @include responsive(420px) {
+    // width: 100%;
+    padding: 0.5rem 3rem 0;
+  }
+  @include responsive(385px) {
+    padding: 0.5rem 2rem 0;
+  }
+  @include responsive(365px) {
+    padding: 0.5rem 1rem 0;
+  }
+  @include responsive(385px) {
+    padding: 0.5rem 0.5rem 0;
+  }
+  @include responsive(295px) {
+    padding: 0.5rem 0 0;
+  }
+
+  //for helpcenter page
+
+  &__banner {
+    margin: 0 8rem;
+    @include responsive(1070px) {
+      margin: 0 0.2rem;
+    }
+    img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__menus {
+    margin: 3rem 0 0;
+    display: flex;
+    gap: 1.2rem;
+    justify-content: center;
+    align-items: center;
+    @include responsive(1070px) {
+      flex-wrap: wrap;
+      margin: 3rem 0.5rem 1.5rem;
+    }
+    @include responsive(850px) {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1rem;
+    }
+    @include responsive(515px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .blue {
+      box-shadow: 2px 2px 0.6rem #59595926;
+      &:hover {
+        background-color: #f1f8fe;
+        border-top: 0.3rem solid #0e63b2;
+        .sub__text {
+          color: #444444;
+          color: var(--help-hover);
+        }
+      }
+      &.active {
+        background-color: #f1f8fe;
+        border-top: 0.3rem solid #0e63b2;
+        .sub__text {
+          color: #444444;
+          color: var(--help-hover) !important;
+        }
+      }
+    }
+
+    .yellow {
+      box-shadow: 2px 2px 0.6rem #59595926;
+      &:hover {
+        background-color: #fef7e7;
+        border-top: 0.3rem solid #e0a50c;
+        .sub__text {
+          color: #444444;
+          color: var(--help-hover);
+        }
+      }
+      &.active {
+        background-color: #fef7e7;
+        border-top: 0.3rem solid #e0a50c;
+        .sub__text {
+          color: #444444;
+          color: var(--help-hover);
+        }
+      }
+    }
+
+    .green {
+      box-shadow: 2px 2px 0.6rem #59595926;
+      &:hover {
+        background-color: #edfbe9;
+        border-top: 0.3rem solid #3db020;
+        .sub__text {
+          color: #444444;
+          color: var(--help-hover);
+        }
+      }
+      &.active {
+        background-color: #edfbe9;
+        border-top: 0.3rem solid #3db020;
+        .sub__text {
+          color: #444444;
+          color: var(--help-hover);
+        }
+      }
+    }
+
+    .cyan {
+      box-shadow: 2px 2px 0.6rem #59595926;
+      &:hover,
+      &.active {
+        background-color: #e9fbf9;
+        border-top: 0.3rem solid #20c2ae;
+        color: #444444;
+        .sub__text {
+          color: #444444;
+          color: var(--help-hover);
+        }
+      }
+    }
+
+    .dark-blue {
+      box-shadow: 2px 2px 0.6rem #59595926;
+      &:hover,
+      &.active {
+        background-color: #eaf1fa;
+        border-top: 0.3rem solid #2760b4;
+        color: #444444;
+        .sub__text {
+          color: #444444;
+          color: var(--help-hover);
+        }
+      }
+    }
+
+    .purple {
+      box-shadow: 2px 2px 0.6rem #59595926;
+      &:hover,
+      &.active {
+        background-color: #f7eafa;
+        border-top: 0.3rem solid #9327ad;
+        color: #444444;
+        .sub__text {
+          color: #444444;
+          color: var(--help-hover);
+        }
+      }
+    }
+
+    .sub {
+      &__menu {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        background-color: #ffffff;
+        border-radius: 0.4rem;
+        padding: 3rem 0;
+        width: 100%;
+        cursor: pointer;
+        background-color: var(--navtab-bg);
+        @include responsive(1080px) {
+          width: 32%;
+          padding: 1.5rem 0;
+        }
+        @include responsive(850px) {
+          width: auto;
+        }
+
+        .color__icon {
+          width: 3.5rem;
+          @include responsive(1104px) {
+            width: 3.3rem;
+          }
+          @include responsive(975px) {
+            width: 3.2rem;
+          }
+        }
+
+        .menu__icon {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+      }
+
+      &__text {
+        font-size: 1.6rem;
+        font-weight: 500;
+        color: #444444;
+        padding-top: 10px;
+        padding-top: 0.8rem;
+        color: var(--help-text);
+        @include responsive(1104px) {
+          font-size: 1.4rem;
+        }
+        @include responsive(950px) {
+          padding-top: 1.2rem;
+          font-size: 1.5rem;
+        }
+        @include responsive(670px) {
+          padding-top: 1rem;
+          font-size: 1.4rem;
+        }
+      }
+    }
+  }
+}
+
+.faq {
+  margin: 8rem 15rem 6rem;
+  // width: 70%;
+  @include responsive(1270px) {
+    // width: 85%;
+  }
+  @include responsive(1215px) {
+    margin-top: 6rem;
+    margin-bottom: 15rem;
+  }
+  @include responsive(1150px) {
+    margin-bottom: 14rem;
+  }
+  @include responsive(1190px) {
+    margin-bottom: 13rem;
+  }
+  @include responsive(1070px) {
+    margin: 8rem 10rem 9rem;
+  }
+  @include responsive(1000px) {
+    margin-bottom: 9rem;
+  }
+
+  @include responsive(978px) {
+    // margin-bottom: 9rem;
+  }
+  @include responsive(880px) {
+    // width: 100%;
+  }
+  @include responsive(870px) {
+    margin-bottom: 0;
+  }
+  @include responsive(800px) {
+    margin: 8rem 8rem 8rem;
+  }
+  @include responsive(665px) {
+    margin: 8rem 0rem 9rem;
+  }
+  @include responsive(500px) {
+    margin: 6rem 0rem 7rem;
+  }
+  @include responsive(385px) {
+    margin: 4rem 0rem 5rem;
+  }
+
+  &__text {
+    font-size: 2.8rem;
+    font-weight: 700;
+    color: #7bb20e;
+    text-align: center;
+    @include responsive(1190px) {
+      font-size: 2.6rem;
+    }
+    @include responsive(900px) {
+      font-size: 2rem;
+    }
+    @include responsive(899px) {
+      font-size: 1.8rem;
+    }
+  }
+
+  &__body {
+    background-color: #ffffff;
+    margin-top: 3rem;
+    padding: 4.5rem 8rem 6rem 8rem;
+    height: 50%;
+    background: var(--navtab-bg);
+    @include responsive(1190px) {
+      padding: 4rem 4.5rem 2rem;
+    }
+    @include responsive(600px) {
+      padding: 4rem 4rem 2rem;
+    }
+    @include responsive(570px) {
+      padding: 4rem 3rem 2rem;
+    }
+    @include responsive(500px) {
+      padding: 3rem 2rem;
+    }
+    @include responsive(335px) {
+      padding: 3rem 1rem;
+    }
+  }
+
+  &__search {
+    display: flex;
+    gap: 1rem;
+    border: 1px solid #b4b4b4;
+    border-radius: 4px;
+    padding: 1rem 0 1rem 2rem;
+    margin-bottom: 2rem;
+
+    .enter__word {
+      font-size: 1.5rem;
+      color: #b4b4b4;
+      font-weight: 400;
+    }
+
+    .search__icon {
+      font-size: 1.8rem;
+      color: #b4b4b4;
+    }
+  }
+
+  &__accordion {
+    .accordion {
+      &__head {
+        font-size: 1.6rem;
+        font-weight: 700;
+        color: #7bb20e;
+        text-align: center;
+        padding: 2rem 0 1.5rem 0;
+        @include responsive(845px) {
+          padding: 1.6rem 0 0.8rem 0;
+        }
+        @include responsive(845px) {
+          padding: 1.6rem 0 0.8rem 0;
+        }
+      }
+
+      &__title {
+        display: flex;
+        justify-content: space-between;
+        border: 1px solid #b4b4b4;
+        padding: 1rem 1.5rem;
+        margin-bottom: 1rem;
+        border-radius: 0.4rem;
+        align-items: center;
+        gap: 1.5rem;
+        box-shadow: 0.3px 0.5px 2px #b4b4b4;
+        // &:active {
+        //   border: 1px solid #7bb20e;
+        // }
+
+        .how__can {
+          font-size: 1.6rem;
+          font-weight: 500;
+          color: #141414;
+          color: var(--chev-btn);
+
+          @include responsive(845px) {
+            font-size: 1.3rem;
+          }
+          @include responsive(650px) {
+            font-size: 1.4rem;
+          }
+          @include responsive(650px) {
+            font-size: 1.4rem;
+          }
+        }
+      }
+
+      &__body {
+        .text {
+          font-size: 1.6rem;
+          font-weight: 500;
+          color: #545454;
+          padding: 0.5rem 2rem 1rem;
+          text-align: justify;
+          color: var(--prod-title);
+          @include responsive(845px) {
+            font-size: 1.3rem;
+          }
+          @include responsive(650px) {
+            font-size: 1.4rem;
+          }
+        }
+      }
+    }
+  }
+}

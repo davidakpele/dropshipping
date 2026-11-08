@@ -1,0 +1,80 @@
+.ranking {
+  background-color: #ffffff;
+  border-radius: 0.4rem;
+  padding: 3rem 3rem 8rem 3rem;
+  margin-top: 2rem;
+  background-color: var(--navtab-bg);
+
+  &__body {
+    gap: 2rem;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 2rem 0.8rem;
+  }
+
+  &__grades {
+    font-weight: 500;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    // min-width: 4rem;
+
+    .icon {
+      width: 3.5rem;
+    }
+
+    .text {
+      font-size: 1.4rem;
+      color: #555555;
+      padding-top: 0.3rem;
+      color: var(--account-text);
+    }
+
+    .ranks {
+      font-size: 1.2rem;
+      color: #b0b0b0;
+      padding-top: 0.5rem;
+      color: var(--rank-fig);
+    }
+  }
+
+  &__benefits {
+    margin-top: 0.4rem;
+
+    .benefitt {
+      font-size: 1.6rem;
+      font-weight: 700;
+      color: #3b7f04;
+    }
+  }
+
+  &__list {
+    display: flex;
+    gap: 5rem;
+    line-height: 2.7;
+
+    .listed {
+      &__ranks {
+        display: flex;
+        gap: 0.5rem;
+
+        .text {
+          font-size: 1.6rem;
+          font-weight: 500;
+          color: #555555;
+          color: var(--rank-text);
+        }
+      }
+
+      &__info {
+        .infos {
+          font-size: 1.6rem;
+          font-weight: 500;
+          color: #b0b0b0;
+          color: var(--rank-info);
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,97 @@
+.similar {
+  background-color: $white;
+  padding: 2rem 1.5rem 2rem 1.5rem;
+  border-radius: 0.4rem;
+  margin: 0 0 5rem;
+  background-color: var(--navtab-bg);
+
+  overflow-x: scroll;
+
+  @include responsive(600px) {
+    margin: 0 0 3.5rem;
+  }
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  &__product {
+    margin-top: 1.5rem;
+  }
+
+  &__pictures {
+    display: flex;
+    gap: 1.8rem;
+    overflow-x: scroll;
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+
+  &__part {
+    border: 1px solid $grey9;
+    flex: 0 0 20rem;
+    border-radius: 7.5px;
+    overflow: hidden;
+    border: 1px solid var(--similar-border);
+  }
+
+  &__img {
+    width: 100%;
+  }
+
+  &__imgWrap {
+    height: 20rem;
+    width: 20rem;
+    background: #f7f7f7;
+    position: relative;
+  }
+
+  &__discount {
+    background: $discountBg;
+    color: $discountTxt;
+    position: absolute;
+    right: 5%;
+    top: 5%;
+    padding: 0.4rem;
+    border-radius: 0.4rem;
+    font-size: 1rem;
+  }
+
+  &__name {
+    font-size: 2rem;
+    font-weight: 600;
+    color: $white;
+    text-transform: uppercase;
+    padding: 0.5rem 2rem;
+    border-radius: 0.4rem;
+    background-color: $primary;
+  }
+}
+
+.products {
+  padding: 2rem;
+
+  &__name {
+    font-size: 1.3rem;
+    font-weight: 500;
+    color: $ftBlackSec;
+
+    &:hover {
+      color: $lemon;
+    }
+  }
+
+  &__price {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: $grey3;
+    text-decoration: line-through;
+  }
+  &__prices {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: $ftBlackSec;
+    color: var(--chev-btn);
+  }
+}

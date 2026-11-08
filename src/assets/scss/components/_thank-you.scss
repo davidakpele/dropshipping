@@ -1,0 +1,108 @@
+.thankyou {
+  &__page {
+    width: 60%;
+    margin: 4rem auto;
+    background-color: #ffffff;
+    padding: 4rem 0;
+    border-radius: 0.4rem;
+    background: var(--navtab-bg);
+    @include responsive(1090px) {
+      width: 70%;
+    }
+    @include responsive(880px) {
+      width: 80%;
+    }
+    @include responsive(375px) {
+      width: 90%;
+    }
+
+    .check__icon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      .checkedd {
+        width: 8rem;
+      }
+    }
+
+    .see {
+      &__btn {
+        display: flex;
+        justify-content: center;
+      }
+
+      &__detailss {
+        margin-top: 2.5rem;
+        background-color: #7bb20e;
+        padding: 1rem 4.5rem;
+        font-size: 1.3rem;
+        font-weight: 500;
+        color: #ffffff;
+        border-radius: 0.4rem;
+        // border: none;
+      }
+    }
+  }
+
+  &__part {
+    align-content: center;
+    text-align: center;
+
+    .item {
+      &__details, &__incomplete {
+        margin: 2rem 8rem;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 1rem;
+        padding: 1.6rem 5px;
+        line-height: 1.6;
+        background-color: #fcfcee;
+        border-radius: 0.4px;
+        background: var(--thanks-details);
+        @include responsive(880px) {
+          margin: 2rem 4rem;
+        }
+        @include responsive(600px) {
+          grid-template-columns: repeat(2, 1fr);
+          row-gap: 2rem;
+        }
+        @include responsive(375px) {
+          margin: 2rem;
+        }
+
+        .detail__amount {
+          font-size: 1.4rem;
+          font-weight: 700;
+        }
+
+        .detail__span {
+          font-size: 1.2rem;
+          font-weight: 400;
+        }
+      }
+
+      &__incomplete {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    .thanks__text, .incomplete__text {
+      font-size: 2rem;
+      font-weight: 700;
+      margin-top: 1.2rem;
+    }
+    .thanks__text {
+      color: #7bb20e;
+    }
+
+    .incomplete__text {
+      color: $red3;
+    }
+    .received {
+      font-size: 1.4rem;
+      font-weight: 400;
+      padding-top: 0.2rem;
+    }
+  }
+}

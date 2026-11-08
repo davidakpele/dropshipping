@@ -1,0 +1,43 @@
+.error {
+  // background: $white;
+  // background: var(--navtab-bg);
+
+  &__wrap {
+    display: flex;
+    padding: 5rem 0;
+    gap: 3rem;
+    @include responsive(790px) {
+      flex-direction: column;
+    }
+  }
+
+  &__img,
+  &__caption {
+    flex: 1;
+  }
+
+  &__caption {
+    .oops,
+    .not-found {
+      color: #444444;
+      font-size: 5rem;
+      font-weight: 700;
+      color: var(--help-text);
+      @include responsive(1150px) {
+        font-size: 3.5rem;
+      }
+      @include responsive(790px) {
+        font-size: 4rem;
+      }
+    }
+
+    .not-found {
+      margin: 1rem 0;
+      text-transform: uppercase;
+    }
+
+    .error-content {
+      margin: 0 0 2rem;
+    }
+  }
+}

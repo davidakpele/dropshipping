@@ -1,0 +1,1066 @@
+.checkout {
+  &__container {
+    padding: 0 2rem;
+    position: relative;
+    @include responsive(650px) {
+      padding: 0;
+      margin-top: 3rem;
+    }
+  }
+
+  // order progress style here
+  .processes {
+    // margin-left: -12%;
+    width: 32%;
+    margin-top: 0rem;
+    overflow: hidden;
+    @include responsive(970px) {
+      width: 50%;
+    }
+
+    @include responsive(570px) {
+      width: 100%;
+      margin-left: -5%;
+    }
+
+    &__list {
+      display: flex;
+
+      .processes__list__item {
+        flex: 1;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 9rem;
+
+        .progress__count {
+          width: 1rem;
+          height: 1rem;
+          border-radius: 50%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          position: relative;
+          z-index: 5;
+          background: $grey10;
+          color: $white;
+        }
+
+        .progress__label {
+          color: $grey3;
+          font-size: 1.2rem;
+          text-transform: uppercase;
+          font-weight: 600;
+          visibility: visible;
+        }
+
+        .active__label {
+          color: $lemon;
+        }
+      }
+
+      &__item:not(:first-child)::before {
+        position: absolute;
+        content: "";
+        background: $grey10;
+        width: 100%;
+        height: 0.3rem;
+        top: 28%;
+        right: 50%;
+        transform: translateY(-50%);
+      }
+
+      &__item:last-child {
+        margin-right: -10%;
+      }
+
+      .active {
+        .progress__count {
+          background: $white;
+          padding: 0.6rem;
+          border: 0.5rem solid $lemon;
+        }
+      }
+
+      .checked {
+        .progress__count {
+          background: $lemon;
+          padding: 0.3rem;
+          width: 1.5rem;
+          height: 1.5rem;
+        }
+      }
+
+      .checked:not(:first-child)::before,
+      .active:not(:first-child)::before {
+        background: $lemon;
+      }
+    }
+  }
+
+  .show__processes__up {
+    display: block;
+    @include responsive(570px) {
+      display: none;
+    }
+  }
+
+  .show__processes__down {
+    display: none;
+    @include responsive(570px) {
+      display: block;
+      margin-bottom: 1rem;
+    }
+  }
+
+  // ends here
+
+  &__body {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #d0d0d0;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid var(--check-border);
+
+    .checkout__text {
+      font-size: 2.8rem;
+      font-weight: 700;
+      @include responsive(768px) {
+        font-size: 2.4rem;
+      }
+      @include responsive(570px) {
+        font-size: 2rem;
+      }
+    }
+  }
+
+  &__summary {
+    flex: 2;
+    padding: 2rem 1.5rem 3rem 1.5rem;
+    border-radius: 0.5rem;
+    background-color: var(--navtab-bg);
+  }
+
+  &__head {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.6rem;
+    @include responsive(1024px) {
+      font-size: 1.4rem;
+    }
+
+    .orderr {
+      font-weight: 700;
+    }
+
+    .edit {
+      font-weight: 600;
+      color: #7bb20e;
+      cursor: pointer;
+    }
+  }
+
+  &__page {
+    padding-top: 1rem;
+
+    .detailed {
+      display: flex;
+      gap: 2rem;
+      border-bottom: 1px solid #e6e6e6;
+      padding: 1.2rem 0;
+      border-bottom: 1px solid var(--checkout-border);
+
+      .canon-img {
+        width: 9rem;
+      }
+
+      &__name {
+        font-size: 1.6rem;
+        font-weight: 600;
+        color: #808080;
+        color: var(--order-text);
+      }
+
+      &__price {
+        font-size: 1.8rem;
+        font-weight: 600;
+        color: var(--chev-btn);
+        @include responsive(1024px) {
+          font-size: 1.5rem;
+        }
+      }
+
+      &__quantity {
+        font-size: 1.4rem;
+        font-weight: 400;
+        padding-top: 1rem;
+        color: var(--order-text);
+
+        .quan {
+          color: #808080;
+          font-size: 1.4rem;
+          font-weight: 400;
+          margin-right: 0.5rem;
+          color: var(--order-text);
+        }
+      }
+    }
+  }
+
+  &__total {
+    padding: 3rem 0 4px 0;
+    border-bottom: 1px solid #e6e6e6;
+    line-height: 2.3;
+    border-bottom: 1px solid var(--checkout-border);
+
+    .total__prices {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      &:last-child {
+        margin-bottom: 1rem;
+      }
+
+      .progress {
+        p {
+          text-align: right;
+          font-size: 1.3rem;
+        }
+      }
+
+      .coupon_code {
+        display: flex;
+        border: 1px solid $lemon;
+        overflow: hidden;
+        border-radius: 1rem;
+
+        input {
+          padding: 0.4rem 1rem;
+          flex: 1;
+        }
+      }
+
+      .subtotal {
+        font-size: 1.6rem;
+        font-weight: 600;
+        color: #808080;
+        color: var(--order-text);
+      }
+
+      .amount {
+        font-size: 1.6rem;
+        font-weight: 600;
+        color: var(--chev-btn);
+        @include responsive(1024px) {
+          font-size: 1.5rem;
+        }
+      }
+    }
+  }
+
+  &__totals {
+    padding: 1.2rem 0;
+
+    .totals__pricess {
+      display: flex;
+      justify-content: space-between;
+
+      .subtotals {
+        font-size: 1.8rem;
+        font-weight: 700;
+        color: #808080;
+        color: var(--order-text);
+        @include responsive(1024px) {
+          font-size: 1.6rem;
+        }
+      }
+
+      .amounts {
+        font-size: 1.8rem;
+        font-weight: 700;
+        color: var(--chev-btn);
+        @include responsive(1024px) {
+          font-size: 1.6rem;
+        }
+      }
+    }
+
+    .pay__btn {
+      padding-top: 5rem;
+      align-items: center;
+
+      @include responsive(970px) {
+        width: 50%;
+        margin: auto;
+      }
+      @include responsive(570px) {
+        width: 100%;
+      }
+
+      .pay {
+        background-color: #7bb20e;
+        padding: 1.5rem 0;
+        color: #ffffff;
+        border-radius: 0.4rem;
+        font-size: 1.6rem;
+        font-weight: 600;
+        cursor: pointer;
+        text-align: center;
+        width: 100%;
+      }
+
+      .disablePay {
+        pointer-events: none;
+        background: #b4b4b4;
+      }
+    }
+  }
+}
+
+.personal {
+  &__detail {
+    display: flex;
+    gap: 1.5rem;
+    margin: 2rem 0 5rem 0;
+    align-items: flex-start;
+    @include responsive(970px) {
+      // flex-wrap: wrap;
+      display: block;
+    }
+  }
+
+  &__body {
+    flex: 5;
+    @include responsive(970px) {
+      margin-bottom: 2rem;
+    }
+
+    .no__address__yet {
+      margin-top: 4rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #faf2ed;
+      padding: 2rem 4.5rem;
+      gap: 2rem;
+    }
+
+    .details {
+      background-color: $white;
+      border-radius: 0.6rem;
+      padding: 2rem 0 1.5rem 5rem;
+      margin-bottom: 1.5rem;
+
+      @include responsive(1024px) {
+        padding-left: 2rem;
+      }
+
+      &__title {
+        font-size: 2rem;
+        font-weight: 700;
+        color: $primary;
+        padding-bottom: 1rem;
+      }
+
+      &__info {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 5rem;
+        row-gap: 10px;
+
+        .infos {
+          font-size: 1.5rem;
+          font-weight: 600;
+          color: #141414;
+
+          &__address {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #808080;
+          }
+        }
+      }
+    }
+  }
+}
+
+.shipping {
+  background-color: $white;
+  border-radius: 0.5rem;
+
+  &__text {
+    font-size: 2rem;
+    font-weight: 700;
+    color: $primary;
+    padding: 2rem 0 2rem 5rem;
+    @include responsive(1024px) {
+      padding-left: 2rem;
+    }
+  }
+
+  &__pay {
+    font-size: 2rem;
+    font-weight: 700;
+    color: $primary;
+    padding: 2rem 0 2rem 4rem;
+  }
+
+  &__select {
+    font-size: 1.6rem;
+    font-weight: 600;
+    padding: 2rem 0 1rem 0;
+    color: var(--chev-btn);
+  }
+
+  &__part {
+    display: grid;
+    gap: 1.5rem;
+
+    grid-template-columns: repeat(2, 1fr);
+    @include responsive(1200px) {
+      grid-template-columns: 1fr;
+    }
+    @include responsive(970px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @include responsive(630px) {
+      grid-template-columns: 1fr;
+    }
+
+    &__option,
+    .remove__border {
+      display: flex;
+      background-color: #ffffff;
+      column-gap: 10px;
+      border-radius: 1.2rem;
+      align-items: center;
+      height: max-content;
+      cursor: pointer;
+      padding: 1rem 1.4rem 1rem 3rem;
+      background-color: var(--pay-bg);
+      @include responsive(1024px) {
+        padding-left: 1.4rem;
+      }
+
+      .deliveries {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 1.8rem;
+        flex: 1;
+        .truck {
+          width: 4.5rem;
+          border: 1px solid #cccccc;
+          padding: 1rem;
+          border-radius: 0.6rem;
+        }
+
+        &__iconss {
+          display: flex;
+          .first__radio {
+            height: 1.5rem;
+            width: 1.5rem;
+
+            accent-color: green;
+          }
+        }
+      }
+
+      .change__carrier {
+        color: $green1;
+        font-weight: 500;
+      }
+    }
+    .border__remove {
+      border-radius: 0;
+      border-top-left-radius: 1.2rem;
+      border-top-right-radius: 1.2rem;
+      border-bottom: 1px solid $green1;
+    }
+
+    .shipping__method__list {
+      .remove__border {
+        border-radius: 0;
+        border-top: 0.5px solid $grey1;
+      }
+    }
+    .shipping__method__list:last-child {
+      .remove__border {
+        border-radius: 0;
+        border-bottom-left-radius: 1.2rem;
+        border-bottom-right-radius: 1.2rem;
+      }
+    }
+    .shipping__method__list:first-child {
+      .remove__border {
+        border-top: 0;
+      }
+    }
+  }
+
+  .shipping__list {
+    display: flex;
+    background-color: #ffffff;
+    column-gap: 30px;
+    align-items: center;
+    //static height here
+    height: 100px;
+    cursor: pointer;
+    padding: 1rem 1.4rem 1rem 3rem;
+    @include responsive(1024px) {
+      padding-left: 1.4rem;
+    }
+  }
+
+  &__picks {
+    line-height: 1.8;
+    font-size: 1.4rem;
+    flex: 1;
+    @include responsive(1024px) {
+      font-size: 1.3rem;
+    }
+
+    .shipping__carrier {
+      display: flex;
+      column-gap: 3rem;
+      // justify-content: space-between;
+      align-items: center;
+      b {
+        color: #3b7f04;
+      }
+    }
+
+    .type {
+      font-weight: 500;
+      color: var(--chev-btn);
+    }
+
+    .typee {
+      font-size: 1.5rem;
+      font-weight: 500;
+    }
+
+    .fee {
+      font-weight: 300;
+      color: var(--chev-btn);
+
+      &__bold {
+        font-weight: 700;
+      }
+    }
+
+    .datee {
+      font-weight: 300;
+      color: var(--chev-btn);
+
+      &__bold {
+        font-size: 1.4rem;
+        font-weight: 700;
+      }
+    }
+  }
+}
+
+.delivery {
+  // margin-top: 2rem;
+  .deliver {
+    font-size: 1.6rem;
+    font-weight: 600;
+    margin: 0 0 1rem 0;
+
+    &_wrap {
+      flex: 0 0 70%;
+    }
+
+    &__info {
+      display: flex;
+      gap: 5rem;
+      row-gap: 10px;
+      flex-wrap: wrap;
+
+      div {
+        flex: 1 0;
+      }
+
+      .adrs {
+        min-width: 20rem;
+        @include responsive(1310px) {
+          min-width: 100%;
+        }
+      }
+
+      .infos {
+        font-size: 1.5rem;
+        font-weight: 600;
+        color: #141414;
+        padding-bottom: 0.5rem;
+        color: var(--chev-btn);
+        @include responsive(1024px) {
+          font-size: 1.4rem;
+        }
+
+        .address {
+          font-size: 2rem;
+          font-weight: 600;
+          // color: #808080;
+        }
+      }
+    }
+
+    &__part {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #edf2fa;
+      padding: 2rem 4.5rem;
+      gap: 2rem;
+      background-color: var(--deliver-bg);
+      @include responsive(1065px) {
+        gap: 3rem;
+      }
+      @include responsive(1024px) {
+        padding-left: 2rem;
+        padding-right: 2rem;
+      }
+      @include responsive(570px) {
+        display: block;
+      }
+
+      .choose {
+        @include responsive(570px) {
+          margin-top: 0.8rem;
+        }
+
+        &__btn {
+          background-color: #fe792d;
+          padding: 1rem 1.8rem;
+          border-radius: 0.5rem;
+          font-size: 1.4rem;
+          font-weight: 600;
+          color: #ffffff;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+
+  // .add__details {
+  //   display: flex;
+  //   gap: 5px;
+  //   align-items: center;
+  //   margin-bottom: 2rem;
+  // }
+
+  .add {
+    margin: 1.2rem 0;
+
+    &__details {
+      font-size: 1.6rem;
+      font-weight: 600;
+      color: #7bb20e;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      margin-bottom: 2rem;
+    }
+
+    &__detailed {
+      font-size: 1.6rem;
+      font-weight: 600;
+      color: #a6a6a6;
+    }
+  }
+
+  .disabled__text {
+    pointer-events: none;
+    color: $grey10;
+  }
+}
+
+.none {
+  display: none;
+}
+
+//for shipping payment
+.payment {
+  &__body {
+    background-color: #ffffff;
+    border-radius: 0.5rem;
+    margin-bottom: 1.5rem;
+    padding: 2rem 4rem;
+    line-height: 2;
+    @include responsive(425px) {
+      padding: 2rem;
+    }
+  }
+
+  &__text {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #3b7f04;
+  }
+
+  &__part {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+    @include responsive(425px) {
+      flex-wrap: wrap;
+    }
+
+    .addresss {
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: #808080;
+    }
+
+    .choose {
+      align-items: center;
+
+      &__btn {
+        background-color: #d1672c;
+        padding: 0.4rem 1.8rem;
+        font-size: 1.4rem;
+        font-weight: 600;
+        color: #ffffff;
+        border-radius: 0.4rem;
+      }
+    }
+  }
+
+  &__info {
+    display: flex;
+    column-gap: 2rem;
+    @include responsive(320px) {
+      flex-wrap: wrap;
+    }
+
+    .infos {
+      font-size: 1.6rem;
+      font-weight: 600;
+    }
+  }
+
+  &__option {
+    display: flex;
+    background-color: #ffffff;
+    justify-content: space-between;
+    border-radius: 1.2rem;
+    align-items: center;
+    padding: 1.4rem 1rem 1.4rem 2rem;
+    background-color: var(--pay-bg);
+
+    .payments {
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+
+      .wallet {
+        width: 3.5rem;
+      }
+
+      &__pays {
+        display: flex;
+        align-items: center;
+        column-gap: 2rem;
+        flex-wrap: wrap;
+
+        .wallett {
+          font-size: 1.6rem;
+          font-weight: 500;
+        }
+
+        .pays__amount {
+          background-color: #228e20;
+          padding: 0.6rem 1.4rem;
+          border-radius: 0.5rem;
+          color: #ffffff;
+          font-size: 1.4rem;
+          font-weight: 700;
+        }
+      }
+
+      &__pick {
+        line-height: 1.8;
+
+        .messg {
+          font-size: 1.2rem;
+          font-weight: 300;
+        }
+      }
+
+      &__mode {
+        font-size: 1.6rem;
+        font-weight: 500;
+        color: var(--chev-btn);
+      }
+    }
+
+    .deliveries__iconss {
+      accent-color: green;
+    }
+  }
+}
+
+.mode__card {
+  margin-top: 1rem;
+  width: 50%;
+
+  .tel {
+    width: 80%;
+  }
+
+  input {
+    display: block;
+    padding: 0.8rem 0.8rem 0.8rem 1.2rem;
+    background-color: #ffffff;
+    border: 0.2rem solid #e6e6e6;
+    border-radius: 0.6rem;
+    font-size: 1.6rem;
+    font-weight: 400;
+    color: #cccccc;
+    width: 100%;
+    margin-top: 1rem;
+  }
+
+  label {
+    font-size: 1.4rem;
+    font-weight: 400;
+    color: #545454;
+  }
+
+  .card__number {
+    display: flex;
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+    // width: 50%;
+
+    input {
+      display: block;
+    }
+  }
+}
+
+.note {
+  margin-top: 2rem;
+  background-color: #edf2fa;
+  padding: 2.5rem 2.5rem 2.5rem 4rem;
+  border-radius: 0.5rem;
+  line-height: 2;
+  background-color: var(--deliver-bg);
+  @include responsive(425px) {
+    padding: 2rem;
+  }
+
+  &__text {
+    font-size: 1.6rem;
+    font-weight: 600;
+  }
+
+  &__notice {
+    font-size: 1.6rem;
+    font-weight: 400;
+
+    .spaan {
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: #7bb20e;
+    }
+  }
+
+  &__confirm {
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: #808080;
+    color: var(--note-text);
+  }
+}
+
+.summary {
+  flex-basis: 20%;
+  background-color: $white;
+}
+
+//for insufficient style
+.pop__page {
+  background-color: rgba($black, 0.4);
+  min-width: 100vw;
+  min-height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 3000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .insufficient {
+    margin: auto;
+    width: 50%;
+    padding: 4rem 8rem;
+    background-color: #f9faf8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 4px;
+    background-color: var(--insufficient-bg);
+    @include responsive(1105px) {
+      width: 60%;
+    }
+    @include responsive(900px) {
+      padding: 3rem 4rem;
+    }
+    @include responsive(768px) {
+      width: 70%;
+    }
+    @include responsive(628px) {
+      width: 80%;
+    }
+    @include responsive(375px) {
+      width: 90%;
+      padding: 2rem;
+    }
+
+    &__content {
+      text-align: center;
+
+      .opps {
+        font-size: 4rem;
+        font-weight: 700;
+        color: #d75050;
+      }
+
+      .insuff {
+        font-size: 2.2rem;
+        font-weight: 500;
+        // color: #727272;
+        color: var(--insufficient-text);
+      }
+
+      .fund {
+        font-size: 1.4rem;
+        font-weight: 500;
+        padding-top: 1rem;
+      }
+    }
+
+    .bank__details {
+      flex: 1;
+      padding: 2rem;
+      border-radius: 15px;
+      background: $white;
+      margin: 3rem 0rem;
+      text-align: center;
+      justify-content: center;
+      background-color: var(--pay-bg);
+      @include responsive(320px) {
+        padding: 1rem;
+      }
+
+      .bank {
+        display: flex;
+        justify-content: center;
+
+        span {
+          font-size: 2rem;
+          font-weight: 600;
+          margin-left: 1rem;
+        }
+      }
+
+      .account__num {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem 1.8rem;
+        background: #fafafa;
+        border-radius: 0.8rem;
+        margin: 1rem 0;
+        background-color: var(--insufficient-num);
+
+        span {
+          font-weight: 600;
+          font-size: 1.8rem;
+          color: var(--chev-btn);
+        }
+
+        .copy {
+          background: #7bb20e;
+          color: $white;
+          display: flex;
+          align-items: center;
+          padding: 0.5rem 1rem;
+          border-radius: 0.4rem;
+
+          ion-icon {
+            margin-left: 0.5rem;
+          }
+        }
+      }
+
+      .wallet__info {
+        color: #bebebe;
+        font-size: 1.2rem;
+        font-weight: 400;
+      }
+
+      .copied {
+        margin-top: 2rem;
+        color: $green1;
+      }
+    }
+
+    .popup {
+      &__close {
+        background-color: #7bb20e;
+        color: #ffffff;
+        font-size: 1.6rem;
+        font-weight: 600;
+        padding: 1rem 10rem;
+        border-radius: 0.4rem;
+      }
+    }
+  }
+}
+
+// styles for shipping method options
+
+.Shipping__available {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  row-gap: 2rem;
+  @include responsive(550px) {
+    padding: 1rem;
+  }
+  ion-icon {
+    cursor: pointer;
+    font-size: 2.4rem;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    margin-left: auto;
+  }
+
+  .shipping__title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .more__shippment {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+
+    @include responsive(1024px) {
+      grid-template-columns: 1fr;
+    }
+  }
+}

@@ -1,0 +1,292 @@
+.orderdetails {
+  padding-right: 1rem;
+  flex: 1;
+  @include responsive(500px) {
+    padding-right: 0;
+  }
+
+  &__info {
+    padding: 2rem 0;
+
+    .order__tracking__process {
+      .btns {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+        margin-bottom: 2rem;
+        row-gap: 1rem;
+        margin-top: 1rem;
+        font-weight: 500;
+
+        .order__btns {
+          color: $white;
+          font-size: 1.2rem;
+          padding: 0.6rem 1.5rem;
+          border-radius: 0.4rem;
+          text-transform: uppercase;
+        }
+
+        .cancel {
+          background: $cancelled-left-border;
+        }
+
+        .tracking {
+          background: $grey3;
+          pointer-events: none;
+          margin-right: 1rem;
+        }
+
+        .rate__products {
+          background: $primary;
+        }
+
+        .rate__order {
+          background: $white;
+          color: $primary;
+          border: 1px solid $primary;
+          background: var(--rate-product);
+        }
+
+        .rate__buttons {
+          .rate__order {
+            margin-right: 1rem;
+          }
+        }
+      }
+    }
+
+    .order__information {
+      .all__orders {
+        background: $black;
+        color: $white;
+        padding: 1rem;
+        width: 100%;
+        border-radius: 0.8rem;
+        margin: 0.8rem 0;
+        background: var(--details-info);
+      }
+
+      .order__info {
+        background: $white;
+        padding: 2rem;
+        border-radius: 0.8rem;
+        background: var(--navtab-bg);
+
+        .order__price {
+          padding-top: 2rem;
+
+          &__list {
+            display: flex;
+            flex-direction: column;
+            background: $order-price-bkg;
+            padding: 2rem;
+            border-radius: 0.8rem;
+            background: var(--details-total);
+
+            &__title {
+              margin-bottom: 0.5rem;
+              display: flex;
+              justify-content: space-between;
+
+              .price {
+                font-size: 1.5rem;
+                font-weight: 600;
+                flex: 1;
+
+                @include responsive(425px) {
+                  flex: 2;
+                }
+              }
+            }
+          }
+
+          .price__title {
+            font-weight: 600;
+            flex: 5;
+          }
+
+          .order__price__total {
+            padding: 2rem;
+            display: flex;
+            justify-content: space-between;
+
+            .price__total {
+              flex: 1;
+              font-size: 1.8rem;
+              font-weight: 700;
+              @include responsive(425px) {
+                flex: 2;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// order list style
+
+.order__items {
+  &__details {
+    display: flex;
+    flex-wrap: wrap;
+    font-weight: 600;
+    gap: 2rem;
+    // justify-content: space-between;
+  }
+}
+
+.order__list {
+  font-size: 1.2rem;
+  display: flex;
+  align-items: flex-start;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid $order-bottom-border;
+  border-bottom: 1px solid var(--checkout-border);
+  @include responsive(768px) {
+    width: 48%;
+  }
+  @include responsive(582px) {
+    width: 100%;
+  }
+
+  &__img {
+    margin-right: 1rem;
+  }
+
+  &__detail {
+    flex-direction: column;
+
+    .order__name__price {
+      .price {
+        display: block;
+        font-weight: 700;
+        margin-bottom: 1rem;
+      }
+    }
+  }
+}
+
+// order card styles
+.cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  margin-bottom: 3rem;
+  @include responsive(1119px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @include responsive(930px) {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  @include responsive(769px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @include responsive(360px) {
+    grid-template-columns: 1fr;
+  }
+
+  .orderCard {
+    padding: 2.5rem 1.5rem;
+    flex: 1;
+    border-radius: 0.8rem;
+
+    &__name {
+      display: flex;
+      align-items: center;
+
+      span {
+        font-size: 1.4rem;
+        margin-left: 1rem;
+        @include responsive(1240px) {
+          font-size: 1.3rem;
+        }
+      }
+    }
+
+    &__val {
+      margin-top: 0.5rem;
+      color: $black;
+      font-size: 1.6rem;
+      font-weight: 600;
+      color: var(--details-text);
+      @include responsive(1240px) {
+        font-size: 1.3rem;
+      }
+    }
+  }
+
+  .orange {
+    background: $processing-bkg;
+    color: $processing-left-border;
+    background: var(--processing-bg);
+  }
+
+  .grey {
+    color: $orderdetails-card-text;
+    background: $delivery-order;
+    background: var(--details-grey);
+  }
+
+  .green {
+    background: $delivered-bkg;
+    color: #397305;
+    background: var(--details-green);
+    color: var(--green-text);
+  }
+
+  .blue {
+    color: $orderdetails-card-text;
+    background: $shipped-bkg;
+    background: var(--details-blue);
+  }
+}
+
+.order__location {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 5rem;
+  font-size: 1.5rem;
+  @include responsive(530px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @include responsive(425px) {
+    grid-template-columns: 1fr;
+  }
+  @include responsive(1024px) {
+    gap: 2rem;
+  }
+
+  .bold,
+  .mail {
+    display: block;
+    padding: 0.5rem 0;
+    font-weight: 600;
+  }
+
+  .mail {
+    margin-top: 2rem;
+    @include responsive(1024px) {
+      margin-top: 1rem;
+    }
+  }
+
+  .location__head {
+    display: flex;
+    align-items: center;
+
+    ion-icon {
+      margin-right: 0.5rem;
+    }
+  }
+}
+
+// container for product images
+.prodImg__container {
+  padding: 1rem 0.8rem;
+  background: $order-price-bkg;
+  border-radius: 0.8rem;
+  width: 8rem;
+  height: 8rem;
+}

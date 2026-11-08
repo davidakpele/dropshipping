@@ -1,0 +1,77 @@
+.details {
+  background-color: $white;
+  border-radius: 5px;
+
+  background-color: var(--navtab-bg);
+
+  &__parts {
+    padding: 3rem 4.5rem 5rem 4.5rem;
+    margin-bottom: 1rem;
+
+    @include responsive(600px) {
+      padding: 2rem;
+    }
+  }
+
+  &__titles {
+    font-size: 1.8rem;
+    color: $ftBlackSec;
+    font-weight: 600;
+  }
+}
+
+.key_features {
+  margin-left: 1.8rem;
+  padding-right: 3.2rem;
+  @include responsive(600px) {
+    padding-right: unset;
+  }
+
+  .features {
+    font-size: 1.7rem;
+    font-weight: 600;
+    color: $featuresBlack;
+    padding: 2.2rem 3rem 2rem 2rem;
+
+    &_lists {
+      padding-left: 4rem;
+      @include responsive(600px) {
+        padding-left: 1rem;
+      }
+    }
+
+    &_listed {
+      font-size: 1.6rem;
+      font-weight: 400;
+      color: $featuresBlack;
+      padding-left: 1rem;
+      padding-bottom: 1.5rem;
+      list-style: disc;
+    }
+  }
+
+  .specs {
+    margin-top: 3rem;
+    padding-left: 2rem;
+
+    &_second {
+      font-size: 1.7rem;
+      color: $featuresBlack;
+      font-weight: 600;
+      padding-bottom: 2rem;
+    }
+
+    &_info {
+      font-size: 1.7rem;
+      font-weight: 600;
+      color: $ftBlackSec;
+      padding-bottom: 1rem;
+
+      span {
+        font-size: 1.8rem;
+        font-weight: 400;
+        columns: $ftBlackSec;
+      }
+    }
+  }
+}

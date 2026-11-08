@@ -1,0 +1,65 @@
+.account__details {
+  padding: 3rem 4rem;
+
+  form {
+    background: #fcfcfc;
+    border-radius: 0.8rem;
+    padding: 2rem;
+    margin-bottom: 3rem;
+
+    .detailsofacc {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+
+      .input__container {
+        display: flex;
+        gap: 2rem;
+        width: 100%;
+        margin-bottom: 2rem;
+
+        input,
+        select,
+        textarea {
+          display: block;
+          background: $white;
+          padding: 0.8rem 1rem;
+          border: 1px solid #e6e6e6;
+          border-radius: 0.4rem;
+          width: 100%;
+          margin-top: 1rem;
+
+          :focus {
+            border-color: $lemon;
+          }
+        }
+
+        .input__box {
+          width: 50%;
+        }
+
+        .input__address {
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  .btn__container {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    margin-top: 3rem;
+
+    .save__btn {
+      width: 40%;
+      padding: 0.8rem 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: $lemon;
+      border-radius: 0.4rem;
+      color: $white;
+    }
+  }
+}

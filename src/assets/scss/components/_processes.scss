@@ -1,0 +1,127 @@
+.processes {
+  margin-left: -12%;
+  margin-top: 2rem;
+  overflow: hidden;
+  
+
+  &__list {
+    display: flex;
+
+    .processes__list__item {
+      flex: 1;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 9rem;
+
+      .progress__count {
+        width: 1rem;
+        height: 1rem;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        z-index: 5;
+        background: $grey10;
+        color: $white;
+      }
+
+      .progress__label {
+        color: $ratingsYellow;
+        font-size: 1.2rem;
+        text-transform: uppercase;
+        font-weight: 600;
+        visibility: hidden;
+      }
+
+      .active__label {
+        padding-top: 0px;
+      }
+
+      .inactive__label {
+        // margin-top: 5px;
+      }
+
+      .show__progress {
+        visibility: visible;
+      }
+    }
+
+    .remove__margin__left {
+      @include responsive(1110px) {
+        margin-left: 0;
+      }
+
+      @include responsive(1110px) {
+        margin-left: .6rem;
+      }
+
+      @include responsive(930px) {
+        margin-left: 0;
+      }
+      
+      @include responsive(685px) {
+        margin-left: .6rem;
+      }
+    }
+
+    &__item:not(:first-child)::before {
+      position: absolute;
+      content: "";
+      background: $grey10;
+      width: 100%;
+      height: 0.3rem;
+      top: 70%;
+      right: 50%;
+      transform: translateY(-50%);
+    }
+
+    &__item:last-child {
+      margin-right: -10%;
+    }
+
+    .remove__margin {
+      margin-right: -10%;
+      @include responsive(1229px) {
+        margin-right: -7%;
+      }
+      @include responsive(520px) {
+        margin-right: -2%;
+      }
+    }
+
+    .add__margin {
+      // @include responsive(1229px) {
+      //   margin-right: -10%;
+      // }
+      @include responsive(970px) {
+        // margin-right: -5%;
+      }
+    }
+
+    .active {
+      .progress__count {
+        background: $white;
+        padding: 0.8rem;
+        border: 0.5rem solid $ratingsYellow;
+      }
+    }
+
+    .checked {
+      .progress__count {
+        background: $ratingsYellow;
+        padding: 0.3rem;
+        width: 1.5rem;
+        height: 1.5rem;
+      }
+    }
+
+    .checked:not(:first-child)::before,
+    .active:not(:first-child)::before {
+      background: $ratingsYellow;
+    }
+  }
+}

@@ -1,0 +1,106 @@
+.footer1 {
+  background-color: #232323;
+  color: #fff;
+  padding: 5.6rem 0;
+  background-color: var(--footer-bg);
+
+  &__container {
+    display: grid;
+    grid-template-columns: 30fr 30fr 20fr 20fr;
+    gap: 3.6rem;
+    @media (max-width: 1170px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @media (max-width: 670px) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__block {
+    display: flex;
+    flex-direction: column;
+    gap: 1.8rem;
+  }
+
+  &__block-heading {
+    font-size: 1.8rem;
+    text-transform: uppercase;
+  }
+
+  &__flex {
+    display: flex;
+    gap: 2rem;
+    @media (max-width: 670px) {
+      gap: 3.6rem;
+    }
+
+    &.quick {
+      @media (max-width: 670px) {
+        justify-content: space-between;
+      }
+    }
+  }
+
+  &__navbar {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem;
+  }
+
+  &__link {
+    &:link,
+    &:visited {
+      color: #fff;
+    }
+  }
+
+  &__contacts {
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem;
+  }
+
+  &__contact {
+    display: flex;
+    align-items: center;
+    gap: 1.6rem;
+
+    & img {
+      display: block;
+      width: 2.8rem;
+      height: 2.8rem;
+    }
+  }
+
+  &__socials {
+    display: flex;
+    align-items: center;
+    gap: 1.6rem;
+
+    .x-twitter {
+      height: 2.5rem;
+      width: 2.5rem;
+    }
+  }
+
+  &__social {
+    &:link,
+    &:visited {
+      display: block;
+    }
+
+    & ion-icon {
+      display: block;
+      width: 1.8rem;
+      height: 1.8rem;
+    }
+  }
+}
+
+.copyright {
+  padding: 1.8rem;
+  text-align: center;
+  background-color: #141414;
+  color: #fff;
+}

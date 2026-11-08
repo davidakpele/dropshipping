@@ -1,0 +1,35 @@
+.mode-toggle {
+  position: fixed;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+
+  margin-right: -50px;
+  cursor: pointer;
+  border: none;
+  padding: 12px;
+  background-color: var(--body-bg);
+  border-radius: 6px;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  z-index: 99999;
+  font-family: inherit;
+  color: var(--text-color);
+  padding-right: 18px;
+
+  transition: all 0.3s;
+
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  & ion-icon {
+    display: block;
+    width: 18px;
+    height: 18px;
+  }
+
+  &:hover {
+    margin-right: -4px;
+  }
+}

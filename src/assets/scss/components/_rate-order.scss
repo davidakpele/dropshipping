@@ -1,0 +1,85 @@
+.rate__order {
+  margin-right: 1rem;
+  flex: 1;
+  @include responsive(500px) {
+    margin-right: 0;
+  }
+  &__container {
+    display: flex;
+    gap: 20px;
+    @include responsive(1080px) {
+      flex-direction: column;
+    }
+    .rate__order__details {
+      flex: 3;
+      .cards {
+        display: grid;
+        grid-template-columns: 1fr;
+        //  width: max-content;
+        @include responsive(1080px) {
+          grid-template-columns: repeat(2, 1fr);
+        }
+        @include responsive(375px) {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      .order__location {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+
+        @include responsive(1080px) {
+          flex-direction: row;
+        }
+        @include responsive(600px) {
+          flex-wrap: wrap;
+          column-gap: 50px;
+        }
+      }
+
+      // style for the order total price
+      .total__price__rate {
+        font-size: 2rem;
+        font-weight: 700;
+      }
+      // style ends here
+    }
+
+    .order__and__review {
+      flex: 7;
+      background: $white;
+      padding: 2rem;
+      border-radius: 0.8rem;
+      background: var(--navtab-bg);
+
+      .order__items {
+        &__details {
+          .order__list {
+            min-width: 20rem;
+            max-width: 30rem;
+            flex: 0;
+            @include responsive(502px) {
+              min-width: 100%;
+              max-width: 100%;
+            }
+          }
+        }
+      }
+
+      .leave__review {
+        margin-top: 2rem;
+        form {
+          padding-left: 2rem;
+          padding-right: 8rem;
+          @include responsive(425px) {
+            padding-right: 2rem;
+          }
+          @include responsive(320px) {
+            padding: 0 0.5rem;
+          }
+        }
+      }
+    }
+  }
+}

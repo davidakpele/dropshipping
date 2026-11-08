@@ -1,0 +1,385 @@
+.verify__showing__mobile {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  height: 100%;
+  position: relative;
+}
+.my__wallet {
+  flex: 1;
+  height: 90rem;
+
+  @include responsive(425px) {
+    font-size: 1.2rem;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    .wallet__contain {
+      margin: 3rem 0;
+      border-radius: 15px;
+      display: flex;
+      justify-content: space-between;
+      background: inherit;
+      border: 1px solid rgba(212, 212, 212, 1);
+      border: 1px solid var(--deliver-border);
+      @include responsive(580px) {
+        display: block;
+      }
+
+      .balance {
+        flex: 1;
+        padding: 2rem 4rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        @include responsive(580px) {
+          padding-bottom: 4rem;
+        }
+
+        &__available {
+          font-weight: 600;
+        }
+
+        p {
+          font-weight: 700;
+          font-size: 3rem;
+          @include responsive(425px) {
+            font-size: 20px;
+          }
+        }
+      }
+
+      .bank__details {
+        flex: 1;
+        padding: 2rem 4rem;
+        border-top-right-radius: 15px;
+        border-bottom-right-radius: 15px;
+        background: $white;
+        background-color: var(--navtab-bg);
+
+        @include responsive(580px) {
+          border-top-right-radius: 0;
+          border-bottom-right-radius: 1.5rem;
+          border-bottom-left-radius: 1.5rem;
+        }
+
+        .bank {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          font-size: 1.8rem;
+          flex-wrap: wrap;
+
+          .bank__name__icon {
+            display: flex;
+            align-items: center;
+            span {
+              font-weight: 600;
+              margin-left: 1rem;
+            }
+          }
+        }
+
+        .account__num {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          padding: 0.8rem 1rem;
+          // background: #fafafa;
+          border-radius: 0.8rem;
+          margin: 1rem 0;
+          background-color: var(--wallet-bg);
+
+          span {
+            font-weight: 600;
+            font-size: 1.8rem;
+            color: var(--chev-btn);
+            @include responsive(425px) {
+              font-size: 1.4rem;
+            }
+          }
+
+          .copy {
+            background: #7bb20e;
+            color: $white;
+            display: flex;
+            align-items: center;
+            padding: 0.5rem 1rem;
+            border-radius: 0.4rem;
+            margin-left: 1rem;
+            font-size: 1.4rem;
+            @include responsive(425px) {
+              font-size: 1.2rem;
+            }
+
+            ion-icon {
+              margin-left: 0.5rem;
+            }
+          }
+        }
+
+        .wallet__info,
+        .deposit__info {
+          color: #bebebe;
+          font-size: 1.4rem;
+        }
+      }
+    }
+
+    .transaction__history {
+      .custom__trans {
+        display: flex;
+        flex-direction: column;
+
+        .table__heading {
+          padding: 1rem 0;
+          width: inherit;
+          display: flex;
+          font-weight: 500;
+          gap: 1rem;
+          column-gap: 3rem;
+          align-items: center;
+          justify-content: space-between;
+          @include responsive(1000px) {
+            flex-wrap: wrap;
+          }
+          @include responsive(600px) {
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-start;
+            gap: 1rem;
+
+            .history__title {
+              font-size: 1.6rem;
+              @include responsive(425px) {
+                font-size: 1.4rem;
+              }
+            }
+          }
+
+          .sort__filter {
+            display: flex;
+            gap: 2rem;
+
+            @include responsive(600px) {
+              width: 100%;
+              justify-content: space-between;
+              gap: 0;
+            }
+
+            select {
+              padding: 0.6rem;
+              border-radius: 0.4rem;
+              padding-right: 0.5rem;
+              background-color: var(--navtab-bg);
+
+              &:last-child {
+                margin-left: 0.5rem;
+              }
+            }
+          }
+        }
+      }
+
+      table {
+        width: 100%;
+        flex: 1;
+        overflow: scroll;
+
+        .trans__head {
+          display: flex;
+          background: #f1b400;
+          color: $white;
+          font-weight: 600;
+          margin-bottom: 0.4rem;
+
+          th {
+            flex: 1;
+            padding: 1rem 0;
+          }
+        }
+
+        tbody {
+          td {
+            text-align: center;
+            padding: 1rem 0;
+            flex: 1;
+            height: fit-content;
+          }
+
+          .wallet__products {
+            background: $white;
+            border-radius: 0.4rem;
+            margin-top: 0.2rem;
+            height: 6rem;
+            padding: 1rem 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: var(--navtab-bg);
+
+            &-none {
+              background: transparent;
+              min-height: 5rem;
+              border-bottom: 2px solid white;
+            }
+
+            &__id {
+              color: #b4b4b4;
+            }
+
+            &__amount {
+              font-weight: 600;
+              color: #b4b4b4;
+            }
+            .transacType {
+              padding: 0.5rem 1rem;
+              color: white;
+              display: inline-block;
+              border-radius: 8px;
+            }
+
+            .purchase {
+              background: #f1b400;
+            }
+
+            .deposit {
+              background: $green1;
+            }
+            .successful {
+              color: $green1;
+            }
+            .unsuccessful {
+              color: $red3;
+            }
+            .pending {
+              color: $grey3;
+            }
+
+            .date-trans {
+              display: flex;
+              flex-direction: column;
+
+              .date__year {
+                font-weight: 600;
+                color: #b4b4b4;
+              }
+
+              .time {
+                color: #b4b4b4;
+                font-size: 1.4rem;
+                @include responsive(425px) {
+                  font-size: 1.2rem;
+                }
+              }
+            }
+          }
+
+          .lds-facebook {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            width: 80px;
+            height: 80px;
+          }
+          .lds-facebook div {
+            display: inline-block;
+            position: absolute;
+            left: 8px;
+            width: 16px;
+            background: #fff;
+            animation: lds-facebook 1.2s cubic-bezier(0, 0.5, 0.5, 1) infinite;
+          }
+          .lds-facebook div:nth-child(1) {
+            left: 8px;
+            animation-delay: -0.24s;
+          }
+          .lds-facebook div:nth-child(2) {
+            left: 32px;
+            animation-delay: -0.12s;
+          }
+          .lds-facebook div:nth-child(3) {
+            left: 56px;
+            animation-delay: 0;
+          }
+          @keyframes lds-facebook {
+            0% {
+              top: 8px;
+              height: 64px;
+            }
+            50%,
+            100% {
+              top: 24px;
+              height: 32px;
+            }
+          }
+
+          td {
+            flex: 1;
+          }
+        }
+      }
+    }
+  }
+}
+// custom sort style
+.custom__show {
+  display: flex;
+  justify-content: flex-end;
+
+  .custom__sort {
+    display: flex;
+    background: $delivery-order;
+    padding: 1rem;
+    border-radius: 0.8rem;
+    margin-bottom: 2rem;
+    justify-content: flex-end;
+    width: fit-content;
+    flex-wrap: wrap;
+    gap: 1rem;
+
+    background: var(--details-grey);
+
+    .date__box {
+      display: flex;
+      justify-content: flex-end;
+      flex-wrap: wrap;
+      gap: 1rem;
+
+      &__input {
+        display: flex;
+        flex-direction: column;
+
+        label {
+          font-size: 1.2rem;
+          margin-bottom: 0.5rem;
+        }
+
+        input {
+          padding: 0.5rem;
+          border-radius: 0.4rem;
+          width: 100%;
+        }
+
+        input[type="date"]::-webkit-calendar-picker-indicator {
+          filter: invert(0.5);
+        }
+      }
+    }
+
+    &__btn {
+      background: $lemon;
+      padding: 0.5rem 2rem;
+      border-radius: 0.4rem;
+      color: $white;
+      height: fit-content;
+      margin-top: auto;
+      margin-left: 2rem;
+    }
+  }
+}

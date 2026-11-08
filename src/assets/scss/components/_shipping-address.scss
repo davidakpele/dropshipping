@@ -1,0 +1,231 @@
+.shipping__address {
+  background: $white;
+  padding: 2rem;
+  border-radius: 8px;
+  width: 100%;
+  margin-bottom: 2rem;
+  background: var(--navtab-bg);
+  .register {
+    width: 80%;
+    margin-bottom: 1rem;
+
+    @include responsive(1160px) {
+      width: 100%;
+    }
+    @include responsive(560px) {
+      width: 90%;
+      margin: auto;
+    }
+    @include responsive(425px) {
+      width: 100%;
+    }
+
+    .inputs__select {
+      flex: 1;
+    }
+
+    &__name,
+    .address__type,
+    .choose__location {
+      display: flex;
+      gap: 1rem;
+      @include responsive(560px) {
+        flex-direction: column;
+        gap: 0;
+        row-gap: 1rem;
+      }
+
+      .country__option {
+        pointer-events: none;
+      }
+    }
+
+    .address__type {
+      .add__shipping__address {
+        flex: 6;
+      }
+      .add__type__address {
+        flex: 2;
+      }
+    }
+
+    input,
+    select {
+      display: block;
+      padding: 0.8rem;
+      background-color: #ffffff;
+      border: 1px solid #e6e6e6;
+      border-radius: 0.6rem;
+      width: 100%;
+      margin-top: 0.5rem;
+      background: var(--input-bg);
+      border: 1px solid var(--contact-border);
+    }
+
+    label {
+      font-size: 1.2rem;
+      font-weight: 600;
+      padding-top: 1.6rem;
+    }
+
+    .phone {
+      position: relative;
+      // width: 50%;
+
+      .codes {
+        background-color: #f1fcdc;
+        padding: 0.7rem 0.5rem;
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        background: var(--phone-bg);
+        @include responsive(680px) {
+          padding: 7.5px 5px;
+        }
+        @include responsive(400px) {
+          padding: 5.5px 5px;
+        }
+      }
+
+      .country {
+        &__code {
+          display: flex;
+          width: 50%;
+          height: fit-content;
+          border: 1px solid #e6e6e6;
+          border-radius: 0.6rem;
+          overflow: hidden;
+          align-items: center;
+          border: 1px solid var(--contact-border);
+          @include responsive(550px) {
+            width: 100%;
+          }
+          // position: relative;
+          .other__codes {
+            position: absolute;
+            top: 6rem;
+            left: 0;
+            z-index: 20;
+            li:hover {
+              background: $white;
+              cursor: pointer;
+            }
+          }
+        }
+
+        &__input {
+          flex: 1;
+          height: inherit;
+
+          input {
+            min-width: 150px;
+            border-radius: unset;
+            margin: 0;
+            border: unset;
+            @include responsive(700px) {
+              margin: none;
+            }
+            @include responsive(550px) {
+              min-width: 100%;
+              max-width: 100%;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .shipping__address_err {
+    color: $red3;
+  }
+
+  .check {
+    display: flex;
+    align-items: center;
+    column-gap: 3rem;
+    row-gap: 1rem;
+    margin-bottom: 2rem;
+
+    @include responsive(550px) {
+      width: 90%;
+      margin: auto;
+      margin-top: 1rem;
+    }
+    @include responsive(425px) {
+      width: 100%;
+    }
+    @include responsive(500px) {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    .all__checkboxes {
+      display: flex;
+      column-gap: 3rem;
+      @include responsive(375px) {
+        flex-wrap: wrap;
+        column-gap: 10px;
+        row-gap: 1rem;
+      }
+    }
+    .check__boxes {
+      display: flex;
+      align-items: center;
+
+      .check__save {
+        margin-left: 1rem;
+      }
+    }
+  }
+
+  .btn__addresses {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    margin-bottom: 2rem;
+    margin-top: 1rem;
+    @include responsive(550px) {
+      width: 90%;
+      margin: auto;
+      margin-top: 1rem;
+    }
+    @include responsive(425px) {
+      width: 100%;
+    }
+
+    .save__address {
+      background: $lemon;
+      color: white;
+    }
+
+    button {
+      background: $lemon;
+      padding: 0.4rem 2rem;
+      border-radius: 0.4rem;
+      color: white;
+    }
+
+    .cancel__address {
+      background: $red3;
+      color: white;
+    }
+  }
+
+  .cancel__shipping {
+    background: $red3;
+    padding: 0.4rem 2rem;
+    border-radius: 0.4rem;
+    color: white;
+  }
+  // .cancel__block {
+  //   @include responsive(500px){
+  //   display: block !important;
+  //   }
+  // }
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}

@@ -1,0 +1,47 @@
+.brand {
+  margin: 6rem 0;
+  @include responsive(657px) {
+    margin: 4rem 0;
+  }
+
+  &__text {
+    font-size: 2rem;
+    color: $balck1;
+    font-weight: 500;
+    @include responsive(395px) {
+      font-size: 1.8rem;
+    }
+  }
+
+  &__body {
+    margin-top: 1.6rem;
+  }
+
+  &__names {
+    flex-basis: 32rem;
+    @include responsive(720px) {
+      height: 12rem;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__part {
+    display: flex;
+    gap: 1.5rem;
+    height: 12rem;
+    @include responsive(720px) {
+      display: grid;
+      grid-template-columns: repeat(3, calc((100% - 3rem) / 3));
+      justify-content: center;
+      height: auto;
+    }
+    @include responsive(360px) {
+      grid-template-columns: repeat(2, calc((100% - 3rem) / 1.9));
+    }
+  }
+}

@@ -1,0 +1,36 @@
+.navtab {
+  background: inherit;
+}
+
+.navtabWrap {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 1rem;
+  margin-bottom: 6rem;
+  @include responsive(1260px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  @include responsive(600px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  &__item {
+    padding: 1.5rem 0;
+    background-color: $white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    border-radius: 0.4rem;
+    @include responsive(450px) {
+      flex-direction: column;
+      font-size: 1.3rem;
+      padding: 1rem 0;
+    }
+
+    ion-icon {
+      color: $green1;
+    }
+  }
+}

@@ -1,0 +1,96 @@
+.edit__account {
+  flex: 1;
+  .verify {
+    margin-top: 0.8rem;
+    display: flex;
+    gap: 1rem;
+    cursor: pointer;
+    color: #ff7344;
+
+    &__text {
+      font-size: 1.5rem;
+      font-weight: 600;
+      font-style: italic;
+    }
+
+    ion-icon {
+      font-size: 2.2rem;
+    }
+  }
+
+  .edit {
+    &__page {
+      margin-left: 3rem;
+      @include responsive(550px) {
+        margin: 0;
+      }
+
+      label {
+        display: block;
+        padding: 1rem 0;
+        font-size: 1.2rem;
+        font-weight: 400;
+      }
+
+      input {
+        width: 50%;
+        padding: 1rem;
+        border-radius: 6px;
+        border: 1px solid #e6e6e6;
+        font-size: 1.4rem;
+        font-weight: 400;
+        color: #b4b4b4;
+        background-color: #ffffff;
+        background-color: var(--input-bg);
+        border: 1px solid var(--contact-border);
+        @include responsive(700px) {
+          width: 70%;
+        }
+        @include responsive(550px) {
+          width: 100%;
+        }
+      }
+
+      input[type="mail"] {
+        background-color: #ededed;
+        border: 1px solid #e6e6e6;
+        background-color: var(--mail-bg);
+      }
+
+      input[type="date"]::-webkit-calendar-picker-indicator {
+        filter: invert(0.6);
+      }
+
+      .select {
+        width: 50%;
+        padding: 1rem;
+        border: 1px solid #e6e6e6;
+        border-radius: 6px;
+        background-color: var(--input-bg);
+        border: 1px solid var(--contact-border);
+        @include responsive(700px) {
+          width: 70%;
+        }
+        @include responsive(550px) {
+          width: 100%;
+        }
+
+        option {
+          padding-right: 4rem;
+        }
+      }
+
+      .save__butn {
+        margin-top: 5rem;
+
+        .savee {
+          font-size: 1.6rem;
+          color: #ffffff;
+          background: #7bb20e;
+          padding: 0.5rem 10rem;
+          border-radius: 0.4rem;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,92 @@
+.footer {
+  background-color: $ftBlackPry;
+  color: $white;
+  @include responsive(500px) {
+    font-size: 1.3rem;
+  }
+
+  &__mainWrap {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    padding: 4rem 0;
+    gap: 2rem;
+    @include responsive(960px) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+    @include responsive(761px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @include responsive(1000px) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__icon {
+    display: flex;
+    gap: 2rem;
+  }
+
+  &__linksWrap {
+    display: flex;
+    .footer__listing {
+      flex: 1;
+    }
+  }
+
+  &__item {
+    padding: 0.6rem 0;
+    cursor: pointer;
+    color: #e6e6e6;
+  }
+
+  &__footer {
+    text-align: center;
+    padding: 0.6rem 0;
+    background-color: $ftBlackSec;
+  }
+
+  &__flex {
+    display: flex;
+    flex-wrap: wrap;
+
+    .footer__item {
+      @include responsive(470px) {
+        width: 30%;
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+  }
+
+  &__flex {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+
+    img {
+      max-width: 12%;
+      @include responsive(470px) {
+        max-width: 24%;
+      }
+    }
+  }
+
+  h3 {
+    font-size: 2rem;
+    font-weight: 600;
+    padding: 1rem 0;
+    @include responsive(500px) {
+      font-size: 1.7rem;
+    }
+  }
+
+  &__quickLinks {
+    flex: 2;
+  }
+
+  &__nav,
+  &__cusService,
+  &__socials {
+    flex: 1;
+  }
+}

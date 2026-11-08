@@ -1,0 +1,111 @@
+.privacy {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 8rem 12rem 8rem  ;
+  @include responsive(955px) {
+    margin: 6rem 10rem 8rem 10rem;
+  }
+  @include responsive(885px) {
+    margin: 6rem 8.5rem 8rem 8.5rem;
+  }
+  @include responsive(800px) {
+    margin: 7rem 8rem 8rem 8rem;
+  }
+  @include responsive(765px) {
+    margin: 7rem 7.5rem 8rem 7.5rem;
+  }
+  @include responsive(725px) {
+    margin: 7rem 0rem 8rem 0rem;
+  }
+
+  &__title {
+    font-size: 2.8rem;
+    font-weight: 700;
+    color: #7bb20e;
+    @include responsive(955px) {
+      font-size: 2.6rem;
+    }
+    @include responsive(500px) {
+      font-size: 2.4rem;
+    }
+    // @include responsive(400px) {
+    //   font-size: 2rem;
+    // }
+  }
+
+  &__body {
+    background-color: #ffffff;
+    border-radius: 0.4rem;
+    margin-top: 2.5rem;
+    padding: 2rem 5rem 10rem 5rem;
+    background: var(--navtab-bg);
+    @include responsive(885px) {
+      padding: 2rem 4.5rem 10rem 4.5rem;
+    }
+    @include responsive(765px) {
+      padding: 2rem 4rem 10rem 4rem;
+    }
+    @include responsive(725px) {
+      padding: 2rem 3.5rem 10rem 3.5rem;
+    }
+    @include responsive(665px) {
+      padding: 2rem 3rem 10rem 3rem;
+    }
+    @include responsive(500px) {
+      padding: 1.5rem 2rem 10rem 2rem;
+    }
+
+    .heading {
+      font-size: 2rem;
+      font-weight: 600;
+      padding: 1.7rem 0 0.3rem 0;
+      color: #141414;
+      color: var(--chev-btn);
+      @include responsive(955px) {
+        font-size: 18px;
+      }
+      @include responsive(665px) {
+        padding: 1.5rem 0 0.2rem 0;
+      }
+      @include responsive(500px) {
+        font-size: 1.6rem;
+      }
+    }
+
+    .text {
+      font-size: 1.5rem;
+      font-weight: 400;
+      color: #545454;
+      padding-top: 10px;
+      text-align: justify;
+      color: var(--terms-text);
+      @include responsive(885px) {
+        font-size: 1.4rem;
+      }
+      @include responsive(500px) {
+        padding-top: 0.8rem;
+      }
+      // padding-top: 1rem;
+    }
+
+    ul {
+      padding-left: 2rem;
+
+      .lists {
+        font-size: 1.5rem;
+        font-weight: 400;
+        color: #545454;
+        line-height: 2;
+        list-style-type: disc;
+        color: var(--terms-text);
+        @include responsive(885px) {
+          font-size: 1.4rem;
+        }
+        @include responsive(500px) {
+          line-height: 1.5;
+        }
+      }
+    }
+  }
+}

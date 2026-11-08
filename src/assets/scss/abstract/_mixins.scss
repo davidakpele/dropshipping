@@ -1,0 +1,11 @@
+@mixin responsive($query) {
+  @media (max-width: $query) {
+    @content;
+  }
+}
+
+@mixin responsive-lg($query) {
+  @media (min-width: $query) {
+    @content;
+  }
+}

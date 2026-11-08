@@ -1,0 +1,50 @@
+.refund {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 8rem 10rem 8rem;
+  @include responsive(890px) {
+    margin: 8rem 8rem;
+  }
+  @include responsive(745px) {
+    margin: 8rem 6rem;
+  }
+  @include responsive(630px) {
+    margin: 7rem 0;
+  }
+
+  &__title {
+    font-size: 2.8rem;
+    font-weight: 700;
+    color: #7bb20e;
+    @include responsive(800px) {
+      font-size: 2.6rem;
+    }
+    @include responsive(375px) {
+      font-size: 2.2rem;
+    }
+  }
+
+  &__body {
+    background-color: #ffffff;
+    border-radius: 0.4rem;
+    margin-top: 2.5rem;
+    padding: 4.5rem 5rem 10rem;
+    background: var(--navtab-bg);
+    @include responsive(630px) {
+      padding: 3rem 4rem;
+    }
+    @include responsive(500px) {
+      padding: 2.5rem 3rem;
+    }
+  }
+
+  &__text {
+    font-size: 1.7rem;
+    font-weight: 400;
+    color: #545454;
+    line-height: 1.8;
+    text-align: justify;
+    color: var(--prod-title);
+  }
+}

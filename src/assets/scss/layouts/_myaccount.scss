@@ -1,0 +1,80 @@
+.my__account {
+  padding: 2rem 4rem;
+
+  &__item {
+    background: #fcfcfc;
+    border-radius: 0.8rem;
+    padding: 3rem 2rem;
+    margin-bottom: 3rem;
+
+    .details__heading {
+      display: flex;
+      justify-content: space-between;
+
+      &__acc {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+
+        .profile__container {
+          width: 4rem;
+          height: 4rem;
+          border-radius: 50%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+
+          ion-icon {
+            font-size: 2rem;
+          }
+        }
+
+        .account {
+          background: #fcf0e5;
+
+          ion-icon {
+            color: #fe8b21;
+          }
+        }
+
+        .address {
+          background: #faeffc;
+
+          ion-icon {
+            color: #bd4cd9;
+          }
+        }
+
+        .password {
+          background: #fceaea;
+
+          ion-icon {
+            color: #e23939;
+          }
+        }
+
+        span {
+          font-weight: 600;
+        }
+      }
+
+      a {
+        background: $white;
+        color: $lemon;
+        padding: 0.5rem 1.5rem;
+        border-radius: 0.4rem;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+      }
+    }
+
+    p {
+      margin-top: 0.8rem;
+      span {
+        color: gray;
+        margin-right: 0.5rem;
+      }
+    }
+  }
+}

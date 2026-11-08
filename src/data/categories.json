@@ -1,0 +1,1013 @@
+{
+  "category": [
+    {
+      "name": "Laptop",
+      "count": 44
+    },
+    {
+      "name": "Printer & Links",
+      "count": 35
+    },
+    {
+      "name": "Storage",
+      "count": 100
+    },
+    {
+      "name": "Computer Accessories",
+      "count": 15
+    },
+    {
+      "name": "Routers and modems",
+      "count": 65
+    },
+    {
+      "name": "Desktops",
+      "count": 20
+    },
+    {
+      "name": "Monitors",
+      "count": 7
+    }
+  ],
+  "filterBrand": [
+    "HP",
+    "Dell",
+    "Imac",
+    "Lenovo",
+    "Samsung",
+    "Asus",
+    "Microsoft",
+    "Apple"
+  ],
+  "filterMore": [
+    "Recommended",
+    "Recently Added",
+    "Expiring soon",
+    "Most Rated",
+    "Price: Low - High",
+    "Price: High - Low"
+  ],
+  "products": [
+    {
+      "id": 440,
+      "name": "Dell inspiron S4",
+      "discountPrice": 200000,
+      "actualPrice": 30000,
+      "discount": 15,
+      "tag": "Dell",
+      "whitelist": true,
+      "rating": 4.5,
+      "ratings": {
+        "ratingAvg": 4.5,
+        "ratings": [
+          {
+            "value": 3,
+            "comment": "I like it! The camera worked perfectly.",
+            "date": "03-12-2023",
+            "user": "Adams Lola"
+          },
+          {
+            "value": 4,
+            "comment": "I like it! The camera worked perfectly.",
+            "date": "03-12-2023",
+            "user": "Adams Lola"
+          },
+          {
+            "value": 2,
+            "comment": "I like it! The camera worked perfectly.",
+            "date": "03-12-2023",
+            "user": "Adams Lola"
+          }
+        ]
+      },
+      "brand": "Apple",
+      "prodCode": 12345678,
+      "condition": "brand new",
+      "details": "Aliquam dis vulputate vulputate integer sagittis. Faucibus dolor ornare faucibus vel sed et eleifend habitasse amet. Montes, mauris varius ac est bibendum. Scelerisque a, risus ac ante. Velit consectetur neque, elit, aliquet. Non varius proin sed urna, egestas consequat laoreet diam tincidunt. Magna eget faucibus cras justo, tortor sed donec tempus. Imperdiet consequat, quis diam arcu, nulla lobortis justo netus dis. Eu in fringilla vulputate nunc nec. Dui, massa viverr Aliquam dis vulputate vulputate integer sagittis. Faucibus dolor ornare faucibus vel sed et eleifend habitasse amet. Montes, mauris varius ac est bibendum. Scelerisque a, risus ac ante. Velit consectetur neque, elit, aliquet. Non varius proin sed urna, egestas consequat laoreet diam tincidunt. Magna eget faucibus cras justo, tortor sed donec tempus. Imperdiet consequat, quis diam arcu, nulla lobortis justo netus dis. Eu in fringilla vulputate nunc nec. Dui, massa viverr",
+      "specification": {
+        "model": "nokia12i3",
+        "product": "Canon",
+        "color": "red, white, green, blue",
+        "key-feature": [
+          "Aliquam dis vulputate vulputate integer sagittis. Faucibus dolor ornare faucibus vel sed et eleifend habitasse amet. Montes, mauris varius ac est bibendum",
+          "Aliquam dis vulputate vulputate integer sagittis. Faucibus dolor ornare faucibus vel sed et eleifend habitasse amet. Montes, mauris varius ac est bibendum.",
+          "Aliquam dis vulputate vulputate integer sagittis. Faucibus dolor ornare faucibus vel sed et eleifend habitasse amet. Montes, mauris varius ac est bibendum.",
+          "Aliquam dis vulputate vulputate integer sagittis. Faucibus dolor ornare faucibus vel sed et eleifend habitasse amet. Montes, mauris varius ac est bibendum."
+        ]
+      }
+    },
+    {
+      "id": 851,
+      "name": "Samsung S-Class",
+      "discountPrice": 200000,
+      "actualPrice": 30000,
+      "discount": 15,
+      "tag": "Dell",
+      "whitelist": false,
+      "rating": 3.0,
+      "ratings": {
+        "ratingAvg": 4.5,
+        "ratings": [
+          {
+            "value": 3,
+            "comment": "I like it! The camera worked perfectly.",
+            "date": "03-12-2023",
+            "user": "Adams Lola"
+          },
+          {
+            "value": 4,
+            "comment": "I like it! The camera worked perfectly.",
+            "date": "03-12-2023",
+            "user": "Adams Lola"
+          },
+          {
+            "value": 2,
+            "comment": "I like it! The camera worked perfectly.",
+            "date": "03-12-2023",
+            "user": "Adams Lola"
+          }
+        ]
+      },
+      "brand": "Samsung",
+      "prodCode": 12345678,
+      "condition": "Brand new",
+      "details": "Aliquam dis vulputate vulputate integer sagittis. Faucibus dolor ornare faucibus vel sed et eleifend habitasse amet. Montes, mauris varius ac est bibendum. Scelerisque a, risus ac ante. Velit consectetur neque, elit, aliquet. Non varius proin sed urna, egestas consequat laoreet diam tincidunt. Magna eget faucibus cras justo, tortor sed donec tempus. Imperdiet consequat, quis diam arcu, nulla lobortis justo netus dis. Eu in fringilla vulputate nunc nec. Dui, massa viverr Aliquam dis vulputate vulputate integer sagittis. Faucibus dolor ornare faucibus vel sed et eleifend habitasse amet. Montes, mauris varius ac est bibendum. Scelerisque a, risus ac ante. Velit consectetur neque, elit, aliquet. Non varius proin sed urna, egestas consequat laoreet diam tincidunt. Magna eget faucibus cras justo, tortor sed donec tempus. Imperdiet consequat, quis diam arcu, nulla lobortis justo netus dis. Eu in fringilla vulputate nunc nec. Dui, massa viverr",
+      "specification": {
+        "model": "Apple",
+        "product": "Canon",
+        "quantity": 5,
+        "color": "red, white, green, blue",
+        "features": [
+          "Aliquam dis vulputate vulputate integer sagittis. Faucibus dolor ornare faucibus vel sed et eleifend habitasse amet. Montes, mauris varius ac est bibendum",
+          "Aliquam dis vulputate vulputate integer sagittis. Faucibus dolor ornare faucibus vel sed et eleifend habitasse amet. Montes, mauris varius ac est bibendum.",
+          "Aliquam dis vulputate vulputate integer sagittis. Faucibus dolor ornare faucibus vel sed et eleifend habitasse amet. Montes, mauris varius ac est bibendum.",
+          "Aliquam dis vulputate vulputate integer sagittis. Faucibus dolor ornare faucibus vel sed et eleifend habitasse amet. Montes, mauris varius ac est bibendum."
+        ]
+      }
+    },
+    {
+      "id": 293,
+      "name": "Dell inspiron S4",
+      "discountPrice": 200000,
+      "actualPrice": 30000,
+      "discount": 15,
+      "tag": "Dell",
+      "whitelist": true,
+      "rating": 1.0,
+      "ratings": {
+        "ratingAvg": 4.5,
+        "ratings": [
+          {
+            "value": 3,
+            "comment": "I like it! The camera worked perfectly.",
+            "date": "03-12-2023",
+            "user": "Adams Lola"
+          },
+          {
+            "value": 4,
+            "comment": "I like it! The camera worked perfectly.",
+            "date": "03-12-2023",
+            "user": "Adams Lola"
+          },
+          {
+            "value": 2,
+            "comment": "I like it! The camera worked perfectly.",
+            "date": "03-12-2023",
+            "user": "Adams Lola"
+          }
+        ]
+      },
+      "brand": "Apple",
+      "prodCode": 12345678,
+      "condition": "brand new",
+      "details": "Aliquam dis vulputate vulputate integer sagittis. Faucibus dolor ornare faucibus vel sed et eleifend habitasse amet. Montes, mauris varius ac est bibendum. Scelerisque a, risus ac ante. Velit consectetur neque, elit, aliquet. Non varius proin sed urna, egestas consequat laoreet diam tincidunt. Magna eget faucibus cras justo, tortor sed donec tempus. Imperdiet consequat, quis diam arcu, nulla lobortis justo netus dis. Eu in fringilla vulputate nunc nec. Dui, massa viverr Aliquam dis vulputate vulputate integer sagittis. Faucibus dolor ornare faucibus vel sed et eleifend habitasse amet. Montes, mauris varius ac est bibendum. Scelerisque a, risus ac ante. Velit consectetur neque, elit, aliquet. Non varius proin sed urna, egestas consequat laoreet diam tincidunt. Magna eget faucibus cras justo, tortor sed donec tempus. Imperdiet consequat, quis diam arcu, nulla lobortis justo netus dis. Eu in fringilla vulputate nunc nec. Dui, massa viverr",
+      "specification": {
+        "model": "nokia12i3",
+        "product": "Canon",
+        "color": "red, white, green, blue",
+        "key-feature": [
+          "Aliquam dis vulputate vulputate integer sagittis. Faucibus dolor ornare faucibus vel sed et eleifend habitasse amet. Montes, mauris varius ac est bibendum",
+          "Aliquam dis vulputate vulputate integer sagittis. Faucibus dolor ornare faucibus vel sed et eleifend habitasse amet. Montes, mauris varius ac est bibendum.",
+          "Aliquam dis vulputate vulputate integer sagittis. Faucibus dolor ornare faucibus vel sed et eleifend habitasse amet. Montes, mauris varius ac est bibendum.",
+          "Aliquam dis vulputate vulputate integer sagittis. Faucibus dolor ornare faucibus vel sed et eleifend habitasse amet. Montes, mauris varius ac est bibendum."
+        ]
+      }
+    },
+    {
+      "id": 695,
+      "name": "Dell inspiron S4",
+      "discountPrice": 200000,
+      "actualPrice": 30000,
+      "discount": 15,
+      "tag": "Asus",
+      "whitelist": false,
+      "rating": 1.0,
+      "ratings": {
+        "ratingAvg": 4.5,
+        "ratings": [
+          {
+            "value": 3,
+            "comment": "I like it! The camera worked perfectly.",
+            "date": "03-12-2023",
+            "user": "Adams Lola"
+          },
+          {
+            "value": 4,
+            "comment": "I like it! The camera worked perfectly.",
+            "date": "03-12-2023",
+            "user": "Adams Lola"
+          },
+          {
+            "value": 2,
+            "comment": "I like it! The camera worked perfectly.",
+            "date": "03-12-2023",
+            "user": "Adams Lola"
+          }
+        ]
+      },
+      "brand": "Apple",
+      "prodCode": 12345678,
+      "condition": "brand new",
+      "details": "Aliquam dis vulputate vulputate integer sagittis. Faucibus dolor ornare faucibus vel sed et eleifend habitasse amet. Montes, mauris varius ac est bibendum. Scelerisque a, risus ac ante. Velit consectetur neque, elit, aliquet. Non varius proin sed urna, egestas consequat laoreet diam tincidunt. Magna eget faucibus cras justo, tortor sed donec tempus. Imperdiet consequat, quis diam arcu, nulla lobortis justo netus dis. Eu in fringilla vulputate nunc nec. Dui, massa viverr Aliquam dis vulputate vulputate integer sagittis. Faucibus dolor ornare faucibus vel sed et eleifend habitasse amet. Montes, mauris varius ac est bibendum. Scelerisque a, risus ac ante. Velit consectetur neque, elit, aliquet. Non varius proin sed urna, egestas consequat laoreet diam tincidunt. Magna eget faucibus cras justo, tortor sed donec tempus. Imperdiet consequat, quis diam arcu, nulla lobortis justo netus dis. Eu in fringilla vulputate nunc nec. Dui, massa viverr",
+      "specification": {
+        "model": "nokia12i3",
+        "product": "Canon",
+        "color": "red, white, green, blue",
+        "key-feature": [
+          "Aliquam dis vulputate vulputate integer sagittis. Faucibus dolor ornare faucibus vel sed et eleifend habitasse amet. Montes, mauris varius ac est bibendum",
+          "Aliquam dis vulputate vulputate integer sagittis. Faucibus dolor ornare faucibus vel sed et eleifend habitasse amet. Montes, mauris varius ac est bibendum.",
+          "Aliquam dis vulputate vulputate integer sagittis. Faucibus dolor ornare faucibus vel sed et eleifend habitasse amet. Montes, mauris varius ac est bibendum.",
+          "Aliquam dis vulputate vulputate integer sagittis. Faucibus dolor ornare faucibus vel sed et eleifend habitasse amet. Montes, mauris varius ac est bibendum."
+        ]
+      }
+    },
+    {
+      "id": 464,
+      "name": "Dell inspiron S4",
+      "discountPrice": 200000,
+      "actualPrice": 30000,
+      "discount": 15,
+      "tag": "Dell",
+      "whitelist": false,
+      "rating": 1.0,
+      "ratings": {
+        "ratingAvg": 4.5,
+        "ratings": [
+          {
+            "value": 3,
+            "comment": "I like it! The camera worked perfectly.",
+            "date": "03-12-2023",
+            "user": "Adams Lola"
+          },
+          {
+            "value": 4,
+            "comment": "I like it! The camera worked perfectly.",
+            "date": "03-12-2023",
+            "user": "Adams Lola"
+          },
+          {
+            "value": 2,
+            "comment": "I like it! The camera worked perfectly.",
+            "date": "03-12-2023",
+            "user": "Adams Lola"
+          }
+        ]
+      },
+      "brand": "Apple",
+      "prodCode": 12345678,
+      "condition": "brand new",
+      "details": "Aliquam dis vulputate vulputate integer sagittis. Faucibus dolor ornare faucibus vel sed et eleifend habitasse amet. Montes, mauris varius ac est bibendum. Scelerisque a, risus ac ante. Velit consectetur neque, elit, aliquet. Non varius proin sed urna, egestas consequat laoreet diam tincidunt. Magna eget faucibus cras justo, tortor sed donec tempus. Imperdiet consequat, quis diam arcu, nulla lobortis justo netus dis. Eu in fringilla vulputate nunc nec. Dui, massa viverr Aliquam dis vulputate vulputate integer sagittis. Faucibus dolor ornare faucibus vel sed et eleifend habitasse amet. Montes, mauris varius ac est bibendum. Scelerisque a, risus ac ante. Velit consectetur neque, elit, aliquet. Non varius proin sed urna, egestas consequat laoreet diam tincidunt. Magna eget faucibus cras justo, tortor sed donec tempus. Imperdiet consequat, quis diam arcu, nulla lobortis justo netus dis. Eu in fringilla vulputate nunc nec. Dui, massa viverr",
+      "specification": {
+        "model": "nokia12i3",
+        "product": "Canon",
+        "color": "red, white, green, blue",
+        "key-feature": [
+          "Aliquam dis vulputate vulputate integer sagittis. Faucibus dolor ornare faucibus vel sed et eleifend habitasse amet. Montes, mauris varius ac est bibendum",
+          "Aliquam dis vulputate vulputate integer sagittis. Faucibus dolor ornare faucibus vel sed et eleifend habitasse amet. Montes, mauris varius ac est bibendum.",
+          "Aliquam dis vulputate vulputate integer sagittis. Faucibus dolor ornare faucibus vel sed et eleifend habitasse amet. Montes, mauris varius ac est bibendum.",
+          "Aliquam dis vulputate vulputate integer sagittis. Faucibus dolor ornare faucibus vel sed et eleifend habitasse amet. Montes, mauris varius ac est bibendum."
+        ]
+      }
+    },
+    {
+      "id": 142,
+      "name": "Dell inspiron S4",
+      "discountPrice": 200000,
+      "actualPrice": 30000,
+      "discount": 15,
+      "tag": "Dell",
+      "whitelist": false,
+      "rating": 2.6,
+      "ratings": {
+        "ratingAvg": 4.5,
+        "ratings": [
+          {
+            "value": 3,
+            "comment": "I like it! The camera worked perfectly.",
+            "date": "03-12-2023",
+            "user": "Adams Lola"
+          },
+          {
+            "value": 4,
+            "comment": "I like it! The camera worked perfectly.",
+            "date": "03-12-2023",
+            "user": "Adams Lola"
+          },
+          {
+            "value": 2,
+            "comment": "I like it! The camera worked perfectly.",
+            "date": "03-12-2023",
+            "user": "Adams Lola"
+          }
+        ]
+      },
+      "brand": "Apple",
+      "prodCode": 12345678,
+      "condition": "brand new",
+      "details": "Aliquam dis vulputate vulputate integer sagittis. Faucibus dolor ornare faucibus vel sed et eleifend habitasse amet. Montes, mauris varius ac est bibendum. Scelerisque a, risus ac ante. Velit consectetur neque, elit, aliquet. Non varius proin sed urna, egestas consequat laoreet diam tincidunt. Magna eget faucibus cras justo, tortor sed donec tempus. Imperdiet consequat, quis diam arcu, nulla lobortis justo netus dis. Eu in fringilla vulputate nunc nec. Dui, massa viverr Aliquam dis vulputate vulputate integer sagittis. Faucibus dolor ornare faucibus vel sed et eleifend habitasse amet. Montes, mauris varius ac est bibendum. Scelerisque a, risus ac ante. Velit consectetur neque, elit, aliquet. Non varius proin sed urna, egestas consequat laoreet diam tincidunt. Magna eget faucibus cras justo, tortor sed donec tempus. Imperdiet consequat, quis diam arcu, nulla lobortis justo netus dis. Eu in fringilla vulputate nunc nec. Dui, massa viverr",
+      "specification": {
+        "model": "nokia12i3",
+        "product": "Canon",
+        "color": "red, white, green, blue",
+        "key-feature": [
+          "Aliquam dis vulputate vulputate integer sagittis. Faucibus dolor ornare faucibus vel sed et eleifend habitasse amet. Montes, mauris varius ac est bibendum",
+          "Aliquam dis vulputate vulputate integer sagittis. Faucibus dolor ornare faucibus vel sed et eleifend habitasse amet. Montes, mauris varius ac est bibendum.",
+          "Aliquam dis vulputate vulputate integer sagittis. Faucibus dolor ornare faucibus vel sed et eleifend habitasse amet. Montes, mauris varius ac est bibendum.",
+          "Aliquam dis vulputate vulputate integer sagittis. Faucibus dolor ornare faucibus vel sed et eleifend habitasse amet. Montes, mauris varius ac est bibendum."
+        ]
+      }
+    },
+    {
+      "id": 392,
+      "name": "Dell inspiron S4",
+      "discountPrice": 200000,
+      "actualPrice": 30000,
+      "discount": 15,
+      "tag": "Dell",
+      "whitelist": false,
+      "rating": 3.9,
+      "ratings": {
+        "ratingAvg": 4.5,
+        "ratings": [
+          {
+            "value": 3,
+            "comment": "I like it! The camera worked perfectly.",
+            "date": "03-12-2023",
+            "user": "Adams Lola"
+          },
+          {
+            "value": 4,
+            "comment": "I like it! The camera worked perfectly.",
+            "date": "03-12-2023",
+            "user": "Adams Lola"
+          },
+          {
+            "value": 2,
+            "comment": "I like it! The camera worked perfectly.",
+            "date": "03-12-2023",
+            "user": "Adams Lola"
+          }
+        ]
+      },
+      "brand": "Apple",
+      "prodCode": 12345678,
+      "condition": "brand new",
+      "details": "Aliquam dis vulputate vulputate integer sagittis. Faucibus dolor ornare faucibus vel sed et eleifend habitasse amet. Montes, mauris varius ac est bibendum. Scelerisque a, risus ac ante. Velit consectetur neque, elit, aliquet. Non varius proin sed urna, egestas consequat laoreet diam tincidunt. Magna eget faucibus cras justo, tortor sed donec tempus. Imperdiet consequat, quis diam arcu, nulla lobortis justo netus dis. Eu in fringilla vulputate nunc nec. Dui, massa viverr Aliquam dis vulputate vulputate integer sagittis. Faucibus dolor ornare faucibus vel sed et eleifend habitasse amet. Montes, mauris varius ac est bibendum. Scelerisque a, risus ac ante. Velit consectetur neque, elit, aliquet. Non varius proin sed urna, egestas consequat laoreet diam tincidunt. Magna eget faucibus cras justo, tortor sed donec tempus. Imperdiet consequat, quis diam arcu, nulla lobortis justo netus dis. Eu in fringilla vulputate nunc nec. Dui, massa viverr",
+      "specification": {
+        "model": "nokia12i3",
+        "product": "Canon",
+        "color": "red, white, green, blue",
+        "key-feature": [
+          "Aliquam dis vulputate vulputate integer sagittis. Faucibus dolor ornare faucibus vel sed et eleifend habitasse amet. Montes, mauris varius ac est bibendum",
+          "Aliquam dis vulputate vulputate integer sagittis. Faucibus dolor ornare faucibus vel sed et eleifend habitasse amet. Montes, mauris varius ac est bibendum.",
+          "Aliquam dis vulputate vulputate integer sagittis. Faucibus dolor ornare faucibus vel sed et eleifend habitasse amet. Montes, mauris varius ac est bibendum.",
+          "Aliquam dis vulputate vulputate integer sagittis. Faucibus dolor ornare faucibus vel sed et eleifend habitasse amet. Montes, mauris varius ac est bibendum."
+        ]
+      }
+    },
+    {
+      "id": 276,
+      "name": "Dell inspiron S4",
+      "discountPrice": 200000,
+      "actualPrice": 30000,
+      "discount": 15,
+      "tag": "Dell",
+      "whitelist": true,
+      "rating": 2.9,
+      "ratings": {
+        "ratingAvg": 4.5,
+        "ratings": [
+          {
+            "value": 3,
+            "comment": "I like it! The camera worked perfectly.",
+            "date": "03-12-2023",
+            "user": "Adams Lola"
+          },
+          {
+            "value": 4,
+            "comment": "I like it! The camera worked perfectly.",
+            "date": "03-12-2023",
+            "user": "Adams Lola"
+          },
+          {
+            "value": 2,
+            "comment": "I like it! The camera worked perfectly.",
+            "date": "03-12-2023",
+            "user": "Adams Lola"
+          }
+        ]
+      },
+      "brand": "Apple",
+      "prodCode": 12345678,
+      "condition": "brand new",
+      "details": "Aliquam dis vulputate vulputate integer sagittis. Faucibus dolor ornare faucibus vel sed et eleifend habitasse amet. Montes, mauris varius ac est bibendum. Scelerisque a, risus ac ante. Velit consectetur neque, elit, aliquet. Non varius proin sed urna, egestas consequat laoreet diam tincidunt. Magna eget faucibus cras justo, tortor sed donec tempus. Imperdiet consequat, quis diam arcu, nulla lobortis justo netus dis. Eu in fringilla vulputate nunc nec. Dui, massa viverr Aliquam dis vulputate vulputate integer sagittis. Faucibus dolor ornare faucibus vel sed et eleifend habitasse amet. Montes, mauris varius ac est bibendum. Scelerisque a, risus ac ante. Velit consectetur neque, elit, aliquet. Non varius proin sed urna, egestas consequat laoreet diam tincidunt. Magna eget faucibus cras justo, tortor sed donec tempus. Imperdiet consequat, quis diam arcu, nulla lobortis justo netus dis. Eu in fringilla vulputate nunc nec. Dui, massa viverr",
+      "specification": {
+        "model": "nokia12i3",
+        "product": "Canon",
+        "color": "red, white, green, blue",
+        "key-feature": [
+          "Aliquam dis vulputate vulputate integer sagittis. Faucibus dolor ornare faucibus vel sed et eleifend habitasse amet. Montes, mauris varius ac est bibendum",
+          "Aliquam dis vulputate vulputate integer sagittis. Faucibus dolor ornare faucibus vel sed et eleifend habitasse amet. Montes, mauris varius ac est bibendum.",
+          "Aliquam dis vulputate vulputate integer sagittis. Faucibus dolor ornare faucibus vel sed et eleifend habitasse amet. Montes, mauris varius ac est bibendum.",
+          "Aliquam dis vulputate vulputate integer sagittis. Faucibus dolor ornare faucibus vel sed et eleifend habitasse amet. Montes, mauris varius ac est bibendum."
+        ]
+      }
+    },
+    {
+      "id": 53,
+      "name": "Dell inspiron S4",
+      "discountPrice": 200000,
+      "actualPrice": 30000,
+      "discount": 15,
+      "tag": "Dell",
+      "whitelist": false,
+      "rating": 1.7,
+      "ratings": {
+        "ratingAvg": 4.5,
+        "ratings": [
+          {
+            "value": 3,
+            "comment": "I like it! The camera worked perfectly.",
+            "date": "03-12-2023",
+            "user": "Adams Lola"
+          },
+          {
+            "value": 4,
+            "comment": "I like it! The camera worked perfectly.",
+            "date": "03-12-2023",
+            "user": "Adams Lola"
+          },
+          {
+            "value": 2,
+            "comment": "I like it! The camera worked perfectly.",
+            "date": "03-12-2023",
+            "user": "Adams Lola"
+          }
+        ]
+      },
+      "brand": "Apple",
+      "prodCode": 12345678,
+      "condition": "brand new",
+      "details": "Aliquam dis vulputate vulputate integer sagittis. Faucibus dolor ornare faucibus vel sed et eleifend habitasse amet. Montes, mauris varius ac est bibendum. Scelerisque a, risus ac ante. Velit consectetur neque, elit, aliquet. Non varius proin sed urna, egestas consequat laoreet diam tincidunt. Magna eget faucibus cras justo, tortor sed donec tempus. Imperdiet consequat, quis diam arcu, nulla lobortis justo netus dis. Eu in fringilla vulputate nunc nec. Dui, massa viverr Aliquam dis vulputate vulputate integer sagittis. Faucibus dolor ornare faucibus vel sed et eleifend habitasse amet. Montes, mauris varius ac est bibendum. Scelerisque a, risus ac ante. Velit consectetur neque, elit, aliquet. Non varius proin sed urna, egestas consequat laoreet diam tincidunt. Magna eget faucibus cras justo, tortor sed donec tempus. Imperdiet consequat, quis diam arcu, nulla lobortis justo netus dis. Eu in fringilla vulputate nunc nec. Dui, massa viverr",
+      "specification": {
+        "model": "nokia12i3",
+        "product": "Canon",
+        "color": "red, white, green, blue",
+        "key-feature": [
+          "Aliquam dis vulputate vulputate integer sagittis. Faucibus dolor ornare faucibus vel sed et eleifend habitasse amet. Montes, mauris varius ac est bibendum",
+          "Aliquam dis vulputate vulputate integer sagittis. Faucibus dolor ornare faucibus vel sed et eleifend habitasse amet. Montes, mauris varius ac est bibendum.",
+          "Aliquam dis vulputate vulputate integer sagittis. Faucibus dolor ornare faucibus vel sed et eleifend habitasse amet. Montes, mauris varius ac est bibendum.",
+          "Aliquam dis vulputate vulputate integer sagittis. Faucibus dolor ornare faucibus vel sed et eleifend habitasse amet. Montes, mauris varius ac est bibendum."
+        ]
+      }
+    },
+    {
+      "id": 166,
+      "name": "Dell inspiron S4",
+      "discountPrice": 200000,
+      "actualPrice": 30000,
+      "discount": 15,
+      "tag": "Dell",
+      "whitelist": false,
+      "rating": 3.3,
+      "ratings": {
+        "ratingAvg": 4.5,
+        "ratings": [
+          {
+            "value": 3,
+            "comment": "I like it! The camera worked perfectly.",
+            "date": "03-12-2023",
+            "user": "Adams Lola"
+          },
+          {
+            "value": 4,
+            "comment": "I like it! The camera worked perfectly.",
+            "date": "03-12-2023",
+            "user": "Adams Lola"
+          },
+          {
+            "value": 2,
+            "comment": "I like it! The camera worked perfectly.",
+            "date": "03-12-2023",
+            "user": "Adams Lola"
+          }
+        ]
+      },
+      "brand": "Apple",
+      "prodCode": 12345678,
+      "condition": "brand new",
+      "details": "Aliquam dis vulputate vulputate integer sagittis. Faucibus dolor ornare faucibus vel sed et eleifend habitasse amet. Montes, mauris varius ac est bibendum. Scelerisque a, risus ac ante. Velit consectetur neque, elit, aliquet. Non varius proin sed urna, egestas consequat laoreet diam tincidunt. Magna eget faucibus cras justo, tortor sed donec tempus. Imperdiet consequat, quis diam arcu, nulla lobortis justo netus dis. Eu in fringilla vulputate nunc nec. Dui, massa viverr Aliquam dis vulputate vulputate integer sagittis. Faucibus dolor ornare faucibus vel sed et eleifend habitasse amet. Montes, mauris varius ac est bibendum. Scelerisque a, risus ac ante. Velit consectetur neque, elit, aliquet. Non varius proin sed urna, egestas consequat laoreet diam tincidunt. Magna eget faucibus cras justo, tortor sed donec tempus. Imperdiet consequat, quis diam arcu, nulla lobortis justo netus dis. Eu in fringilla vulputate nunc nec. Dui, massa viverr",
+      "specification": {
+        "model": "nokia12i3",
+        "product": "Canon",
+        "color": "red, white, green, blue",
+        "key-feature": [
+          "Aliquam dis vulputate vulputate integer sagittis. Faucibus dolor ornare faucibus vel sed et eleifend habitasse amet. Montes, mauris varius ac est bibendum",
+          "Aliquam dis vulputate vulputate integer sagittis. Faucibus dolor ornare faucibus vel sed et eleifend habitasse amet. Montes, mauris varius ac est bibendum.",
+          "Aliquam dis vulputate vulputate integer sagittis. Faucibus dolor ornare faucibus vel sed et eleifend habitasse amet. Montes, mauris varius ac est bibendum.",
+          "Aliquam dis vulputate vulputate integer sagittis. Faucibus dolor ornare faucibus vel sed et eleifend habitasse amet. Montes, mauris varius ac est bibendum."
+        ]
+      }
+    },
+    {
+      "id": 674,
+      "name": "Dell inspiron S4",
+      "discountPrice": 200000,
+      "actualPrice": 30000,
+      "discount": 15,
+      "tag": "Dell",
+      "whitelist": true,
+      "rating": 4,
+      "ratings": {
+        "ratingAvg": 4.5,
+        "ratings": [
+          {
+            "value": 3,
+            "comment": "I like it! The camera worked perfectly.",
+            "date": "03-12-2023",
+            "user": "Adams Lola"
+          },
+          {
+            "value": 4,
+            "comment": "I like it! The camera worked perfectly.",
+            "date": "03-12-2023",
+            "user": "Adams Lola"
+          },
+          {
+            "value": 2,
+            "comment": "I like it! The camera worked perfectly.",
+            "date": "03-12-2023",
+            "user": "Adams Lola"
+          }
+        ]
+      },
+      "brand": "Apple",
+      "prodCode": 12345678,
+      "condition": "brand new",
+      "details": "Aliquam dis vulputate vulputate integer sagittis. Faucibus dolor ornare faucibus vel sed et eleifend habitasse amet. Montes, mauris varius ac est bibendum. Scelerisque a, risus ac ante. Velit consectetur neque, elit, aliquet. Non varius proin sed urna, egestas consequat laoreet diam tincidunt. Magna eget faucibus cras justo, tortor sed donec tempus. Imperdiet consequat, quis diam arcu, nulla lobortis justo netus dis. Eu in fringilla vulputate nunc nec. Dui, massa viverr Aliquam dis vulputate vulputate integer sagittis. Faucibus dolor ornare faucibus vel sed et eleifend habitasse amet. Montes, mauris varius ac est bibendum. Scelerisque a, risus ac ante. Velit consectetur neque, elit, aliquet. Non varius proin sed urna, egestas consequat laoreet diam tincidunt. Magna eget faucibus cras justo, tortor sed donec tempus. Imperdiet consequat, quis diam arcu, nulla lobortis justo netus dis. Eu in fringilla vulputate nunc nec. Dui, massa viverr",
+      "specification": {
+        "model": "nokia12i3",
+        "product": "Canon",
+        "color": "red, white, green, blue",
+        "key-feature": [
+          "Aliquam dis vulputate vulputate integer sagittis. Faucibus dolor ornare faucibus vel sed et eleifend habitasse amet. Montes, mauris varius ac est bibendum",
+          "Aliquam dis vulputate vulputate integer sagittis. Faucibus dolor ornare faucibus vel sed et eleifend habitasse amet. Montes, mauris varius ac est bibendum.",
+          "Aliquam dis vulputate vulputate integer sagittis. Faucibus dolor ornare faucibus vel sed et eleifend habitasse amet. Montes, mauris varius ac est bibendum.",
+          "Aliquam dis vulputate vulputate integer sagittis. Faucibus dolor ornare faucibus vel sed et eleifend habitasse amet. Montes, mauris varius ac est bibendum."
+        ]
+      }
+    },
+    {
+      "id": 555,
+      "name": "Dell inspiron S4",
+      "discountPrice": 200000,
+      "actualPrice": 30000,
+      "discount": 15,
+      "tag": "Dell",
+      "whitelist": false,
+      "rating": 3,
+      "ratings": {
+        "ratingAvg": 4.5,
+        "ratings": [
+          {
+            "value": 3,
+            "comment": "I like it! The camera worked perfectly.",
+            "date": "03-12-2023",
+            "user": "Adams Lola"
+          },
+          {
+            "value": 4,
+            "comment": "I like it! The camera worked perfectly.",
+            "date": "03-12-2023",
+            "user": "Adams Lola"
+          },
+          {
+            "value": 2,
+            "comment": "I like it! The camera worked perfectly.",
+            "date": "03-12-2023",
+            "user": "Adams Lola"
+          }
+        ]
+      },
+      "brand": "Apple",
+      "prodCode": 12345678,
+      "condition": "brand new",
+      "details": "Aliquam dis vulputate vulputate integer sagittis. Faucibus dolor ornare faucibus vel sed et eleifend habitasse amet. Montes, mauris varius ac est bibendum. Scelerisque a, risus ac ante. Velit consectetur neque, elit, aliquet. Non varius proin sed urna, egestas consequat laoreet diam tincidunt. Magna eget faucibus cras justo, tortor sed donec tempus. Imperdiet consequat, quis diam arcu, nulla lobortis justo netus dis. Eu in fringilla vulputate nunc nec. Dui, massa viverr Aliquam dis vulputate vulputate integer sagittis. Faucibus dolor ornare faucibus vel sed et eleifend habitasse amet. Montes, mauris varius ac est bibendum. Scelerisque a, risus ac ante. Velit consectetur neque, elit, aliquet. Non varius proin sed urna, egestas consequat laoreet diam tincidunt. Magna eget faucibus cras justo, tortor sed donec tempus. Imperdiet consequat, quis diam arcu, nulla lobortis justo netus dis. Eu in fringilla vulputate nunc nec. Dui, massa viverr",
+      "specification": {
+        "model": "nokia12i3",
+        "product": "Canon",
+        "color": "red, white, green, blue",
+        "key-feature": [
+          "Aliquam dis vulputate vulputate integer sagittis. Faucibus dolor ornare faucibus vel sed et eleifend habitasse amet. Montes, mauris varius ac est bibendum",
+          "Aliquam dis vulputate vulputate integer sagittis. Faucibus dolor ornare faucibus vel sed et eleifend habitasse amet. Montes, mauris varius ac est bibendum.",
+          "Aliquam dis vulputate vulputate integer sagittis. Faucibus dolor ornare faucibus vel sed et eleifend habitasse amet. Montes, mauris varius ac est bibendum.",
+          "Aliquam dis vulputate vulputate integer sagittis. Faucibus dolor ornare faucibus vel sed et eleifend habitasse amet. Montes, mauris varius ac est bibendum."
+        ]
+      }
+    },
+    {
+      "id": 714,
+      "name": "Dell inspiron S4",
+      "discountPrice": 200000,
+      "actualPrice": 30000,
+      "discount": 15,
+      "tag": "Dell",
+      "whitelist": false,
+      "rating": 4,
+      "ratings": {
+        "ratingAvg": 4.5,
+        "ratings": [
+          {
+            "value": 3,
+            "comment": "I like it! The camera worked perfectly.",
+            "date": "03-12-2023",
+            "user": "Adams Lola"
+          },
+          {
+            "value": 4,
+            "comment": "I like it! The camera worked perfectly.",
+            "date": "03-12-2023",
+            "user": "Adams Lola"
+          },
+          {
+            "value": 2,
+            "comment": "I like it! The camera worked perfectly.",
+            "date": "03-12-2023",
+            "user": "Adams Lola"
+          }
+        ]
+      },
+      "brand": "Apple",
+      "prodCode": 12345678,
+      "condition": "brand new",
+      "details": "Aliquam dis vulputate vulputate integer sagittis. Faucibus dolor ornare faucibus vel sed et eleifend habitasse amet. Montes, mauris varius ac est bibendum. Scelerisque a, risus ac ante. Velit consectetur neque, elit, aliquet. Non varius proin sed urna, egestas consequat laoreet diam tincidunt. Magna eget faucibus cras justo, tortor sed donec tempus. Imperdiet consequat, quis diam arcu, nulla lobortis justo netus dis. Eu in fringilla vulputate nunc nec. Dui, massa viverr Aliquam dis vulputate vulputate integer sagittis. Faucibus dolor ornare faucibus vel sed et eleifend habitasse amet. Montes, mauris varius ac est bibendum. Scelerisque a, risus ac ante. Velit consectetur neque, elit, aliquet. Non varius proin sed urna, egestas consequat laoreet diam tincidunt. Magna eget faucibus cras justo, tortor sed donec tempus. Imperdiet consequat, quis diam arcu, nulla lobortis justo netus dis. Eu in fringilla vulputate nunc nec. Dui, massa viverr",
+      "specification": {
+        "model": "nokia12i3",
+        "product": "Canon",
+        "color": "red, white, green, blue",
+        "key-feature": [
+          "Aliquam dis vulputate vulputate integer sagittis. Faucibus dolor ornare faucibus vel sed et eleifend habitasse amet. Montes, mauris varius ac est bibendum",
+          "Aliquam dis vulputate vulputate integer sagittis. Faucibus dolor ornare faucibus vel sed et eleifend habitasse amet. Montes, mauris varius ac est bibendum.",
+          "Aliquam dis vulputate vulputate integer sagittis. Faucibus dolor ornare faucibus vel sed et eleifend habitasse amet. Montes, mauris varius ac est bibendum.",
+          "Aliquam dis vulputate vulputate integer sagittis. Faucibus dolor ornare faucibus vel sed et eleifend habitasse amet. Montes, mauris varius ac est bibendum."
+        ]
+      }
+    },
+    {
+      "id": 829,
+      "name": "Dell inspiron S4",
+      "discountPrice": 200000,
+      "actualPrice": 30000,
+      "discount": 15,
+      "tag": "Dell",
+      "whitelist": false,
+      "rating": 4.5,
+      "ratings": {
+        "ratingAvg": 4.5,
+        "ratings": [
+          {
+            "value": 3,
+            "comment": "I like it! The camera worked perfectly.",
+            "date": "03-12-2023",
+            "user": "Adams Lola"
+          },
+          {
+            "value": 4,
+            "comment": "I like it! The camera worked perfectly.",
+            "date": "03-12-2023",
+            "user": "Adams Lola"
+          },
+          {
+            "value": 2,
+            "comment": "I like it! The camera worked perfectly.",
+            "date": "03-12-2023",
+            "user": "Adams Lola"
+          }
+        ]
+      },
+      "brand": "Apple",
+      "prodCode": 12345678,
+      "condition": "brand new",
+      "details": "Aliquam dis vulputate vulputate integer sagittis. Faucibus dolor ornare faucibus vel sed et eleifend habitasse amet. Montes, mauris varius ac est bibendum. Scelerisque a, risus ac ante. Velit consectetur neque, elit, aliquet. Non varius proin sed urna, egestas consequat laoreet diam tincidunt. Magna eget faucibus cras justo, tortor sed donec tempus. Imperdiet consequat, quis diam arcu, nulla lobortis justo netus dis. Eu in fringilla vulputate nunc nec. Dui, massa viverr Aliquam dis vulputate vulputate integer sagittis. Faucibus dolor ornare faucibus vel sed et eleifend habitasse amet. Montes, mauris varius ac est bibendum. Scelerisque a, risus ac ante. Velit consectetur neque, elit, aliquet. Non varius proin sed urna, egestas consequat laoreet diam tincidunt. Magna eget faucibus cras justo, tortor sed donec tempus. Imperdiet consequat, quis diam arcu, nulla lobortis justo netus dis. Eu in fringilla vulputate nunc nec. Dui, massa viverr",
+      "specification": {
+        "model": "nokia12i3",
+        "product": "Canon",
+        "color": "red, white, green, blue",
+        "key-feature": [
+          "Aliquam dis vulputate vulputate integer sagittis. Faucibus dolor ornare faucibus vel sed et eleifend habitasse amet. Montes, mauris varius ac est bibendum",
+          "Aliquam dis vulputate vulputate integer sagittis. Faucibus dolor ornare faucibus vel sed et eleifend habitasse amet. Montes, mauris varius ac est bibendum.",
+          "Aliquam dis vulputate vulputate integer sagittis. Faucibus dolor ornare faucibus vel sed et eleifend habitasse amet. Montes, mauris varius ac est bibendum.",
+          "Aliquam dis vulputate vulputate integer sagittis. Faucibus dolor ornare faucibus vel sed et eleifend habitasse amet. Montes, mauris varius ac est bibendum."
+        ]
+      }
+    },
+    {
+      "id": 933,
+      "name": "Dell inspiron S4",
+      "discountPrice": 200000,
+      "actualPrice": 30000,
+      "discount": 15,
+      "tag": "Dell",
+      "whitelist": false,
+      "rating": 2.8,
+      "ratings": {
+        "ratingAvg": 4.5,
+        "ratings": [
+          {
+            "value": 3,
+            "comment": "I like it! The camera worked perfectly.",
+            "date": "03-12-2023",
+            "user": "Adams Lola"
+          },
+          {
+            "value": 4,
+            "comment": "I like it! The camera worked perfectly.",
+            "date": "03-12-2023",
+            "user": "Adams Lola"
+          },
+          {
+            "value": 2,
+            "comment": "I like it! The camera worked perfectly.",
+            "date": "03-12-2023",
+            "user": "Adams Lola"
+          }
+        ]
+      },
+      "brand": "Apple",
+      "prodCode": 12345678,
+      "condition": "brand new",
+      "details": "Aliquam dis vulputate vulputate integer sagittis. Faucibus dolor ornare faucibus vel sed et eleifend habitasse amet. Montes, mauris varius ac est bibendum. Scelerisque a, risus ac ante. Velit consectetur neque, elit, aliquet. Non varius proin sed urna, egestas consequat laoreet diam tincidunt. Magna eget faucibus cras justo, tortor sed donec tempus. Imperdiet consequat, quis diam arcu, nulla lobortis justo netus dis. Eu in fringilla vulputate nunc nec. Dui, massa viverr Aliquam dis vulputate vulputate integer sagittis. Faucibus dolor ornare faucibus vel sed et eleifend habitasse amet. Montes, mauris varius ac est bibendum. Scelerisque a, risus ac ante. Velit consectetur neque, elit, aliquet. Non varius proin sed urna, egestas consequat laoreet diam tincidunt. Magna eget faucibus cras justo, tortor sed donec tempus. Imperdiet consequat, quis diam arcu, nulla lobortis justo netus dis. Eu in fringilla vulputate nunc nec. Dui, massa viverr",
+      "specification": {
+        "model": "nokia12i3",
+        "product": "Canon",
+        "color": "red, white, green, blue",
+        "key-feature": [
+          "Aliquam dis vulputate vulputate integer sagittis. Faucibus dolor ornare faucibus vel sed et eleifend habitasse amet. Montes, mauris varius ac est bibendum",
+          "Aliquam dis vulputate vulputate integer sagittis. Faucibus dolor ornare faucibus vel sed et eleifend habitasse amet. Montes, mauris varius ac est bibendum.",
+          "Aliquam dis vulputate vulputate integer sagittis. Faucibus dolor ornare faucibus vel sed et eleifend habitasse amet. Montes, mauris varius ac est bibendum.",
+          "Aliquam dis vulputate vulputate integer sagittis. Faucibus dolor ornare faucibus vel sed et eleifend habitasse amet. Montes, mauris varius ac est bibendum."
+        ]
+      }
+    },
+    {
+      "id": 424,
+      "name": "Dell inspiron S4",
+      "discountPrice": 200000,
+      "actualPrice": 30000,
+      "discount": 15,
+      "tag": "Dell",
+      "whitelist": false,
+      "rating": 1.1,
+      "ratings": {
+        "ratingAvg": 4.5,
+        "ratings": [
+          {
+            "value": 3,
+            "comment": "I like it! The camera worked perfectly.",
+            "date": "03-12-2023",
+            "user": "Adams Lola"
+          },
+          {
+            "value": 4,
+            "comment": "I like it! The camera worked perfectly.",
+            "date": "03-12-2023",
+            "user": "Adams Lola"
+          },
+          {
+            "value": 2,
+            "comment": "I like it! The camera worked perfectly.",
+            "date": "03-12-2023",
+            "user": "Adams Lola"
+          }
+        ]
+      },
+      "brand": "Apple",
+      "prodCode": 12345678,
+      "condition": "brand new",
+      "details": "Aliquam dis vulputate vulputate integer sagittis. Faucibus dolor ornare faucibus vel sed et eleifend habitasse amet. Montes, mauris varius ac est bibendum. Scelerisque a, risus ac ante. Velit consectetur neque, elit, aliquet. Non varius proin sed urna, egestas consequat laoreet diam tincidunt. Magna eget faucibus cras justo, tortor sed donec tempus. Imperdiet consequat, quis diam arcu, nulla lobortis justo netus dis. Eu in fringilla vulputate nunc nec. Dui, massa viverr Aliquam dis vulputate vulputate integer sagittis. Faucibus dolor ornare faucibus vel sed et eleifend habitasse amet. Montes, mauris varius ac est bibendum. Scelerisque a, risus ac ante. Velit consectetur neque, elit, aliquet. Non varius proin sed urna, egestas consequat laoreet diam tincidunt. Magna eget faucibus cras justo, tortor sed donec tempus. Imperdiet consequat, quis diam arcu, nulla lobortis justo netus dis. Eu in fringilla vulputate nunc nec. Dui, massa viverr",
+      "specification": {
+        "model": "nokia12i3",
+        "product": "Canon",
+        "color": "red, white, green, blue",
+        "key-feature": [
+          "Aliquam dis vulputate vulputate integer sagittis. Faucibus dolor ornare faucibus vel sed et eleifend habitasse amet. Montes, mauris varius ac est bibendum",
+          "Aliquam dis vulputate vulputate integer sagittis. Faucibus dolor ornare faucibus vel sed et eleifend habitasse amet. Montes, mauris varius ac est bibendum.",
+          "Aliquam dis vulputate vulputate integer sagittis. Faucibus dolor ornare faucibus vel sed et eleifend habitasse amet. Montes, mauris varius ac est bibendum.",
+          "Aliquam dis vulputate vulputate integer sagittis. Faucibus dolor ornare faucibus vel sed et eleifend habitasse amet. Montes, mauris varius ac est bibendum."
+        ]
+      }
+    },
+    {
+      "id": 422,
+      "name": "Dell inspiron S4",
+      "discountPrice": 200000,
+      "actualPrice": 30000,
+      "discount": 15,
+      "tag": "Dell",
+      "whitelist": false,
+      "rating": 5,
+      "ratings": {
+        "ratingAvg": 4.5,
+        "ratings": [
+          {
+            "value": 3,
+            "comment": "I like it! The camera worked perfectly.",
+            "date": "03-12-2023",
+            "user": "Adams Lola"
+          },
+          {
+            "value": 4,
+            "comment": "I like it! The camera worked perfectly.",
+            "date": "03-12-2023",
+            "user": "Adams Lola"
+          },
+          {
+            "value": 2,
+            "comment": "I like it! The camera worked perfectly.",
+            "date": "03-12-2023",
+            "user": "Adams Lola"
+          }
+        ]
+      },
+      "brand": "Apple",
+      "prodCode": 12345678,
+      "condition": "brand new",
+      "details": "Aliquam dis vulputate vulputate integer sagittis. Faucibus dolor ornare faucibus vel sed et eleifend habitasse amet. Montes, mauris varius ac est bibendum. Scelerisque a, risus ac ante. Velit consectetur neque, elit, aliquet. Non varius proin sed urna, egestas consequat laoreet diam tincidunt. Magna eget faucibus cras justo, tortor sed donec tempus. Imperdiet consequat, quis diam arcu, nulla lobortis justo netus dis. Eu in fringilla vulputate nunc nec. Dui, massa viverr Aliquam dis vulputate vulputate integer sagittis. Faucibus dolor ornare faucibus vel sed et eleifend habitasse amet. Montes, mauris varius ac est bibendum. Scelerisque a, risus ac ante. Velit consectetur neque, elit, aliquet. Non varius proin sed urna, egestas consequat laoreet diam tincidunt. Magna eget faucibus cras justo, tortor sed donec tempus. Imperdiet consequat, quis diam arcu, nulla lobortis justo netus dis. Eu in fringilla vulputate nunc nec. Dui, massa viverr",
+      "specification": {
+        "model": "nokia12i3",
+        "product": "Canon",
+        "color": "red, white, green, blue",
+        "key-feature": [
+          "Aliquam dis vulputate vulputate integer sagittis. Faucibus dolor ornare faucibus vel sed et eleifend habitasse amet. Montes, mauris varius ac est bibendum",
+          "Aliquam dis vulputate vulputate integer sagittis. Faucibus dolor ornare faucibus vel sed et eleifend habitasse amet. Montes, mauris varius ac est bibendum.",
+          "Aliquam dis vulputate vulputate integer sagittis. Faucibus dolor ornare faucibus vel sed et eleifend habitasse amet. Montes, mauris varius ac est bibendum.",
+          "Aliquam dis vulputate vulputate integer sagittis. Faucibus dolor ornare faucibus vel sed et eleifend habitasse amet. Montes, mauris varius ac est bibendum."
+        ]
+      }
+    },
+    {
+      "id": 15,
+      "name": "Dell inspiron S4",
+      "discountPrice": 200000,
+      "actualPrice": 30000,
+      "discount": 15,
+      "tag": "Dell",
+      "whitelist": false,
+      "rating": 0,
+      "ratings": {
+        "ratingAvg": 4.5,
+        "ratings": [
+          {
+            "value": 3,
+            "comment": "I like it! The camera worked perfectly.",
+            "date": "03-12-2023",
+            "user": "Adams Lola"
+          },
+          {
+            "value": 4,
+            "comment": "I like it! The camera worked perfectly.",
+            "date": "03-12-2023",
+            "user": "Adams Lola"
+          },
+          {
+            "value": 2,
+            "comment": "I like it! The camera worked perfectly.",
+            "date": "03-12-2023",
+            "user": "Adams Lola"
+          }
+        ]
+      },
+      "brand": "Apple",
+      "prodCode": 12345678,
+      "condition": "brand new",
+      "details": "Aliquam dis vulputate vulputate integer sagittis. Faucibus dolor ornare faucibus vel sed et eleifend habitasse amet. Montes, mauris varius ac est bibendum. Scelerisque a, risus ac ante. Velit consectetur neque, elit, aliquet. Non varius proin sed urna, egestas consequat laoreet diam tincidunt. Magna eget faucibus cras justo, tortor sed donec tempus. Imperdiet consequat, quis diam arcu, nulla lobortis justo netus dis. Eu in fringilla vulputate nunc nec. Dui, massa viverr Aliquam dis vulputate vulputate integer sagittis. Faucibus dolor ornare faucibus vel sed et eleifend habitasse amet. Montes, mauris varius ac est bibendum. Scelerisque a, risus ac ante. Velit consectetur neque, elit, aliquet. Non varius proin sed urna, egestas consequat laoreet diam tincidunt. Magna eget faucibus cras justo, tortor sed donec tempus. Imperdiet consequat, quis diam arcu, nulla lobortis justo netus dis. Eu in fringilla vulputate nunc nec. Dui, massa viverr",
+      "specification": {
+        "model": "nokia12i3",
+        "product": "Canon",
+        "color": "red, white, green, blue",
+        "key-feature": [
+          "Aliquam dis vulputate vulputate integer sagittis. Faucibus dolor ornare faucibus vel sed et eleifend habitasse amet. Montes, mauris varius ac est bibendum",
+          "Aliquam dis vulputate vulputate integer sagittis. Faucibus dolor ornare faucibus vel sed et eleifend habitasse amet. Montes, mauris varius ac est bibendum.",
+          "Aliquam dis vulputate vulputate integer sagittis. Faucibus dolor ornare faucibus vel sed et eleifend habitasse amet. Montes, mauris varius ac est bibendum.",
+          "Aliquam dis vulputate vulputate integer sagittis. Faucibus dolor ornare faucibus vel sed et eleifend habitasse amet. Montes, mauris varius ac est bibendum."
+        ]
+      }
+    },
+    {
+      "id": 827,
+      "name": "Dell inspiron S4",
+      "discountPrice": 200000,
+      "actualPrice": 30000,
+      "discount": 15,
+      "tag": "Dell",
+      "whitelist": false,
+      "rating": 3.0,
+      "ratings": {
+        "ratingAvg": 4.5,
+        "ratings": [
+          {
+            "value": 3,
+            "comment": "I like it! The camera worked perfectly.",
+            "date": "03-12-2023",
+            "user": "Adams Lola"
+          },
+          {
+            "value": 4,
+            "comment": "I like it! The camera worked perfectly.",
+            "date": "03-12-2023",
+            "user": "Adams Lola"
+          },
+          {
+            "value": 2,
+            "comment": "I like it! The camera worked perfectly.",
+            "date": "03-12-2023",
+            "user": "Adams Lola"
+          }
+        ]
+      },
+      "brand": "Apple",
+      "prodCode": 12345678,
+      "condition": "brand new",
+      "details": "Aliquam dis vulputate vulputate integer sagittis. Faucibus dolor ornare faucibus vel sed et eleifend habitasse amet. Montes, mauris varius ac est bibendum. Scelerisque a, risus ac ante. Velit consectetur neque, elit, aliquet. Non varius proin sed urna, egestas consequat laoreet diam tincidunt. Magna eget faucibus cras justo, tortor sed donec tempus. Imperdiet consequat, quis diam arcu, nulla lobortis justo netus dis. Eu in fringilla vulputate nunc nec. Dui, massa viverr Aliquam dis vulputate vulputate integer sagittis. Faucibus dolor ornare faucibus vel sed et eleifend habitasse amet. Montes, mauris varius ac est bibendum. Scelerisque a, risus ac ante. Velit consectetur neque, elit, aliquet. Non varius proin sed urna, egestas consequat laoreet diam tincidunt. Magna eget faucibus cras justo, tortor sed donec tempus. Imperdiet consequat, quis diam arcu, nulla lobortis justo netus dis. Eu in fringilla vulputate nunc nec. Dui, massa viverr",
+      "specification": {
+        "model": "nokia12i3",
+        "product": "Canon",
+        "color": "red, white, green, blue",
+        "key-feature": [
+          "Aliquam dis vulputate vulputate integer sagittis. Faucibus dolor ornare faucibus vel sed et eleifend habitasse amet. Montes, mauris varius ac est bibendum",
+          "Aliquam dis vulputate vulputate integer sagittis. Faucibus dolor ornare faucibus vel sed et eleifend habitasse amet. Montes, mauris varius ac est bibendum.",
+          "Aliquam dis vulputate vulputate integer sagittis. Faucibus dolor ornare faucibus vel sed et eleifend habitasse amet. Montes, mauris varius ac est bibendum.",
+          "Aliquam dis vulputate vulputate integer sagittis. Faucibus dolor ornare faucibus vel sed et eleifend habitasse amet. Montes, mauris varius ac est bibendum."
+        ]
+      }
+    },
+    {
+      "id": 806,
+      "name": "Dell inspiron S4",
+      "discountPrice": 200000,
+      "actualPrice": 30000,
+      "discount": 15,
+      "tag": "Dell",
+      "whitelist": false,
+      "rating": 1.0,
+      "ratings": {
+        "ratingAvg": 4.5,
+        "ratings": [
+          {
+            "value": 3,
+            "comment": "I like it! The camera worked perfectly.",
+            "date": "03-12-2023",
+            "user": "Adams Lola"
+          },
+          {
+            "value": 4,
+            "comment": "I like it! The camera worked perfectly.",
+            "date": "03-12-2023",
+            "user": "Adams Lola"
+          },
+          {
+            "value": 2,
+            "comment": "I like it! The camera worked perfectly.",
+            "date": "03-12-2023",
+            "user": "Adams Lola"
+          }
+        ]
+      },
+      "brand": "Apple",
+      "prodCode": 12345678,
+      "condition": "brand new",
+      "details": "Aliquam dis vulputate vulputate integer sagittis. Faucibus dolor ornare faucibus vel sed et eleifend habitasse amet. Montes, mauris varius ac est bibendum. Scelerisque a, risus ac ante. Velit consectetur neque, elit, aliquet. Non varius proin sed urna, egestas consequat laoreet diam tincidunt. Magna eget faucibus cras justo, tortor sed donec tempus. Imperdiet consequat, quis diam arcu, nulla lobortis justo netus dis. Eu in fringilla vulputate nunc nec. Dui, massa viverr Aliquam dis vulputate vulputate integer sagittis. Faucibus dolor ornare faucibus vel sed et eleifend habitasse amet. Montes, mauris varius ac est bibendum. Scelerisque a, risus ac ante. Velit consectetur neque, elit, aliquet. Non varius proin sed urna, egestas consequat laoreet diam tincidunt. Magna eget faucibus cras justo, tortor sed donec tempus. Imperdiet consequat, quis diam arcu, nulla lobortis justo netus dis. Eu in fringilla vulputate nunc nec. Dui, massa viverr",
+      "specification": {
+        "model": "nokia12i3",
+        "product": "Canon",
+        "color": "red, white, green, blue",
+        "key-feature": [
+          "Aliquam dis vulputate vulputate integer sagittis. Faucibus dolor ornare faucibus vel sed et eleifend habitasse amet. Montes, mauris varius ac est bibendum",
+          "Aliquam dis vulputate vulputate integer sagittis. Faucibus dolor ornare faucibus vel sed et eleifend habitasse amet. Montes, mauris varius ac est bibendum.",
+          "Aliquam dis vulputate vulputate integer sagittis. Faucibus dolor ornare faucibus vel sed et eleifend habitasse amet. Montes, mauris varius ac est bibendum.",
+          "Aliquam dis vulputate vulputate integer sagittis. Faucibus dolor ornare faucibus vel sed et eleifend habitasse amet. Montes, mauris varius ac est bibendum."
+        ]
+      }
+    }
+  ]
+}

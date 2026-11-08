@@ -1,0 +1,25 @@
+.breadcrum {
+  padding: 2rem 0;
+  font-size: 1.4rem;
+  background-color: var(--navtab-bg);
+  @include responsive(750px) {
+    position: sticky;
+    top: 13%;
+    z-index: 200;
+  }
+  @include responsive(450px) {
+    top: 12%;
+  }
+  @include responsive(438px) {
+    top: 11%;
+  }
+  @include responsive(400px) {
+    top: 10%;
+  }
+  @include responsive(355px) {
+    top: 9%;
+  }
+  @include responsive(340px) {
+    top: 8.5%;
+  }
+}

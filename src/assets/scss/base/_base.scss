@@ -1,0 +1,32 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+label,
+input,
+select {
+  outline: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 600;
+}
+
+#outlet-container::-webkit-scrollbar {
+  width: 5px;
+  background: inherit;
+}
+
+#outlet-container::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+  background-color: $grey3;
+}

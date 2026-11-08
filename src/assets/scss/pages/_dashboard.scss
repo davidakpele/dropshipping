@@ -1,0 +1,46 @@
+.dashboard {
+  position: relative;
+  margin-bottom: 2rem;
+  &__header {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 0.1rem solid #d0d0d0;
+    padding-bottom: 1rem;
+
+    h3 {
+      font-size: 2rem;
+      font-weight: 700;
+    }
+    .signout {
+      background: $red-signout;
+      border-radius: 0.4rem;
+      padding: 1rem 2rem;
+      color: $white;
+    }
+  }
+  &__contain {
+    position: relative;
+    display: flex;
+    width: 100%;
+    gap: 2rem;
+    @include responsive(650px) {
+      display: block;
+    }
+
+    .outlet {
+      flex: 1 0;
+      height: 90rem;
+      position: relative;
+      overflow: auto;
+      // display: flex;
+      &::-webkit-scrollbar {
+        display: none;
+      }
+      @include responsive(500px) {
+        height: unset;
+        // overflow: unset;
+      }
+    }
+  }
+}

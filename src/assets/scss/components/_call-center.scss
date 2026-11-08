@@ -1,0 +1,105 @@
+.callCenter {
+  padding: 3rem 0;
+  background-image: url(./assets/imgs/banners/banner4.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  @include responsive(830px) {
+    background-position: center;
+  }
+  @include responsive(500px) {
+    font-size: 1.4rem;
+  }
+
+  &__header {
+    text-align: center;
+    font-size: 2.4rem;
+    font-weight: 600;
+    @include responsive(500px) {
+      font-size: 1.8rem;
+    }
+  }
+
+  &__wrap {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(4, 1fr);
+    margin-top: 3rem;
+    @include responsive(962px) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+    @include responsive(800px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @include responsive(330px) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__orders {
+    @include responsive(530px) {
+      grid-column: 1 / -1;
+    }
+  }
+
+  &__dispute {
+    @include responsive(530px) {
+      grid-column: 1 / -1;
+    }
+  }
+
+  &__HQ {
+    @include responsive(960px) {
+      grid-column: 1 / -1;
+    }
+    @include responsive(785px) {
+      grid-column: 2 / span 1;
+    }
+    @include responsive(530px) {
+      grid-column: 1 / -1;
+    }
+  }
+
+  &__logistics {
+    @include responsive(785px) {
+      grid-column: 1 / span 1;
+    }
+    @include responsive(530px) {
+      grid-column: 1 / -1;
+    }
+  }
+
+  &__item {
+    display: flex;
+    gap: 1rem;
+    margin: 2rem 0;
+    align-items: center;
+    @include responsive(530px) {
+      display: inline-flex;
+      width: 50%;
+    }
+    @include responsive(320px) {
+      display: flex;
+    }
+
+    img {
+      width: 15%;
+      // border-radius: 100%;
+      @include responsive(400px) {
+        width: 24%;
+      }
+    }
+  }
+
+  &__name {
+    padding-bottom: 1rem;
+  }
+
+  &__title {
+    font-size: 2rem;
+    font-weight: 600;
+    margin: 1rem 0;
+    @include responsive(500px) {
+      font-size: 1.7rem;
+    }
+  }
+}

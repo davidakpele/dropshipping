@@ -1,0 +1,159 @@
+.loader {
+  background: transparent;
+
+  .prodPreview {
+    &__itm {
+      position: relative;
+      overflow: hidden;
+      background: #fff;
+      margin: 0 0 3rem;
+      @include responsive(700px) {
+        background: none;
+      }
+
+      &::after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background: linear-gradient(
+          110deg,
+          #efefef00 0%,
+          #efefef00 40%,
+          #f0f0f080 50%,
+          #efefef00 60%,
+          #812e2e00 100%
+        );
+        animation: gradient-animation_2 1.2s linear infinite;
+      }
+    }
+
+    &__itmWrap {
+      display: flex;
+      align-items: flex-start;
+      gap: 2rem;
+      padding: 2rem;
+
+      @include responsive(700px) {
+        display: block;
+        padding: 0;
+      }
+    }
+
+    &__imgWrap {
+      height: 30rem;
+      width: 100%;
+      padding: 1rem;
+      display: block;
+      background: #efefef;
+      margin: 0 0 2rem;
+    }
+
+    &__imgItem {
+      height: 7rem;
+      width: 7rem;
+      cursor: pointer;
+      background-color: #efefef;
+      @include responsive(700px) {
+        height: 20rem;
+        min-width: 20rem;
+        background: $white;
+        padding: 2rem;
+      }
+    }
+
+    &__images {
+      display: flex;
+      flex: 1.2;
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
+      @include responsive(700px) {
+        flex-direction: row;
+        overflow-x: scroll;
+      }
+
+      &::-webkit-scrollbar {
+        display: none;
+      }
+    }
+
+    &__img {
+      height: 100%;
+      width: 100%;
+      object-fit: contain;
+      flex: 1;
+      &.active {
+        outline: 2px solid $lemon;
+        outline-offset: 0.4rem;
+        @include responsive(700px) {
+          outline: none;
+        }
+      }
+    }
+
+    &__display,
+    &__info {
+      flex: 1;
+    }
+
+    &__info {
+      @include responsive(700px) {
+        background: $white;
+        padding: 2rem;
+      }
+
+      .prodVariation {
+        background: #efefef;
+        display: block;
+        height: 21rem;
+        margin-bottom: 2rem;
+      }
+    }
+
+    &__display {
+      p {
+        text-align: center;
+        margin-top: 5rem;
+      }
+    }
+
+    &__displayWrap {
+      display: block;
+      flex-direction: row-reverse;
+      max-height: 30rem;
+      margin: 0;
+      @include responsive(700px) {
+        max-height: fit-content;
+        display: block;
+        margin: 0 0 2rem;
+      }
+    }
+
+    &__infoCaption {
+      background: #efefef;
+      display: block;
+      height: 7rem;
+      margin-bottom: 2rem;
+    }
+
+    &__infoHeader {
+      background: #efefef;
+      display: block;
+      height: 3rem;
+      margin-bottom: 1rem;
+    }
+  }
+}
+
+@keyframes gradient-animation_2 {
+  0% {
+    transform: translateX(-100%);
+  }
+
+  100% {
+    transform: translateX(100%);
+  }
+}
