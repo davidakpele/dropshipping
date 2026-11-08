@@ -32,7 +32,7 @@
       display: block;
       width: 2.4rem;
       height: 2.4rem;
-      color: #4a9f05;
+      color: #8B6400;
     }
 
     @media (max-width: 1400px) {
@@ -111,13 +111,13 @@
 
   &__header {
     font-size: 1.8rem;
-    color: #3b7f04;
+    color: #805E00;
     font-weight: 600;
     display: flex;
     justify-content: space-between;
     align-items: center;
     .see__all__cat {
-      color: #7bb20e;
+      color: #946B00;
       font-size: 1.4rem;
       text-decoration: underline;
       cursor: pointer;
@@ -183,7 +183,7 @@
     text-align: center;
 
     & span {
-      color: #3b7f04;
+      color: #805E00;
     }
   }
 
@@ -234,6 +234,6 @@
 
   &__contact-name {
     font-weight: 600;
-    color: #3b7f04;
+    color: #805E00;
   }
 }
