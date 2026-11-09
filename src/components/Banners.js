@@ -3,11 +3,23 @@ import { Autoplay, Pagination } from "swiper";
 import "swiper/css";
 import "swiper/css/pagination";
 import { Swiper, SwiperSlide } from "swiper/react";
+import leftBanner from "../assets/imgs/firstbanner.svg";
 import Image from "./Image";
 
 // images - bannerCategory
 import bannerCat1 from "../assets/imgs/banners/banner5.png";
 import bannerCat2 from "../assets/imgs/banners/banner6.png";
+
+const SideBanner = ({ src, fallback, alt }) => {
+  return (
+    <Image
+      src={src}
+      fallbackSrc={fallback}
+      alt={alt}
+      style={{ objectFit: "cover" }}
+    />
+  );
+};
 
 const HomeBannerSlider = () => (
   <Swiper
@@ -56,48 +68,36 @@ const HomeBannerSlider = () => (
   </Swiper>
 );
 
-const BannerLoader = () => {
-  return (
-    <section className="container banners">
-      <div>
-        <div className="placeholder"></div>
-      </div>
-      <div>
-        <HomeBannerSlider />
-      </div>
-      <div>
-        <div className="placeholder"></div>
-      </div>
-      <div>
-        <div className="placeholder"></div>
-      </div>
-    </section>
-  );
-};
-
 export const Banner = () => {
   const { banners } = useSelector((state) => state.cache);
 
-  let bottom, left, top;
-  if (banners) {
-    [bottom, , left, top] = banners;
-  }
-
-  if (!banners) return <BannerLoader />;
+  const [bottom, , left, top] = banners || [];
 
   return (
     <section className="container banners">
       <div>
-        <Image src={left.img} alt="" />
+        <SideBanner
+          src={left?.img}
+          fallback={leftBanner}
+          alt="Shop smartphones"
+        />
       </div>
       <div>
         <HomeBannerSlider />
       </div>
       <div>
-        <Image src={top.img} alt="" />
+        <SideBanner
+          src={top?.img}
+          fallback="/images/banners/360_F_417425751_z8Rg86FJnDc8vUSC5Frj3CgD4owjLQTB.jpg"
+          alt="Shop for clothing"
+        />
       </div>
       <div>
-        <Image src={bottom.img} alt="" />
+        <SideBanner
+          src={bottom?.img}
+          fallback="/images/banners/360_F_417425475_6i8y2OkKGOwmfTzHLQTxbm60pmNwxdUt.jpg"
+          alt="Browse a clothing collection"
+        />
       </div>
     </section>
   );
