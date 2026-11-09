@@ -1,13 +1,40 @@
-import { useState, useEffect } from "react";
+import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link, useNavigate, useSearchParams } from "react-router-dom";
-import { logout } from "../store/slices/authSlice";
-import { axiosInstance, currency_formatter } from "../libries";
 import shopnigLogo from "../assets/new-imgs/shopnig-logo.png";
-import WithAuth from "../WithAuth";
-import Notifications from "../pages/Notifications";
 import shopnigLogoDark from "../assets/new-imgs/Shopnig-logodark.svg";
+import { axiosInstance, currency_formatter } from "../libries";
+import Notifications from "../pages/Notifications";
+import { logout } from "../store/slices/authSlice";
+import WithAuth from "../WithAuth";
 // import { clearCarts } from "../store/slices/cartSlice";
+
+const fallbackCategories = [
+  { id: 1, name: "Laptop & Computer" },
+  { id: 2, name: "Smart phones & Tablets" },
+  { id: 3, name: "Speakers" },
+  { id: 4, name: "Gears" },
+  { id: 5, name: "Accessories" },
+  { id: 6, name: "Flash Drives" },
+  { id: 7, name: "Game & Accessories" },
+  { id: 8, name: "Phone Accessories" },
+  { id: 9, name: "Other categories" },
+];
+
+const getSubcategories = (category) => {
+  const subcategories = [
+    category.subcategories,
+    category.subCategories,
+    category.sub_categories,
+    category.subcategory,
+    category.sub_category,
+    category.childCategories,
+    category.child_categories,
+    category.children,
+  ].find(Array.isArray);
+
+  return subcategories || [];
+};
 
 const Navbar = () => {
   const navigate = useNavigate();
@@ -16,16 +43,15 @@ const Navbar = () => {
   const { carts } = useSelector((state) => state.cart);
   const [toggle, setToggle] = useState(false);
   // const [notice, setNotification] = useState(false);
-  const [categories, setCategories] = useState([]);
-  const [brand, setBrand] = useState([]);
+  const [categories, setCategories] = useState(fallbackCategories);
+  const [activeCategoryId, setActiveCategoryId] = useState(null);
   const [accountToggle, setAccountToggle] = useState(false);
   const [helpToggle, setHelpToggle] = useState(false);
   const [search_suggestions, setSearchSuggestions] = useState(null);
   const [suggest, setSuggest] = useState([]);
   const [suggestionsActive, setSuggestionsActive] = useState(false);
   const [value, setValue] = useState("");
-  const [searchParams, ] = useSearchParams();
-
+  const [searchParams] = useSearchParams();
 
   // getting the popular categories here to display on the navbar
   const { popularCategories } = useSelector((state) => state.cache);
@@ -47,14 +73,12 @@ const Navbar = () => {
   useEffect(() => {
     axiosInstance()
       .get(`/categories`)
-      .then((resp) => setCategories(resp.data.data.category))
-      .catch(console.error);
-  }, []);
-
-  useEffect(() => {
-    axiosInstance()
-      .get(`/brands`)
-      .then((resp) => setBrand(resp.data.data.brands))
+      .then((resp) => {
+        const fetchedCategories = resp.data.data.category;
+        if (Array.isArray(fetchedCategories) && fetchedCategories.length) {
+          setCategories(fetchedCategories);
+        }
+      })
       .catch(console.error);
   }, []);
 
@@ -70,7 +94,7 @@ const Navbar = () => {
       logout({
         accessToken: null,
         userDetails: null,
-      })
+      }),
     );
 
     localStorage.removeItem("app_state");
@@ -83,7 +107,7 @@ const Navbar = () => {
 
     if (query.length > 1) {
       let filterSuggestions = search_suggestions?.filter(
-        (el) => el.name.toLowerCase().indexOf(query) > -1
+        (el) => el.name.toLowerCase().indexOf(query) > -1,
       );
 
       filterSuggestions = filterSuggestions?.map(({ id, name, category }) => ({
@@ -105,7 +129,7 @@ const Navbar = () => {
   // resetting brand and filter option when a popular category is selected from the navbar
   const handlePopularCategorySel = () => {
     searchParams.delete("filter");
-    console.log("here...")
+    console.log("here...");
   };
 
   return (
@@ -679,53 +703,67 @@ const Navbar = () => {
                 <div className="top-bar__menu-main">
                   <div className="top-bar__menu-left">
                     <ul className="top-bar__menu1">
-                      {categories?.map((itm) => (
-                        <li className="top-bar__menu1-item" key={itm.id}>
-                          <Link to="#" className="top-bar__menu1-link">
-                            <ion-icon name="laptop-outline"></ion-icon>
-                            {/* <img src={itm.image_url} alt={itm.name} /> */}
-                            {itm.name}
-                          </Link>
-                          <div className="top-bar__menu-right">
-                            <div>
+                      {categories?.map((itm) => {
+                        const subcategories = getSubcategories(itm);
+
+                        return (
+                          <li
+                            className="top-bar__menu1-item"
+                            key={itm.id}
+                            onMouseEnter={() => setActiveCategoryId(itm.id)}
+                            onMouseLeave={() => setActiveCategoryId(null)}
+                            onFocus={() => setActiveCategoryId(itm.id)}
+                            onBlur={(event) => {
+                              if (
+                                !event.currentTarget.contains(
+                                  event.relatedTarget,
+                                )
+                              ) {
+                                setActiveCategoryId(null);
+                              }
+                            }}
+                          >
+                            <Link to="#" className="top-bar__menu1-link">
+                              <ion-icon name="laptop-outline"></ion-icon>
+                              {/* <img src={itm.image_url} alt={itm.name} /> */}
+                              {itm.name}
+                            </Link>
+                            <div
+                              className={`top-bar__menu-right ${
+                                activeCategoryId === itm.id
+                                  ? "top-bar__menu-right--active"
+                                  : ""
+                              }`}
+                            >
                               <div>
                                 <h3 className="top-bar__menu-heading">
-                                  Data Storage
+                                  Sub-categories
                                 </h3>
-                                <div className="top-bar__menu2-links">
-                                  <Link to="#" className="top-bar__menu2-link">
-                                    External Hard Drives
-                                  </Link>
-                                  <Link to="#" className="top-bar__menu2-link">
-                                    USB Flash Drives
-                                  </Link>
-                                  <Link to="#" className="top-bar__menu2-link">
-                                    External Solid State
-                                  </Link>
-                                </div>
-                              </div>
-                            </div>
-                            <div>
-                              <div>
-                                <h3 className="top-bar__menu-heading">
-                                  Top Brands
-                                </h3>
-                                <div className="top-bar__menu2-links">
-                                  {brand?.map((itm, id) => (
+                                <div className="top-bar__menu-subcategories">
+                                  {subcategories.length ? (
+                                    subcategories.map((subcategory, index) => (
+                                      <Link
+                                        to={`/categories?categories=${subcategory.id ?? itm.id}`}
+                                        className="top-bar__menu2-link"
+                                        key={subcategory.id ?? index}
+                                      >
+                                        {subcategory.name ?? subcategory}
+                                      </Link>
+                                    ))
+                                  ) : (
                                     <Link
-                                      to="/categories"
+                                      to={`/categories?categories=${itm.id}`}
                                       className="top-bar__menu2-link"
-                                      key={id}
                                     >
-                                      {itm.name}
+                                      View all {itm.name}
                                     </Link>
-                                  ))}
+                                  )}
                                 </div>
                               </div>
                             </div>
-                          </div>
-                        </li>
-                      ))}
+                          </li>
+                        );
+                      })}
                     </ul>
                   </div>
                 </div>

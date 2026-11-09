@@ -268,7 +268,7 @@
   &__text {
     font-size: 2.8rem;
     font-weight: 700;
-    color: #7bb20e;
+    color: #946B00;
     text-align: center;
     @include responsive(1190px) {
       font-size: 2.6rem;
@@ -329,7 +329,7 @@
       &__head {
         font-size: 1.6rem;
         font-weight: 700;
-        color: #7bb20e;
+        color: #946B00;
         text-align: center;
         padding: 2rem 0 1.5rem 0;
         @include responsive(845px) {
@@ -351,7 +351,7 @@
         gap: 1.5rem;
         box-shadow: 0.3px 0.5px 2px #b4b4b4;
         // &:active {
-        //   border: 1px solid #7bb20e;
+        //   border: 1px solid #946B00;
         // }
 
         .how__can {

@@ -6,6 +6,12 @@
   box-sizing: inherit;
 }
 
+img,
+video {
+  height: auto;
+  max-width: 100%;
+}
+
 body {
   padding-top: 12.8rem;
 

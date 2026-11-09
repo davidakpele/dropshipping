@@ -45,11 +45,11 @@
       transition: all 0.3s;
 
       &:hover {
-        color: #7bb20e;
+        color: #946B00;
       }
 
       &.active {
-        color: #7bb20e;
+        color: #946B00;
         border-bottom: 3px solid currentColor;
       }
     }
@@ -89,7 +89,7 @@
     max-width: 100%;
     margin: auto;
 
-    background-color: #f4f9ec;
+    background-color: #FFF8DE;
     padding: 4.8rem 0;
     border-radius: 1.2rem;
     background-color: var(--login-bg);
