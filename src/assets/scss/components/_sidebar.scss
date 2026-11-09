@@ -4,9 +4,9 @@
   overflow: auto;
   padding: 4rem 2rem;
   padding-bottom: 2rem;
-  background: #805E00;
+  background: $primary;
   border-radius: 0.8rem;
-  color: white;
+  color: $black;
 
   @include responsive(930px) {
     display: none;
@@ -19,7 +19,7 @@
     .menu__list__item {
       padding: 0.8rem 2rem;
       margin-top: 0.6rem;
-      color: $white;
+      color: $black;
       font-weight: 400;
       cursor: pointer;
       display: block;
@@ -62,13 +62,13 @@
     .menu__list__item:hover,
     .active {
       // padding: 1rem 2rem;
-      background: $sidebar-user;
+      background: $white;
       border-top-right-radius: 0.4rem;
       border-bottom-right-radius: 0.4rem;
-      color: $white;
+      color: $black;
       font-size: 1.8rem;
       font-weight: 500;
-      border-left: 0.2rem solid $white;
+      border-left: 0.2rem solid $black;
     }
   }
 }

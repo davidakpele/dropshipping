@@ -4,13 +4,12 @@ import { getState, saveState } from "../global";
 
 import { set_mode } from "../../utils/app";
 
-const AppInitialState = {
-  uiMode: localStorage.getItem("uiMode") || "light",
-};
+const AppInitialState = { uiMode: "light" };
+set_mode("light");
 
 const appSlice = createSlice({
   name: "app",
-  initialState: getState("app", AppInitialState),
+  initialState: { ...getState("app", AppInitialState), uiMode: "light" },
   reducers: {
     changeMode(state, { payload }) {
       state.uiMode = payload;

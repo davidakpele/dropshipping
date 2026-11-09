@@ -1,0 +1,123 @@
+{
+  "categories": [
+    { "id": 101, "name": "Women's Clothing" },
+    { "id": 102, "name": "Men's Clothing" },
+    { "id": 103, "name": "Children & Baby" },
+    { "id": 104, "name": "Shoes & Bags" },
+    { "id": 105, "name": "Home & Kitchen" },
+    { "id": 106, "name": "Beauty & Personal Care" },
+    { "id": 107, "name": "Phones & Accessories" },
+    { "id": 108, "name": "Computers & Electronics" },
+    { "id": 109, "name": "Groceries & Beverages" },
+    { "id": 110, "name": "Sports & Outdoors" },
+    { "id": 111, "name": "Toys & Games" }
+  ],
+  "brands": [
+    { "id": 1, "name": "SILVER CREST", "image_url": "/images/products/m1" },
+    {
+      "id": 2,
+      "name": "Northstar Computing",
+      "image_url": "/images/products/m1"
+    },
+    { "id": 3, "name": "Aster Mobile", "image_url": "/images/products/m1" },
+    { "id": 4, "name": "Breeze Home", "image_url": "/images/products/m1" },
+    { "id": 5, "name": "ShopNig", "image_url": "/images/products/m1" }
+  ],
+  "representatives": {
+    "orders": [
+      {
+        "id": "orders-help",
+        "name": "Orders Support",
+        "phone_number": "+2348000000101",
+        "image_url": "/images/products/m1"
+      },
+      {
+        "id": "orders-help-2",
+        "name": "Customer Care",
+        "phone_number": "+2348000000102",
+        "image_url": "/images/products/m1"
+      }
+    ],
+    "logistics": [
+      {
+        "id": "delivery-help",
+        "name": "Delivery Support",
+        "phone_number": "+2348000000201",
+        "image_url": "/images/products/m1"
+      },
+      {
+        "id": "delivery-help-2",
+        "name": "Returns Support",
+        "phone_number": "+2348000000202",
+        "image_url": "/images/products/m1"
+      }
+    ]
+  },
+  "states": [
+    { "id": 1, "name": "Lagos", "isoCode": "LA" },
+    { "id": 2, "name": "Oyo", "isoCode": "OY" },
+    { "id": 3, "name": "Abuja", "isoCode": "FC" }
+  ],
+  "localGovernments": [
+    { "id": 11, "state_id": 1, "name": "Ikeja" },
+    { "id": 12, "state_id": 1, "name": "Eti-Osa" },
+    { "id": 21, "state_id": 2, "name": "Ibadan North" }
+  ],
+  "cities": [
+    { "id": 1, "name": "Ikeja", "stateCode": "LA" },
+    { "id": 2, "name": "Lekki", "stateCode": "LA" },
+    { "id": 3, "name": "Ibadan", "stateCode": "OY" }
+  ],
+  "addressTypes": [
+    { "id": 1, "name": "Home" },
+    { "id": 2, "name": "Office" }
+  ],
+  "paymentMethods": [
+    { "id": 1, "name": "Flutterwave", "code": "flutterwave" },
+    { "id": 2, "name": "Pay on pickup", "code": "pay-on-pickup" },
+    { "id": 3, "name": "Wallet", "code": "wallets" }
+  ],
+  "shippingMethods": [
+    {
+      "id": 1,
+      "name": "Door Delivery",
+      "delivery_time": "2-5 business days",
+      "amount": 3500,
+      "carrier_name": "ShopNig Delivery",
+      "carrier_reference": "mock-door"
+    },
+    {
+      "id": 2,
+      "name": "Pickup",
+      "delivery_time": "1-3 business days",
+      "amount": 0,
+      "carrier_name": "Pickup Point",
+      "carrier_reference": "mock-pickup"
+    }
+  ],
+  "account": {
+    "user": {
+      "id": "mock-customer",
+      "first_name": "ShopNig",
+      "last_name": "Customer",
+      "email": "customer@example.test",
+      "phone_number": "+2348000000000"
+    },
+    "verification": { "email_verified_at": null, "phone_verified_at": null },
+    "wallet": { "available_balance": 250000 },
+    "order_count": 0,
+    "bank": null
+  },
+  "deliveryAddresses": [],
+  "orders": [],
+  "notifications": [],
+  "popularCategories": [101, 105, 107, 108, 104, 111],
+  "banners": [
+    {
+      "img": "/images/banners/360_F_417425751_z8Rg86FJnDc8vUSC5Frj3CgD4owjLQTB.jpg"
+    },
+    {
+      "img": "/images/banners/360_F_417425475_6i8y2OkKGOwmfTzHLQTxbm60pmNwxdUt.jpg"
+    }
+  ]
+}

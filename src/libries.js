@@ -1,16 +1,17 @@
 import axios from "axios";
 import { addCartItem } from "./store/slices/cartSlice";
+import mockApiAdapter from "./utils/mockApi";
 
-export const baseUrl = "https://test.bulk.ng/api/v1";
+export const baseUrl = "/mock-api/v1";
+
+axios.defaults.adapter = mockApiAdapter;
 
 export const axiosInstance = (token) => {
   const instance = axios.create({
-    baseURL: "https://test.bulk.ng/api/v1",
-    headers: {
-      "Content-Type": "application/json",
-      Authorization: `Bearer ${token}`,
-      timeout: 1000,
-    },
+    baseURL: baseUrl,
+    adapter: mockApiAdapter,
+    timeout: 10000,
+    ...(token ? { headers: { Authorization: `Bearer ${token}` } } : {}),
   });
 
   instance.interceptors.response.use(
@@ -22,7 +23,7 @@ export const axiosInstance = (token) => {
         window.location.assign("/login");
       }
       return Promise.reject(error);
-    }
+    },
   );
 
   return instance;

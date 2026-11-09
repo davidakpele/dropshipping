@@ -1,6 +1,7 @@
+import Empty from "./Empty";
 import Product, { ProductLoader } from "./Product";
 
-const Products = ({ title, data, isNew }) => {
+const Products = ({ title, data, isNew, emptyMessage }) => {
   return (
     <section className="products-section">
       <div className="container-sm products-section__container">
@@ -8,9 +9,11 @@ const Products = ({ title, data, isNew }) => {
         <div className="products-section__products">
           {!data
             ? new Array(6).fill(null).map((_, i) => <ProductLoader key={i} />)
-            : data.map((itm, id) => (
-                <Product data={itm} key={id} isNew={isNew} />
-              ))}
+            : data.length
+              ? data.map((itm, id) => (
+                  <Product data={itm} key={itm.id ?? id} isNew={isNew} />
+                ))
+              : emptyMessage && <Empty emptyTitle={emptyMessage} />}
         </div>
       </div>
     </section>

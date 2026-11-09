@@ -1,6 +1,6 @@
 $uiMode: light;
 
-$body-bg: if($uiMode == light, "#efefef", "#1D1A17");
+$body-bg: if($uiMode == light, "#ffffff", "#ffffff");
 
 // $footer-bg: if($uiMode == light, "#232323", "#1A1A1A");
 $footer-bg: if($uiMode == light, "#232323", "#100E0C");
@@ -11,7 +11,7 @@ $text-color: if($uiMode == light, "#2B2B2B", "#D9D9D9");
 $text-slashed: if($uiMode == light, "#909090", "#909090");
 $header-bg: if($uiMode == light, "#FFF", "#1D1A17");
 $header-border: if($uiMode == light, "#eee", "#453025");
-$drop-hover: if($uiMode == light, "#946B00", "#946B00");
+$drop-hover: if($uiMode == light, "#ffcc00", "#ffcc00");
 $menu-hover: if($uiMode == light, "#f1f1f1", "#453025");
 $navtab-bg: if($uiMode == light, "#FFF", "#2A211B");
 $loader: if($uiMode == light, "#a9a9a9", "#2A211B");
@@ -62,8 +62,8 @@ $cancelled-bg: if($uiMode == light, "#Fdf2f1", "#402726");
 $processing-bg: if($uiMode == light, "#fcdecf", "#402F26");
 $shipped-bg: if($uiMode == light, "#CCE0FF", "#263040");
 $details-grey: if($uiMode == light, "#eaeaea", "#2A211B");
-$details-green: if($uiMode == light, "#E1FFCC", "#314026");
-$green-text: if($uiMode == light, "#397305", "#61C309");
+$details-green: if($uiMode == light, "#fff4bf", "#fff4bf");
+$green-text: if($uiMode == light, "#5c4700", "#5c4700");
 $details-blue: if($uiMode == light, "#cce0ff", "#263040");
 $details-text: if($uiMode == light, "#000", "#d9d9d9");
 $details-info: if($uiMode == light, "#000", "#2A211B");

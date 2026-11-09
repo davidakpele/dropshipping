@@ -20,11 +20,11 @@
       display: flex;
       gap: 1rem;
       align-items: center;
-      border: 1px solid #946B00;
+      border: 1px solid #946b00;
       padding: 0.5rem 2.5rem;
-      border-radius: .4rem;
+      border-radius: 0.4rem;
       margin-right: 2rem;
-      color: #946B00;
+      color: #946b00;
       font-weight: 500;
       @include responsive(790px) {
         font-size: 1.3rem;
@@ -62,12 +62,12 @@
 
   // for account not verified red text
   .verify {
-    margin-top: .8rem;
+    margin-top: 0.8rem;
     display: flex;
     align-items: center;
     gap: 1rem;
     cursor: pointer;
-    color: #ff7344;
+    color: $green1;
     &__text {
       font-size: 1.5rem;
       font-weight: 600;

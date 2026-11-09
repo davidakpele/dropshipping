@@ -5,7 +5,7 @@
     display: flex;
     gap: 1rem;
     cursor: pointer;
-    color: #ff7344;
+    color: $green1;
 
     &__text {
       font-size: 1.5rem;
@@ -86,7 +86,7 @@
         .savee {
           font-size: 1.6rem;
           color: #ffffff;
-          background: #946B00;
+          background: #946b00;
           padding: 0.5rem 10rem;
           border-radius: 0.4rem;
         }

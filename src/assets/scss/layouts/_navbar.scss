@@ -1,7 +1,7 @@
 .nav {
   padding: 0.4rem 2rem;
   background-color: $primary;
-  color: $white;
+  color: $black;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -319,7 +319,8 @@
       font-size: 1rem;
       top: -0.7rem;
       right: -0.7rem;
-      background: #ff784b;
+      background: $lemon;
+      color: $black;
       color: #fff;
       border-radius: 100%;
     }
@@ -622,7 +623,7 @@
         }
 
         ion-icon {
-          color: #946B00;
+          color: #946b00;
           font-size: 10px;
         }
       }
@@ -656,7 +657,7 @@
         }
 
         ion-icon {
-          color: #946B00;
+          color: #946b00;
           font-size: 10px;
         }
       }

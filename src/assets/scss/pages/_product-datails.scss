@@ -55,14 +55,14 @@
         transition: all 0.5s;
 
         &.active {
-          background-color: #7db312;
-          color: $white;
+          background-color: $lemon;
+          color: $black;
         }
 
         &:hover {
-          background-color: #7db312;
-          color: $white;
-          border-bottom: 1px solid #7db312;
+          background-color: $lemon;
+          color: $black;
+          border-bottom: 1px solid $lemon;
           border-top-left-radius: 0.5rem;
           border-top-right-radius: 0.5rem;
           cursor: pointer;
@@ -919,7 +919,7 @@
       font-size: 2rem;
 
       .see__all__rating {
-        color: #946B00;
+        color: #946b00;
         font-size: 1.6rem;
         text-decoration: underline;
         cursor: pointer;
