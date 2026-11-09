@@ -9,6 +9,7 @@ import { SimilarProductLoader } from "../components/SimilarProduct";
 
 // components
 import datas from "../data/categories.json";
+import { getMarketplaceProductById } from "../data/marketplaceProducts";
 import { axiosInstance } from "../libries";
 import Layout from "../containers/Layout";
 import SimilarProduct from "../components/SimilarProduct";
@@ -41,10 +42,17 @@ const ProductDetails = () => {
   const userToken = useSelector((state) => state.auth.accessToken);
   const carts = useSelector((state) => state.cart.carts);
   const { id } = useParams();
+  const localProduct = getMarketplaceProductById(id);
 
   const [openRatings, setOpenRatings] = useState(false);
 
   useEffect(() => {
+    if (localProduct) {
+      setProdData(localProduct);
+      !userToken && dispatch(setViewedItems(localProduct));
+      return;
+    }
+
     axiosInstance(userToken)
       .get(`/products/details/${id}`)
       .then((resp) => {
@@ -54,17 +62,23 @@ const ProductDetails = () => {
         !userToken && dispatch(setViewedItems(prod));
       })
       .catch(console.error);
-  }, [id, dispatch, userToken]);
+  }, [id, dispatch, userToken, localProduct]);
 
   useEffect(() => {
     setIsLoading(true);
+    if (localProduct) {
+      setSimilarProd([]);
+      setIsLoading(false);
+      return;
+    }
+
     if (id)
       axiosInstance()
         .get(`/products/similar/${id}`)
         .then((resp) => setSimilarProd(resp.data.data.products))
         .catch(console.error)
         .finally(() => setIsLoading(false));
-  }, [id]);
+  }, [id, localProduct]);
 
   useEffect(() => {
     axiosInstance()
@@ -195,7 +209,7 @@ const ProductDetails = () => {
                     {isDetails ? (
                       <Specification
                         data={prodData}
-                        dat={productData?.specification}
+                        dat={prodData?.specification || productData?.specification}
                       />
                     ) : ratings ? (
                       <Ratings

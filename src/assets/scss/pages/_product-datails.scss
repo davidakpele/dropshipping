@@ -55,14 +55,14 @@
         transition: all 0.5s;
 
         &.active {
-          background-color: #7db312;
-          color: $white;
+          background-color: $lemon;
+          color: $black;
         }
 
         &:hover {
-          background-color: #7db312;
-          color: $white;
-          border-bottom: 1px solid #7db312;
+          background-color: $lemon;
+          color: $black;
+          border-bottom: 1px solid $lemon;
           border-top-left-radius: 0.5rem;
           border-top-right-radius: 0.5rem;
           cursor: pointer;

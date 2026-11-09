@@ -7,19 +7,13 @@ import { axiosInstance, currency_formatter } from "../libries";
 import Notifications from "../pages/Notifications";
 import { logout } from "../store/slices/authSlice";
 import WithAuth from "../WithAuth";
+import {
+  fallbackCategories,
+  getCategoryIcon,
+  getCategoryLink,
+  getMarketplaceCategories,
+} from "../data/marketplaceCategories";
 // import { clearCarts } from "../store/slices/cartSlice";
-
-const fallbackCategories = [
-  { id: 1, name: "Laptop & Computer" },
-  { id: 2, name: "Smart phones & Tablets" },
-  { id: 3, name: "Speakers" },
-  { id: 4, name: "Gears" },
-  { id: 5, name: "Accessories" },
-  { id: 6, name: "Flash Drives" },
-  { id: 7, name: "Game & Accessories" },
-  { id: 8, name: "Phone Accessories" },
-  { id: 9, name: "Other categories" },
-];
 
 const getSubcategories = (category) => {
   const subcategories = [
@@ -76,7 +70,7 @@ const Navbar = () => {
       .then((resp) => {
         const fetchedCategories = resp.data.data.category;
         if (Array.isArray(fetchedCategories) && fetchedCategories.length) {
-          setCategories(fetchedCategories);
+          setCategories(getMarketplaceCategories(fetchedCategories));
         }
       })
       .catch(console.error);
@@ -152,6 +146,7 @@ const Navbar = () => {
                 src={uiMode === "light" ? shopnigLogo : shopnigLogoDark}
                 alt=""
                 className="header__logo"
+                style={uiMode === "light" ? { filter: "brightness(0)" } : undefined}
               />
             </Link>
             <form
@@ -510,96 +505,23 @@ const Navbar = () => {
                   <p>Categories</p>
                 </div>
                 <ul className="sidebar1__menu">
-                  <li className="sidebar1__menu-item">
-                    <Link
-                      to="/categories?categories=1"
-                      className="sidebar1__menu-link"
-                      onClick={() => setToggle((t) => !t)}
+                  {categories.map((category, index) => (
+                    <li
+                      className="sidebar1__menu-item"
+                      key={category.id ?? category.category_id ?? index}
                     >
-                      <ion-icon name="laptop-outline"></ion-icon>
-                      Laptop & Computer
-                    </Link>
-                  </li>
-                  <li className="sidebar1__menu-item">
-                    <Link
-                      to="/categories?categories=2"
-                      className="sidebar1__menu-link"
-                      onClick={() => setToggle((t) => !t)}
-                    >
-                      <ion-icon name="phone-portrait-outline"></ion-icon>
-                      Smart phones & Tablets
-                    </Link>
-                  </li>
-                  <li className="sidebar1__menu-item">
-                    <Link
-                      to="/categories?categories=3"
-                      className="sidebar1__menu-link"
-                      onClick={() => setToggle((t) => !t)}
-                    >
-                      <ion-icon name="megaphone-outline"></ion-icon>
-                      Speakers
-                    </Link>
-                  </li>
-                  <li className="sidebar1__menu-item">
-                    <Link
-                      to="/categories?categories=4"
-                      className="sidebar1__menu-link"
-                      onClick={() => setToggle((t) => !t)}
-                    >
-                      <ion-icon name="game-controller-outline"></ion-icon>
-                      Gears
-                    </Link>
-                  </li>
-                  <li className="sidebar1__menu-item">
-                    <Link
-                      to="/categories?categories=5"
-                      className="sidebar1__menu-link"
-                      onClick={() => setToggle((t) => !t)}
-                    >
-                      <ion-icon name="disc-outline"></ion-icon>
-                      Accessories
-                    </Link>
-                  </li>
-                  <li className="sidebar1__menu-item">
-                    <Link
-                      to="/categories?categories=6"
-                      className="sidebar1__menu-link"
-                      onClick={() => setToggle((t) => !t)}
-                    >
-                      <ion-icon name="lock-closed-outline"></ion-icon>
-                      Flash Drives
-                    </Link>
-                  </li>
-                  <li className="sidebar1__menu-item">
-                    <Link
-                      to="/categories?categories=7"
-                      className="sidebar1__menu-link"
-                      onClick={() => setToggle((t) => !t)}
-                    >
-                      <ion-icon name="game-controller-outline"></ion-icon>
-                      Game & Accessories
-                    </Link>
-                  </li>
-                  <li className="sidebar1__menu-item">
-                    <Link
-                      to="/categories?categories=8"
-                      className="sidebar1__menu-link"
-                      onClick={() => setToggle((t) => !t)}
-                    >
-                      <ion-icon name="call-outline"></ion-icon>
-                      Phone Accessories
-                    </Link>
-                  </li>
-                  <li className="sidebar1__menu-item">
-                    <Link
-                      to="/categories?categories=9"
-                      className="sidebar1__menu-link"
-                      onClick={() => setToggle((t) => !t)}
-                    >
-                      <ion-icon name="keypad-outline"></ion-icon>
-                      Other categories
-                    </Link>
-                  </li>
+                      <Link
+                        to={getCategoryLink(category)}
+                        className="sidebar1__menu-link"
+                        onClick={() => setToggle((t) => !t)}
+                      >
+                        <ion-icon
+                          name={getCategoryIcon(category.name)}
+                        ></ion-icon>
+                        {category.name}
+                      </Link>
+                    </li>
+                  ))}
                 </ul>
               </div>
               <div className="sidebar1__block">
@@ -703,16 +625,18 @@ const Navbar = () => {
                 <div className="top-bar__menu-main">
                   <div className="top-bar__menu-left">
                     <ul className="top-bar__menu1">
-                      {categories?.map((itm) => {
+                      {categories?.map((itm, index) => {
                         const subcategories = getSubcategories(itm);
+                        const categoryKey =
+                          itm.id ?? itm.category_id ?? itm.name ?? index;
 
                         return (
                           <li
                             className="top-bar__menu1-item"
-                            key={itm.id}
-                            onMouseEnter={() => setActiveCategoryId(itm.id)}
+                            key={categoryKey}
+                            onMouseEnter={() => setActiveCategoryId(categoryKey)}
                             onMouseLeave={() => setActiveCategoryId(null)}
-                            onFocus={() => setActiveCategoryId(itm.id)}
+                            onFocus={() => setActiveCategoryId(categoryKey)}
                             onBlur={(event) => {
                               if (
                                 !event.currentTarget.contains(
@@ -723,14 +647,19 @@ const Navbar = () => {
                               }
                             }}
                           >
-                            <Link to="#" className="top-bar__menu1-link">
-                              <ion-icon name="laptop-outline"></ion-icon>
+                            <Link
+                              to={getCategoryLink(itm)}
+                              className="top-bar__menu1-link"
+                            >
+                              <ion-icon
+                                name={getCategoryIcon(itm.name)}
+                              ></ion-icon>
                               {/* <img src={itm.image_url} alt={itm.name} /> */}
                               {itm.name}
                             </Link>
                             <div
                               className={`top-bar__menu-right ${
-                                activeCategoryId === itm.id
+                                activeCategoryId === categoryKey
                                   ? "top-bar__menu-right--active"
                                   : ""
                               }`}
@@ -741,18 +670,44 @@ const Navbar = () => {
                                 </h3>
                                 <div className="top-bar__menu-subcategories">
                                   {subcategories.length ? (
-                                    subcategories.map((subcategory, index) => (
-                                      <Link
-                                        to={`/categories?categories=${subcategory.id ?? itm.id}`}
-                                        className="top-bar__menu2-link"
-                                        key={subcategory.id ?? index}
-                                      >
-                                        {subcategory.name ?? subcategory}
-                                      </Link>
-                                    ))
+                                    subcategories.map((subcategory, index) => {
+                                      const subcategoryName =
+                                        typeof subcategory === "object"
+                                          ? subcategory.name ?? subcategory.title
+                                          : subcategory;
+                                      const category =
+                                        typeof subcategory === "object"
+                                          ? {
+                                              ...subcategory,
+                                              id:
+                                                subcategory.id ??
+                                                subcategory.category_id ??
+                                                itm.id ??
+                                                itm.category_id,
+                                            }
+                                          : {
+                                              id: itm.id ?? itm.category_id,
+                                              name: subcategoryName,
+                                              searchTerm: `${itm.name} ${subcategoryName}`,
+                                            };
+
+                                      return (
+                                        <Link
+                                          to={getCategoryLink(category)}
+                                          className="top-bar__menu2-link"
+                                          key={
+                                            subcategory.id ??
+                                            subcategory.category_id ??
+                                            index
+                                          }
+                                        >
+                                          {subcategoryName}
+                                        </Link>
+                                      );
+                                    })
                                   ) : (
                                     <Link
-                                      to={`/categories?categories=${itm.id}`}
+                                      to={getCategoryLink(itm)}
                                       className="top-bar__menu2-link"
                                     >
                                       View all {itm.name}
@@ -785,51 +740,6 @@ const Navbar = () => {
                   </Link>
                 </li>
               ))}
-              {/* <li className="top-bar__navbar-item">
-                <Link
-                  to="/categories?categories=1"
-                  className="top-bar__navbar-link"
-                >
-                  <ion-icon name="laptop-outline"></ion-icon>
-                  Laptop & Computer
-                </Link>
-              </li>
-              <li className="top-bar__navbar-item">
-                <Link
-                  to="/categories?categories=2"
-                  className="top-bar__navbar-link"
-                >
-                  <ion-icon name="phone-portrait-outline"></ion-icon>
-                  Smartphones & Tablets
-                </Link>
-              </li>
-              <li className="top-bar__navbar-item">
-                <Link
-                  to="/categories?categories=3"
-                  className="top-bar__navbar-link"
-                >
-                  <ion-icon name="megaphone-outline"></ion-icon>
-                  Speakers
-                </Link>
-              </li>
-              <li className="top-bar__navbar-item">
-                <Link
-                  to="/categories?categories=4"
-                  className="top-bar__navbar-link"
-                >
-                  <ion-icon name="game-controller-outline"></ion-icon>
-                  Gears
-                </Link>
-              </li>
-              <li className="top-bar__navbar-item">
-                <Link
-                  to="/categories?categories=8"
-                  className="top-bar__navbar-link"
-                >
-                  <ion-icon name="phone-portrait-outline"></ion-icon>
-                  Phone Accessories MERCY
-                </Link>
-              </li> */}
             </ul>
             {user ? (
               <ul className="top-bar__navbar">

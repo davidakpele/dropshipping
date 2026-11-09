@@ -1,22 +1,41 @@
-import React, { useState, useEffect, useRef } from "react";
-import { useSelector, useDispatch } from "react-redux";
-import { setCategories, setBrands } from "../store/slices/cacheSlice";
+import { useEffect, useRef, useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { setBrands, setCategories } from "../store/slices/cacheSlice";
 // import { currency_formatter } from "../libries";
 
 // components
-import { axiosInstance, currency_formatter } from "../libries";
-import Layout from "../containers/Layout";
-import Breadcrumb from "../components/Breadcrumb";
 import BestBrand from "../components/BestBrand";
-import LimtedOffer from "../components/LimitedOffer";
-import ProdCategory, { ProdCategoryLoader } from "../components/prodCategory";
-import { BannerCategory } from "../components/Banners";
+import Breadcrumb from "../components/Breadcrumb";
 import Empty from "../components/Empty";
+import ProdCategory, { ProdCategoryLoader } from "../components/prodCategory";
+import Layout from "../containers/Layout";
+import { axiosInstance, currency_formatter } from "../libries";
 
-// imgs
-import limtedbanner from "../assets/imgs/banners/ipad-banner.png";
 import { useSearchParams } from "react-router-dom";
 import CartNotification from "../components/CartNotification";
+import {
+    getMarketplaceProductsForCategory,
+    getMarketplaceProductsForSearchTerm,
+} from "../data/marketplaceProducts";
+
+const mergeCategoryProducts = (
+  products,
+  categoryName,
+  priceRange,
+  minimumDiscount
+) => {
+  const remoteProducts = Array.isArray(products) ? products : [];
+  const remoteIds = new Set(remoteProducts.map((product) => product.id));
+  const localProducts = getMarketplaceProductsForCategory(categoryName).filter(
+    (product) =>
+      !remoteIds.has(product.id) &&
+      (!priceRange ||
+        (product.amount >= priceRange.min && product.amount <= priceRange.max)) &&
+      (!minimumDiscount || product.discount >= Number(minimumDiscount))
+  );
+
+  return [...localProducts, ...remoteProducts];
+};
 
 const Categories = () => {
   const RangeRef = useRef();
@@ -73,15 +92,28 @@ const Categories = () => {
   // API call for search endpoint
   useEffect(() => {
     if (searchParams.get("prod")) {
-      setIsLoading(true);
+      const searchTerm = searchParams.get("prod");
+      const localProducts = getMarketplaceProductsForSearchTerm(searchTerm);
+      setProds(localProducts);
+      setIsLoading(localProducts.length === 0);
 
       axiosInstance()
-        .get(`/general-search-products?seach_term=${searchParams.get("prod")}`)
+        .get(
+          `/general-search-products?seach_term=${encodeURIComponent(searchTerm)}`
+        )
         .then((resp) => {
-          setProds(resp.data.data.search_results.data);
+          const products = resp.data.data.search_results.data ?? [];
+          const remoteIds = new Set(products.map((product) => product.id));
+          const localProducts = getMarketplaceProductsForSearchTerm(
+            searchTerm
+          ).filter((product) => !remoteIds.has(product.id));
+          setProds([...localProducts, ...products]);
           // setLinks(resp.data.data.search_results.meta.links);
         })
-        .catch((err) => console.error(err.response))
+        .catch((err) => {
+          console.error(err.response);
+          setProds(localProducts);
+        })
         .finally(() => setIsLoading(false));
     }
   }, [searchParams]);
@@ -89,14 +121,22 @@ const Categories = () => {
   // API call for products under different categories
   useEffect(() => {
     if (!searchParams.get("prod")) {
-      const categories = searchParams.get("categories") ?? null;
+      const selectedCategoryId = searchParams.get("categories") ?? null;
+      const selectedCategoryName = categories?.find(
+        (category) =>
+          String(category.id ?? category.category_id) ===
+          String(selectedCategoryId)
+      )?.name;
+      const localProducts =
+        getMarketplaceProductsForCategory(selectedCategoryName);
       const page = searchParams.get("page") ?? 1;
       const brand = searchParams.get("brand") ?? [];
-      setIsLoading(true);
+      setProds(localProducts);
+      setIsLoading(localProducts.length === 0);
 
       axiosInstance()
         .get(
-          `/products/all/category/${categories}?key=${
+          `/products/all/category/${selectedCategoryId}?key=${
             searchParams.get("filter") ?? "all"
           }&page=${page}&discount=${searchParams.get(
             "discount"
@@ -105,17 +145,22 @@ const Categories = () => {
         .then((resp) => {
           const res = resp.data.data.products;
 
-          if (!Array.isArray(res)) {
-            setProds(resp.data.data.products.data);
-            // setLinks(resp.data.data.products.meta.links);
-          } else setProds([]);
+          const products = Array.isArray(res) ? res : res?.data ?? [];
+          setProds(
+            mergeCategoryProducts(
+              products,
+              selectedCategoryName,
+              null,
+              searchParams.get("discount")
+            )
+          );
         })
         .catch((err) => {
           console.error(err.response);
         })
         .finally(() => setIsLoading(false));
     }
-  }, [searchParams]);
+  }, [categories, searchParams]);
 
   // API call for price filter
   useEffect(() => {
@@ -127,12 +172,23 @@ const Categories = () => {
           }&min_price=${minRange}&max_price=${maxRange}`
         )
         .then((resp) => {
-          setProds(resp.data.data.products);
+          const products = resp.data.data.products;
+          const categoryName = categories?.find(
+            (category) =>
+              String(category.id ?? category.category_id) ===
+              String(searchParams.get("categories"))
+          )?.name;
+          setProds(
+            mergeCategoryProducts(products, categoryName, {
+              min: minRange,
+              max: maxRange,
+            }, searchParams.get("discount"))
+          );
         })
         .catch((err) => console.log(err))
         .finally(() => setFilterPrice(!filter_price));
     }
-  }, [maxRange, minRange, searchParams, filter_price]);
+  }, [maxRange, minRange, searchParams, filter_price, categories]);
 
   const setActiveCategory = (id) => {
     searchParams.delete("prod");
@@ -238,8 +294,6 @@ const Categories = () => {
       <Layout>
         <Breadcrumb name="Home > Categories > Computer" />
         <div className="category__pad">
-          <BannerCategory />
-
           <div className="category">
             <div className="container">
               <div className="add_popup"></div>
@@ -419,7 +473,6 @@ const Categories = () => {
                       </ul>
                     </div>
                   </div>
-                  <LimtedOffer src={limtedbanner} />
                 </div>
                 <div className="category__main">
                   <h3 className="category__allProd">
@@ -501,6 +554,10 @@ const Categories = () => {
                           .map((_, i) => <ProdCategoryLoader key={i} />)
                       : prods
                           ?.filter((prod) => {
+                            if (prod.categoryKeywords) {
+                              return !searchParams.get("brand");
+                            }
+
                             const activeBrands =
                               brands &&
                               brands

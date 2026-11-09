@@ -1,18 +1,11 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
-
-const fallbackCategories = [
-  { id: 1, name: "Laptop & Computer" },
-  { id: 2, name: "Smart phones & Tablets" },
-  { id: 3, name: "Speakers" },
-  { id: 4, name: "Gears" },
-  { id: 5, name: "Accessories" },
-  { id: 6, name: "Flash Drives" },
-  { id: 7, name: "Game & Accessories" },
-  { id: 8, name: "Phone Accessories" },
-  { id: 9, name: "Other categories" },
-];
+import {
+  getCategoryIcon,
+  getCategoryLink,
+  getMarketplaceCategories,
+} from "../data/marketplaceCategories";
 
 const getSubcategories = (category) =>
   [
@@ -29,10 +22,7 @@ const getSubcategories = (category) =>
 const HomeCategorySidebar = () => {
   const categories = useSelector((state) => state.cache.categories);
   const [activeCategory, setActiveCategory] = useState(null);
-  const items =
-    Array.isArray(categories) && categories.length
-      ? categories
-      : fallbackCategories;
+  const items = getMarketplaceCategories(categories);
   const activeCategoryId =
     activeCategory?.id ?? activeCategory?.category_id;
   const activeSubcategories = activeCategory
@@ -77,7 +67,10 @@ const HomeCategorySidebar = () => {
                 onMouseEnter={() => setActiveCategory(category)}
                 onFocus={() => setActiveCategory(category)}
               >
-                <ion-icon name="laptop-outline" aria-hidden="true"></ion-icon>
+                <ion-icon
+                  name={getCategoryIcon(category.name)}
+                  aria-hidden="true"
+                ></ion-icon>
                 <span>{category.name}</span>
                 <ion-icon
                   className="home-category-sidebar__chevron"
@@ -121,7 +114,10 @@ const HomeCategorySidebar = () => {
               return (
                 <li key={subcategoryId ?? subcategoryName ?? index}>
                   <Link
-                    to={`/categories?categories=${subcategoryId}`}
+                    to={getCategoryLink({
+                      id: subcategoryId,
+                      name: subcategoryName,
+                    })}
                     onClick={() => setActiveCategory(null)}
                   >
                     {subcategoryName}
@@ -131,7 +127,7 @@ const HomeCategorySidebar = () => {
             })}
             <li>
               <Link
-                to={`/categories?categories=${activeCategoryId}`}
+                to={getCategoryLink(activeCategory)}
                 onClick={() => setActiveCategory(null)}
               >
                 View all {activeCategory.name}

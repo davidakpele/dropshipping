@@ -17,9 +17,12 @@ import Products from "../components/Products";
 import ProductCategories from "../components/PopularCategories";
 import BestBrand from "../components/BestBrand";
 import Welcome from "../components/Welcome";
+import { getMarketplaceCategories } from "../data/marketplaceCategories";
+import { getMarketplaceProductsForCategory } from "../data/marketplaceProducts";
 
 const Home = () => {
   const dispatch = useDispatch();
+  const [categoryProducts, setCategoryProducts] = useState([]);
   // declearing state for best-deals, popular products, latest-products, welcome-popup and banner
 
   // const [latestProducts, setLatestProducts] = useState(null);
@@ -75,8 +78,84 @@ const Home = () => {
       .then((resp) => {
         dispatch(setCategories(resp.data.data.category));
       })
-      .catch(console.error);
+      .catch((error) => {
+        console.error(error);
+        dispatch(setCategories([]));
+      });
   }, [categories, dispatch]);
+
+  useEffect(() => {
+    let isCurrent = true;
+    const marketplaceCategories = getMarketplaceCategories(categories);
+    const publishCategory = (category, categoryOrder, products) => {
+      const categoryKey = category.id ?? category.category_id ?? category.name;
+
+      setCategoryProducts((currentProducts) => {
+        const resolvedCategories = currentProducts.filter(
+          (item) => item.categoryKey !== categoryKey
+        );
+
+        resolvedCategories.push({
+          ...category,
+          categoryKey,
+          categoryOrder,
+          products: products.slice(0, 6),
+        });
+
+        return resolvedCategories.sort(
+          (first, second) => first.categoryOrder - second.categoryOrder
+        );
+      });
+    };
+
+    setCategoryProducts([]);
+
+    marketplaceCategories.forEach((category, categoryOrder) => {
+      const localProducts = getMarketplaceProductsForCategory(category.name);
+      if (localProducts.length) {
+        publishCategory(category, categoryOrder, localProducts);
+      }
+    });
+
+    marketplaceCategories.forEach(async (category, categoryOrder) => {
+      const categoryId = category.id ?? category.category_id;
+      let products = [];
+
+      try {
+        const requestUrl =
+          categoryId != null
+            ? `/products/all/category/${categoryId}?key=all&page=1`
+            : `/general-search-products?seach_term=${encodeURIComponent(
+                category.searchTerm ?? category.name
+              )}`;
+        const resp = await axiosInstance().get(requestUrl);
+        const responseProducts =
+          categoryId != null
+            ? resp.data.data.products
+            : resp.data.data.search_results;
+        products = Array.isArray(responseProducts)
+          ? responseProducts
+          : responseProducts?.data ?? [];
+      } catch (error) {
+        products = [];
+      }
+
+      if (!isCurrent) return;
+
+      const localProducts = getMarketplaceProductsForCategory(category.name);
+      const localIds = new Set(localProducts.map((product) => product.id));
+      const categoryProducts = [
+        ...localProducts,
+        ...products.filter((product) => !localIds.has(product.id)),
+      ];
+
+      publishCategory(category, categoryOrder, categoryProducts);
+    });
+
+    return () => {
+      isCurrent = false;
+    };
+  }, [categories]);
 
   useEffect(() => {
     axiosInstance()
@@ -126,13 +205,32 @@ const Home = () => {
           </div>
         </section>
         <ProductCategories data={popularCategories} />
+        {categoryProducts?.map((category) => (
+          <Products
+            key={category.id ?? category.category_id ?? category.name}
+            title={category.name}
+            data={category.products.slice(0, 6)}
+            isNew={false}
+            emptyMessage={`No products available in ${category.name} yet.`}
+          />
+        ))}
         <BestBrand />
-        <Products title="Today's Best Deal" data={bestDeal} isNew={false} />
-        <Products
-          title="Latest Product on ShopNig"
-          data={latestProduct}
-          isNew={true}
-        />
+        {bestDeal && (
+          <Products
+            title="Today's Best Deal"
+            data={bestDeal.slice(0, 6)}
+            isNew={false}
+            emptyMessage="No deals available right now."
+          />
+        )}
+        {latestProduct && (
+          <Products
+            title="Latest Product on ShopNig"
+            data={latestProduct.slice(0, 6)}
+            isNew={true}
+            emptyMessage="No new products available right now."
+          />
+        )}
       </Layout>
       {!welcomePopup && <Welcome />}
     </>

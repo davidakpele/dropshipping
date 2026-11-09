@@ -1,0 +1,157 @@
+[
+  {
+    "id": "FA203MW89279LNAFAMZ",
+    "name": "3pcs Beautiful Ladies Sexy High Waist Tight Different Colours",
+    "amount": 7026,
+    "previous_amount": 7399,
+    "brand": "Fashion",
+    "color": "Different Colours",
+    "weight_kg": 0.1,
+    "categoryKeywords": ["women", "womens", "ladies"],
+    "description": "Feel comfortable wearing a form fitting top, or even a crop top when you wear your Fleece Lined Leggings. The high waist compression band will flatten out your tummy and elongate your torso to create a slimming effect. The material will stretch and adjust to highlight the curves that you want, and hide the rolls that you do not want.",
+    "features": ["High waist compression band for a supportive fit", "Stretch material designed for comfortable everyday wear", "Three-piece set in assorted colours"]
+  },
+  {
+    "id": "LOCAL-MENS-POLO-001",
+    "name": "Men's Classic Everyday Cotton Polo Shirt",
+    "amount": 12500,
+    "brand": "Northline",
+    "color": "Navy",
+    "weight_kg": 0.35,
+    "categoryKeywords": ["men", "mens", "male", "gents"],
+    "description": "A breathable cotton polo shirt for everyday wear, with a neat collar, short sleeves, and a comfortable regular fit. Easy to pair with jeans, chinos, or shorts.",
+    "features": ["Soft, breathable cotton fabric", "Classic button placket and ribbed collar", "Regular fit for daily comfort"]
+  },
+  {
+    "id": "LOCAL-KIDS-SNEAKERS-001",
+    "name": "Kids' Lightweight Velcro School Sneakers",
+    "amount": 9800,
+    "brand": "Little Steps",
+    "color": "Black and White",
+    "weight_kg": 0.4,
+    "categoryKeywords": ["children", "child", "kids", "baby"],
+    "description": "Lightweight children's sneakers made for school days and play. The hook-and-loop straps are easy to fasten, and the cushioned sole supports comfortable movement.",
+    "features": ["Easy hook-and-loop fastening", "Cushioned, flexible sole", "Durable everyday construction"]
+  },
+  {
+    "id": "LOCAL-CASUAL-SHOES-001",
+    "name": "Unisex Everyday Casual Walking Shoes",
+    "amount": 15750,
+    "brand": "Streetform",
+    "color": "Grey",
+    "weight_kg": 0.6,
+    "categoryKeywords": ["shoes", "shoe", "footwear", "bags"],
+    "description": "Versatile casual walking shoes with a padded collar and flexible outsole. Designed for errands, commuting, and relaxed weekend wear.",
+    "features": ["Padded collar for a secure feel", "Flexible textured outsole", "Suitable for everyday casual outfits"]
+  },
+  {
+    "id": "LOCAL-SILVER-CREST-AIR-FRYER-001",
+    "name": "SILVER CREST 8L Extra Large Digital AirFryer",
+    "amount": 89500,
+    "brand": "SILVER CREST",
+    "color": "Black",
+    "weight_kg": 5.2,
+    "categoryKeywords": ["kitchen", "home", "appliances", "air fryer"],
+    "description": "Prepare family-sized portions with this 8-litre digital air fryer. Adjustable temperature and timer controls make it convenient to roast, bake, and crisp food with little or no added oil.",
+    "features": ["Extra-large 8-litre cooking capacity", "Digital temperature and timer controls", "Removable basket for easier cleaning"]
+  },
+  {
+    "id": "LOCAL-CHEST-FREEZER-001",
+    "name": "150L Energy-Saving Chest Freezer",
+    "amount": 248000,
+    "brand": "Frostline",
+    "color": "White",
+    "weight_kg": 28,
+    "categoryKeywords": ["freezer", "freezers", "fridge", "refrigerator", "home", "appliances"],
+    "description": "A practical 150-litre chest freezer for storing frozen food at home or in a small shop. The top-opening lid and roomy interior make loading and organizing supplies straightforward.",
+    "features": ["150-litre storage capacity", "Top-opening insulated lid", "Adjustable temperature control"]
+  },
+  {
+    "id": "LOCAL-LAPTOP-001",
+    "name": "15.6-Inch Core i5 Everyday Laptop",
+    "amount": 685000,
+    "brand": "Northstar Computing",
+    "color": "Silver",
+    "weight_kg": 1.9,
+    "categoryKeywords": ["laptop", "laptops", "computer", "computers", "electronics"],
+    "description": "A 15.6-inch laptop for study, office work, video calls, and everyday browsing. Its full-size keyboard and portable design suit home, campus, and workplace use.",
+    "features": ["15.6-inch Full HD display", "Intel Core i5 processor", "Full-size keyboard and built-in webcam"]
+  },
+  {
+    "id": "LOCAL-ANDROID-PHONE-001",
+    "name": "6.7-Inch Dual-SIM Android Smartphone",
+    "amount": 189000,
+    "brand": "Aster Mobile",
+    "color": "Midnight Blue",
+    "weight_kg": 0.22,
+    "categoryKeywords": ["phone", "phones", "mobile", "smartphone", "smartphones", "accessories"],
+    "description": "A dual-SIM Android smartphone with a large 6.7-inch display for messaging, video, browsing, and daily apps. The generous screen makes reading and streaming more comfortable.",
+    "features": ["6.7-inch touchscreen display", "Dual-SIM support", "Rear and front-facing cameras"]
+  },
+  {
+    "id": "LOCAL-STANDING-FAN-001",
+    "name": "18-Inch Oscillating Standing Fan with Remote",
+    "amount": 73500,
+    "brand": "Breeze Home",
+    "color": "White",
+    "weight_kg": 6.5,
+    "categoryKeywords": ["fan", "fans", "home", "appliances", "electronics"],
+    "description": "Keep a room comfortable with this adjustable-height standing fan. Oscillation, multiple speed settings, and a remote control make it easy to direct airflow from across the room.",
+    "features": ["18-inch fan head with oscillation", "Adjustable height and multiple speed settings", "Remote control included"]
+  },
+  {
+    "id": "LOCAL-ELECTRIC-IRON-001",
+    "name": "Quick-Heat Non-Stick Electric Steam Iron",
+    "amount": 22500,
+    "brand": "Presswell",
+    "color": "Blue and White",
+    "weight_kg": 1.1,
+    "categoryKeywords": ["iron", "irons", "home", "kitchen", "appliances"],
+    "description": "Smooth shirts and everyday fabrics with this quick-heating steam iron. Its non-stick soleplate glides across clothing, while the adjustable control helps match heat to the garment.",
+    "features": ["Quick-heating non-stick soleplate", "Adjustable temperature control", "Steam function for everyday creases"]
+  },
+  {
+    "id": "LOCAL-HAIR-DRYER-001",
+    "name": "Compact 5-in-1 Ceramic Hair Styling Dryer",
+    "amount": 42900,
+    "brand": "Luma Beauty",
+    "color": "Rose Gold",
+    "weight_kg": 0.9,
+    "categoryKeywords": ["beauty", "cosmetics", "personal care", "hair"],
+    "description": "A compact styling set for drying and shaping hair at home. Multiple attachments support different styling routines, while ceramic heat distribution helps provide an even finish.",
+    "features": ["Five interchangeable styling attachments", "Ceramic heat for even drying", "Multiple heat and airflow settings"]
+  },
+  {
+    "id": "LOCAL-THERMAL-FLASK-001",
+    "name": "1.5L Insulated Stainless Steel Food Flask",
+    "amount": 16800,
+    "brand": "Daykeep",
+    "color": "Stainless Steel",
+    "weight_kg": 0.8,
+    "categoryKeywords": ["groceries", "grocery", "food", "beverages", "beverage", "drink"],
+    "description": "Carry soups, stews, or hot drinks in this 1.5-litre insulated flask. The wide opening makes filling and serving easier, and the secure lid helps reduce spills on the go.",
+    "features": ["1.5-litre capacity", "Insulated stainless steel body", "Wide opening and secure screw lid"]
+  },
+  {
+    "id": "LOCAL-TRAINING-FOOTBALL-001",
+    "name": "Size 5 Textured Training Football",
+    "amount": 14500,
+    "brand": "Fieldmark",
+    "color": "White and Green",
+    "weight_kg": 0.45,
+    "categoryKeywords": ["sports", "sport", "outdoors", "outdoor", "football"],
+    "description": "A size 5 football for practice sessions, school activities, and casual matches. Its textured outer surface is designed to provide a steady grip and predictable control.",
+    "features": ["Regulation size 5 format", "Textured outer surface for ball control", "Suitable for training and recreation"]
+  },
+  {
+    "id": "LOCAL-REMOTE-CONTROL-CAR-001",
+    "name": "Rechargeable Remote Control Toy Car",
+    "amount": 19500,
+    "brand": "Playtrail",
+    "color": "Red",
+    "weight_kg": 0.7,
+    "categoryKeywords": ["toys", "toy", "games", "game", "children", "kids"],
+    "description": "A rechargeable remote-control car for indoor play. The simple controller makes it easy to drive forward, reverse, and turn around furniture and open spaces.",
+    "features": ["Rechargeable toy car battery", "Easy-to-use remote controller", "Forward, reverse, and turning controls"]
+  }
+]
