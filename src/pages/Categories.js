@@ -14,15 +14,15 @@ import { axiosInstance, currency_formatter } from "../libries";
 import { useSearchParams } from "react-router-dom";
 import CartNotification from "../components/CartNotification";
 import {
-    getMarketplaceProductsForCategory,
-    getMarketplaceProductsForSearchTerm,
+  getMarketplaceProductsForCategory,
+  getMarketplaceProductsForSearchTerm,
 } from "../data/marketplaceProducts";
 
 const mergeCategoryProducts = (
   products,
   categoryName,
   priceRange,
-  minimumDiscount
+  minimumDiscount,
 ) => {
   const remoteProducts = Array.isArray(products) ? products : [];
   const remoteIds = new Set(remoteProducts.map((product) => product.id));
@@ -30,8 +30,9 @@ const mergeCategoryProducts = (
     (product) =>
       !remoteIds.has(product.id) &&
       (!priceRange ||
-        (product.amount >= priceRange.min && product.amount <= priceRange.max)) &&
-      (!minimumDiscount || product.discount >= Number(minimumDiscount))
+        (product.amount >= priceRange.min &&
+          product.amount <= priceRange.max)) &&
+      (!minimumDiscount || product.discount >= Number(minimumDiscount)),
   );
 
   return [...localProducts, ...remoteProducts];
@@ -99,13 +100,13 @@ const Categories = () => {
 
       axiosInstance()
         .get(
-          `/general-search-products?seach_term=${encodeURIComponent(searchTerm)}`
+          `/general-search-products?seach_term=${encodeURIComponent(searchTerm)}`,
         )
         .then((resp) => {
           const products = resp.data.data.search_results.data ?? [];
           const remoteIds = new Set(products.map((product) => product.id));
           const localProducts = getMarketplaceProductsForSearchTerm(
-            searchTerm
+            searchTerm,
           ).filter((product) => !remoteIds.has(product.id));
           setProds([...localProducts, ...products]);
           // setLinks(resp.data.data.search_results.meta.links);
@@ -125,7 +126,7 @@ const Categories = () => {
       const selectedCategoryName = categories?.find(
         (category) =>
           String(category.id ?? category.category_id) ===
-          String(selectedCategoryId)
+          String(selectedCategoryId),
       )?.name;
       const localProducts =
         getMarketplaceProductsForCategory(selectedCategoryName);
@@ -139,20 +140,20 @@ const Categories = () => {
           `/products/all/category/${selectedCategoryId}?key=${
             searchParams.get("filter") ?? "all"
           }&page=${page}&discount=${searchParams.get(
-            "discount"
-          )}&brand=${brand}`
+            "discount",
+          )}&brand=${brand}`,
         )
         .then((resp) => {
           const res = resp.data.data.products;
 
-          const products = Array.isArray(res) ? res : res?.data ?? [];
+          const products = Array.isArray(res) ? res : (res?.data ?? []);
           setProds(
             mergeCategoryProducts(
               products,
               selectedCategoryName,
               null,
-              searchParams.get("discount")
-            )
+              searchParams.get("discount"),
+            ),
           );
         })
         .catch((err) => {
@@ -169,20 +170,25 @@ const Categories = () => {
         .get(
           `/search-products?category_id=${
             searchParams.get("categories") ?? ""
-          }&min_price=${minRange}&max_price=${maxRange}`
+          }&min_price=${minRange}&max_price=${maxRange}`,
         )
         .then((resp) => {
           const products = resp.data.data.products;
           const categoryName = categories?.find(
             (category) =>
               String(category.id ?? category.category_id) ===
-              String(searchParams.get("categories"))
+              String(searchParams.get("categories")),
           )?.name;
           setProds(
-            mergeCategoryProducts(products, categoryName, {
-              min: minRange,
-              max: maxRange,
-            }, searchParams.get("discount"))
+            mergeCategoryProducts(
+              products,
+              categoryName,
+              {
+                min: minRange,
+                max: maxRange,
+              },
+              searchParams.get("discount"),
+            ),
           );
         })
         .catch((err) => console.log(err))

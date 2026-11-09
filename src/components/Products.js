@@ -1,5 +1,5 @@
-import Product, { ProductLoader } from "./Product";
 import Empty from "./Empty";
+import Product, { ProductLoader } from "./Product";
 
 const Products = ({ title, data, isNew, emptyMessage }) => {
   return (
@@ -10,10 +10,10 @@ const Products = ({ title, data, isNew, emptyMessage }) => {
           {!data
             ? new Array(6).fill(null).map((_, i) => <ProductLoader key={i} />)
             : data.length
-            ? data.map((itm, id) => (
-                <Product data={itm} key={itm.id ?? id} isNew={isNew} />
-              ))
-            : emptyMessage && <Empty emptyTitle={emptyMessage} />}
+              ? data.map((itm, id) => (
+                  <Product data={itm} key={itm.id ?? id} isNew={isNew} />
+                ))
+              : emptyMessage && <Empty emptyTitle={emptyMessage} />}
         </div>
       </div>
     </section>

@@ -16,7 +16,10 @@
     padding: 0;
 
     @media (min-width: 1201px) {
-      grid-template-columns: minmax(20rem, 1fr) minmax(0, 3fr) minmax(20rem, 1fr);
+      grid-template-columns: minmax(20rem, 1fr) minmax(0, 3fr) minmax(
+          20rem,
+          1fr
+        );
     }
   }
 
@@ -198,7 +201,7 @@
       display: block;
       width: 2.4rem;
       height: 2.4rem;
-      color: #8B6400;
+      color: #8b6400;
     }
 
     @media (max-width: 1400px) {
@@ -276,13 +279,13 @@
 
   &__header {
     font-size: 1.8rem;
-    color: #805E00;
+    color: #805e00;
     font-weight: 600;
     display: flex;
     justify-content: space-between;
     align-items: center;
     .see__all__cat {
-      color: #946B00;
+      color: #946b00;
       font-size: 1.4rem;
       text-decoration: underline;
       cursor: pointer;
@@ -348,7 +351,7 @@
     text-align: center;
 
     & span {
-      color: #805E00;
+      color: #805e00;
     }
   }
 
@@ -399,6 +402,6 @@
 
   &__contact-name {
     font-weight: 600;
-    color: #805E00;
+    color: #805e00;
   }
 }

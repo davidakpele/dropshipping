@@ -1,33 +1,33 @@
-import React, { useState, useEffect } from "react";
+import { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 
-import Specification from "../components/Specification";
 import Details from "../components/Details";
-import ProductPreview from "../components/productPreview";
 import ProdPreviewLoader from "../components/loaders/ProdPreviewLoader";
+import ProductPreview from "../components/productPreview";
 import { SimilarProductLoader } from "../components/SimilarProduct";
+import Specification from "../components/Specification";
 
 // components
-import datas from "../data/categories.json";
-import { getMarketplaceProductById } from "../data/marketplaceProducts";
-import { axiosInstance } from "../libries";
-import Layout from "../containers/Layout";
-import SimilarProduct from "../components/SimilarProduct";
+import AllRatings from "../components/AllRatings";
 import Breadcrumb from "../components/Breadcrumb";
 import Explore from "../components/ExploreCategories";
 import Ratings from "../components/Ratings";
-import AllRatings from "../components/AllRatings";
+import SimilarProduct from "../components/SimilarProduct";
+import Layout from "../containers/Layout";
+import datas from "../data/categories.json";
+import { getMarketplaceProductById } from "../data/marketplaceProducts";
+import { axiosInstance } from "../libries";
 
 // image
+import { useDispatch, useSelector } from "react-redux";
+import explore_banner from "../assets/imgs/banners/explore-banner.png";
 import icon1 from "../assets/imgs/icons/icon3.png";
 import icon2 from "../assets/imgs/icons/icon4.png";
 import icon3 from "../assets/imgs/icons/icon5.png";
 import icon4 from "../assets/imgs/icons/icon6.png";
-import explore_banner from "../assets/imgs/banners/explore-banner.png";
 import { currency_formatter } from "../libries";
-import { useDispatch, useSelector } from "react-redux";
-import { setViewedItems } from "../store/slices/recentlyViewedSlice";
 import { addCartItem, removeCartItem } from "../store/slices/cartSlice";
+import { setViewedItems } from "../store/slices/recentlyViewedSlice";
 
 const ProductDetails = () => {
   const dispatch = useDispatch();
@@ -100,7 +100,7 @@ const ProductDetails = () => {
         quantity: 1,
         total: Number(item.amount) * 1,
         variation_info: null, // var_id,
-      })
+      }),
     );
 
     if (userToken)
@@ -127,8 +127,8 @@ const ProductDetails = () => {
                 quantity: item.quantity,
                 total: item.amount * item.quantity,
                 variation_info: null,
-              })
-            )
+              }),
+            ),
         )
         .catch(console.error);
     else dispatch(addCartItem(item));
@@ -144,7 +144,7 @@ const ProductDetails = () => {
         })
         .then(
           (resp) =>
-            resp.data.status && dispatch(removeCartItem(item.id, var_id))
+            resp.data.status && dispatch(removeCartItem(item.id, var_id)),
         )
         .catch(console.error);
     else dispatch(removeCartItem(item.id, var_id));
@@ -209,7 +209,9 @@ const ProductDetails = () => {
                     {isDetails ? (
                       <Specification
                         data={prodData}
-                        dat={prodData?.specification || productData?.specification}
+                        dat={
+                          prodData?.specification || productData?.specification
+                        }
                       />
                     ) : ratings ? (
                       <Ratings

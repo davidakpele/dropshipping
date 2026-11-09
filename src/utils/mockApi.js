@@ -1,9 +1,9 @@
-import mockData from "../data/mockApi.json";
 import marketplaceProducts, {
   getMarketplaceProductById,
   getMarketplaceProductsForCategory,
   getMarketplaceProductsForSearchTerm,
 } from "../data/marketplaceProducts";
+import mockData from "../data/mockApi.json";
 
 const success = (data = {}) => ({ status: true, data });
 
@@ -29,7 +29,7 @@ const getAddresses = () => {
 
 const getProductList = (categoryId, query) => {
   const category = mockData.categories.find(
-    (item) => String(item.id) === String(categoryId)
+    (item) => String(item.id) === String(categoryId),
   );
   let results = category
     ? getMarketplaceProductsForCategory(category.name)
@@ -50,9 +50,13 @@ const getProductList = (categoryId, query) => {
   }
 
   if (query.get("key") === "highest-price") {
-    results = [...results].sort((first, second) => second.amount - first.amount);
+    results = [...results].sort(
+      (first, second) => second.amount - first.amount,
+    );
   } else if (query.get("key") === "lowest-price") {
-    results = [...results].sort((first, second) => first.amount - second.amount);
+    results = [...results].sort(
+      (first, second) => first.amount - second.amount,
+    );
   }
 
   return results;
@@ -60,10 +64,13 @@ const getProductList = (categoryId, query) => {
 
 const getMockData = (config) => {
   const baseUrl = config.baseURL || window.location.origin;
-  const requestUrl = new URL(config.url || "/", new URL(baseUrl, window.location.origin));
+  const requestUrl = new URL(
+    config.url || "/",
+    new URL(baseUrl, window.location.origin),
+  );
   const pathname = decodeURIComponent(requestUrl.pathname).replace(
     /^\/mock-api\/v1/,
-    ""
+    "",
   );
   const query = requestUrl.searchParams;
   Object.entries(config.params || {}).forEach(([key, value]) => {
@@ -90,7 +97,7 @@ const getMockData = (config) => {
     return success(
       pathname.endsWith("/best")
         ? { product: mockData.brands }
-        : { brands: mockData.brands }
+        : { brands: mockData.brands },
     );
   }
   if (pathname === "/products/best-deals") {
@@ -103,12 +110,14 @@ const getMockData = (config) => {
   if (pathname === "/products/latest-products") {
     return success({ products: marketplaceProducts.slice(0, 6) });
   }
-  if (pathname === "/banner/home-top") return success({ banners: mockData.banners });
+  if (pathname === "/banner/home-top")
+    return success({ banners: mockData.banners });
   if (pathname === "/likeable-products") {
     return success({ likeable_products: marketplaceProducts.slice(0, 6) });
   }
   if (pathname === "/general-search-products") {
-    const searchTerm = query.get("seach_term") || query.get("search_term") || "";
+    const searchTerm =
+      query.get("seach_term") || query.get("search_term") || "";
     return success({
       search_results: {
         data: getMarketplaceProductsForSearchTerm(searchTerm),
@@ -124,32 +133,48 @@ const getMockData = (config) => {
   }
 
   const categoryProductsMatch = pathname.match(
-    /^\/products\/all\/category\/([^/]+)$/
+    /^\/products\/all\/category\/([^/]+)$/,
   );
   if (categoryProductsMatch) {
-    const categoryId = categoryProductsMatch[1] === "null"
-      ? null
-      : categoryProductsMatch[1];
+    const categoryId =
+      categoryProductsMatch[1] === "null" ? null : categoryProductsMatch[1];
     return success({
-      products: { data: getProductList(categoryId, query), meta: { links: [] } },
+      products: {
+        data: getProductList(categoryId, query),
+        meta: { links: [] },
+      },
     });
   }
 
-  if (pathname === "/products/details" || pathname.startsWith("/products/details/")) {
+  if (
+    pathname === "/products/details" ||
+    pathname.startsWith("/products/details/")
+  ) {
     const id = pathname.split("/").pop();
-    return success({ product: getMarketplaceProductById(id) || marketplaceProducts[0] });
+    return success({
+      product: getMarketplaceProductById(id) || marketplaceProducts[0],
+    });
   }
   if (pathname.startsWith("/products/similar/")) {
     const id = pathname.split("/").pop();
     return success({
-      products: marketplaceProducts.filter((product) => product.id !== id).slice(0, 6),
+      products: marketplaceProducts
+        .filter((product) => product.id !== id)
+        .slice(0, 6),
     });
   }
   if (pathname.startsWith("/products/variation/details/")) {
     const productId = pathname.split("/").pop();
-    const product = getMarketplaceProductById(productId) || marketplaceProducts[0];
+    const product =
+      getMarketplaceProductById(productId) || marketplaceProducts[0];
     return success({
-      product_variation: [{ id: `${product.id}-variation`, amount: product.amount, quantity: product.in_stock }],
+      product_variation: [
+        {
+          id: `${product.id}-variation`,
+          amount: product.amount,
+          quantity: product.in_stock,
+        },
+      ],
     });
   }
 
@@ -160,7 +185,10 @@ const getMockData = (config) => {
     return success({ representatives: mockData.representatives.logistics });
   }
   if (pathname === "/accounts" || pathname === "/accounts/") {
-    return success({ ...mockData.account, verification: mockData.account.verification });
+    return success({
+      ...mockData.account,
+      verification: mockData.account.verification,
+    });
   }
   if (pathname === "/accounts/get-notifications") {
     return success({
@@ -177,11 +205,14 @@ const getMockData = (config) => {
     return success({ message: "Mock request accepted" });
   }
 
-  if (pathname === "/locations/states") return success({ states: mockData.states });
+  if (pathname === "/locations/states")
+    return success({ states: mockData.states });
   if (pathname.startsWith("/locations/state/")) {
     const stateId = Number(pathname.split("/").pop());
     return success({
-      lgs: mockData.localGovernments.filter((item) => item.state_id === stateId),
+      lgs: mockData.localGovernments.filter(
+        (item) => item.state_id === stateId,
+      ),
     });
   }
   if (pathname.startsWith("/locations/states/cities/")) {
@@ -200,7 +231,9 @@ const getMockData = (config) => {
     return success({ shipping: mockData.shippingMethods });
   }
   if (pathname === "/shipment/rate") {
-    return success({ rate: { amount: 3500, delivery_time: "2-5 business days" } });
+    return success({
+      rate: { amount: 3500, delivery_time: "2-5 business days" },
+    });
   }
 
   if (pathname === "/accounts/default/delivery/address") {
@@ -219,14 +252,27 @@ const getMockData = (config) => {
   }
   if (pathname === "/accounts/delivery/address" && method === "post") {
     const addresses = getAddresses();
-    const address = { ...body, id: Date.now(), is_default: addresses.length ? body.is_default : 1 };
+    const address = {
+      ...body,
+      id: Date.now(),
+      is_default: addresses.length ? body.is_default : 1,
+    };
     const updatedAddresses = body.is_default
       ? [address, ...addresses.map((item) => ({ ...item, is_default: 0 }))]
       : [...addresses, address];
-    localStorage.setItem("mock-delivery-addresses", JSON.stringify(updatedAddresses));
-    return success({ delivery_address: address, message: "Address saved locally" });
+    localStorage.setItem(
+      "mock-delivery-addresses",
+      JSON.stringify(updatedAddresses),
+    );
+    return success({
+      delivery_address: address,
+      message: "Address saved locally",
+    });
   }
-  if (pathname.startsWith("/accounts/change/default/address/") || pathname === "/accounts/change/default/address") {
+  if (
+    pathname.startsWith("/accounts/change/default/address/") ||
+    pathname === "/accounts/change/default/address"
+  ) {
     const addresses = getAddresses().map((item) => ({
       ...item,
       is_default: String(item.id) === String(body.id) ? 1 : 0,
@@ -238,7 +284,7 @@ const getMockData = (config) => {
     const id = pathname.split("/").pop();
     localStorage.setItem(
       "mock-delivery-addresses",
-      JSON.stringify(getAddresses().filter((item) => String(item.id) !== id))
+      JSON.stringify(getAddresses().filter((item) => String(item.id) !== id)),
     );
     return success({ message: "Address removed locally" });
   }
@@ -253,7 +299,10 @@ const getMockData = (config) => {
   if (pathname.startsWith("/carts/") || pathname === "/carts") {
     return success({ message: "Cart updated locally" });
   }
-  if (pathname.startsWith("/saved-products/") || pathname.startsWith("/products/remove/saved")) {
+  if (
+    pathname.startsWith("/saved-products/") ||
+    pathname.startsWith("/products/remove/saved")
+  ) {
     return success({ message: "Saved items updated locally" });
   }
   if (pathname.startsWith("/orders/checkout")) {
@@ -268,8 +317,17 @@ const getMockData = (config) => {
       coupon: 0,
     };
   }
-  if (pathname.startsWith("/orders/single/order/") || pathname.startsWith("/orders/single-order/")) {
-    return success({ order: { id: pathname.split("/").pop(), products: [], order_code: pathname.split("/").pop() } });
+  if (
+    pathname.startsWith("/orders/single/order/") ||
+    pathname.startsWith("/orders/single-order/")
+  ) {
+    return success({
+      order: {
+        id: pathname.split("/").pop(),
+        products: [],
+        order_code: pathname.split("/").pop(),
+      },
+    });
   }
   if (pathname.startsWith("/orders/") || pathname === "/orders") {
     return success({
@@ -300,9 +358,15 @@ const getMockData = (config) => {
     return success({ products: [] });
   }
   if (pathname === "/list-genders") {
-    return success({ genders: [{ id: 1, name: "Female" }, { id: 2, name: "Male" }] });
+    return success({
+      genders: [
+        { id: 1, name: "Female" },
+        { id: 2, name: "Male" },
+      ],
+    });
   }
-  if (pathname === "/contact-us") return success({ message: "Message saved locally" });
+  if (pathname === "/contact-us")
+    return success({ message: "Message saved locally" });
 
   return success({ message: "Mock response", data: [], items: [] });
 };

@@ -33,8 +33,8 @@ export const getMarketplaceProductsForCategory = (categoryName = "") => {
 
   return products.filter((product) =>
     product.categoryKeywords.some((keyword) =>
-      containsKeyword(normalizedName, keyword)
-    )
+      containsKeyword(normalizedName, keyword),
+    ),
   );
 };
 
@@ -45,8 +45,8 @@ export const getMarketplaceProductsForSearchTerm = (searchTerm = "") => {
     (product) =>
       product.name.toLowerCase().includes(normalizedTerm) ||
       product.categoryKeywords.some((keyword) =>
-        containsKeyword(normalizedTerm, keyword)
-      )
+        containsKeyword(normalizedTerm, keyword),
+      ),
   );
 };
 

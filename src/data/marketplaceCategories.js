@@ -58,13 +58,14 @@ export const fallbackCategories = [
 
 export const getMarketplaceCategories = (categories) => {
   const existingCategories = Array.isArray(categories) ? categories : [];
-  const missingCategories = fallbackCategories.filter((fallback) =>
-    !existingCategories.some((category) => {
-      const name = String(category.name ?? "").toLowerCase();
-      return fallback.keywords.some((keyword) =>
-        new RegExp(`\\b${keyword}\\b`).test(name)
-      );
-    })
+  const missingCategories = fallbackCategories.filter(
+    (fallback) =>
+      !existingCategories.some((category) => {
+        const name = String(category.name ?? "").toLowerCase();
+        return fallback.keywords.some((keyword) =>
+          new RegExp(`\\b${keyword}\\b`).test(name),
+        );
+      }),
   );
 
   return [...existingCategories, ...missingCategories];
@@ -76,7 +77,7 @@ export const getCategoryLink = (category) => {
   return categoryId != null
     ? `/categories?categories=${categoryId}`
     : `/categories?prod=${encodeURIComponent(
-        category.searchTerm ?? category.name
+        category.searchTerm ?? category.name,
       )}`;
 };
 

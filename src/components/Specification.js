@@ -1,4 +1,3 @@
-
 const Specification = ({ data, dat }) => {
   if (data) {
     const features = dat?.features ?? data.features;

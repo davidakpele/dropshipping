@@ -23,7 +23,7 @@ export const axiosInstance = (token) => {
         window.location.assign("/login");
       }
       return Promise.reject(error);
-    }
+    },
   );
 
   return instance;

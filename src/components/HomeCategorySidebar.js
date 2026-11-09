@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
+import { Link } from "react-router-dom";
 import {
   getCategoryIcon,
   getCategoryLink,
@@ -23,8 +23,7 @@ const HomeCategorySidebar = () => {
   const categories = useSelector((state) => state.cache.categories);
   const [activeCategory, setActiveCategory] = useState(null);
   const items = getMarketplaceCategories(categories);
-  const activeCategoryId =
-    activeCategory?.id ?? activeCategory?.category_id;
+  const activeCategoryId = activeCategory?.id ?? activeCategory?.category_id;
   const activeSubcategories = activeCategory
     ? getSubcategories(activeCategory)
     : [];
@@ -102,13 +101,13 @@ const HomeCategorySidebar = () => {
             {activeSubcategories.map((subcategory, index) => {
               const subcategoryId =
                 typeof subcategory === "object"
-                  ? subcategory.id ??
+                  ? (subcategory.id ??
                     subcategory.category_id ??
-                    activeCategoryId
+                    activeCategoryId)
                   : activeCategoryId;
               const subcategoryName =
                 typeof subcategory === "object"
-                  ? subcategory.name ?? subcategory.title
+                  ? (subcategory.name ?? subcategory.title)
                   : subcategory;
 
               return (

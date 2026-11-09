@@ -3,16 +3,16 @@ import { useDispatch, useSelector } from "react-redux";
 import { Link, useNavigate, useSearchParams } from "react-router-dom";
 import shopnigLogo from "../assets/new-imgs/shopnig-logo.png";
 import shopnigLogoDark from "../assets/new-imgs/Shopnig-logodark.svg";
-import { axiosInstance, currency_formatter } from "../libries";
-import Notifications from "../pages/Notifications";
-import { logout } from "../store/slices/authSlice";
-import WithAuth from "../WithAuth";
 import {
   fallbackCategories,
   getCategoryIcon,
   getCategoryLink,
   getMarketplaceCategories,
 } from "../data/marketplaceCategories";
+import { axiosInstance, currency_formatter } from "../libries";
+import Notifications from "../pages/Notifications";
+import { logout } from "../store/slices/authSlice";
+import WithAuth from "../WithAuth";
 // import { clearCarts } from "../store/slices/cartSlice";
 
 const getSubcategories = (category) => {
@@ -146,7 +146,9 @@ const Navbar = () => {
                 src={uiMode === "light" ? shopnigLogo : shopnigLogoDark}
                 alt=""
                 className="header__logo"
-                style={uiMode === "light" ? { filter: "brightness(0)" } : undefined}
+                style={
+                  uiMode === "light" ? { filter: "brightness(0)" } : undefined
+                }
               />
             </Link>
             <form
@@ -634,7 +636,9 @@ const Navbar = () => {
                           <li
                             className="top-bar__menu1-item"
                             key={categoryKey}
-                            onMouseEnter={() => setActiveCategoryId(categoryKey)}
+                            onMouseEnter={() =>
+                              setActiveCategoryId(categoryKey)
+                            }
                             onMouseLeave={() => setActiveCategoryId(null)}
                             onFocus={() => setActiveCategoryId(categoryKey)}
                             onBlur={(event) => {
@@ -673,7 +677,8 @@ const Navbar = () => {
                                     subcategories.map((subcategory, index) => {
                                       const subcategoryName =
                                         typeof subcategory === "object"
-                                          ? subcategory.name ?? subcategory.title
+                                          ? (subcategory.name ??
+                                            subcategory.title)
                                           : subcategory;
                                       const category =
                                         typeof subcategory === "object"

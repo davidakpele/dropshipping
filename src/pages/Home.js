@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from "react";
-import { useSelector, useDispatch } from "react-redux";
+import { useEffect, useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
 import {
   setBanners,
   setBestDeal,
@@ -9,16 +9,16 @@ import {
 } from "../store/slices/cacheSlice";
 
 // components
-import { axiosInstance } from "../libries";
-import Layout from "../containers/Layout";
 import { Banner } from "../components/Banners";
-import HomeCategorySidebar from "../components/HomeCategorySidebar";
-import Products from "../components/Products";
-import ProductCategories from "../components/PopularCategories";
 import BestBrand from "../components/BestBrand";
+import HomeCategorySidebar from "../components/HomeCategorySidebar";
+import ProductCategories from "../components/PopularCategories";
+import Products from "../components/Products";
 import Welcome from "../components/Welcome";
+import Layout from "../containers/Layout";
 import { getMarketplaceCategories } from "../data/marketplaceCategories";
 import { getMarketplaceProductsForCategory } from "../data/marketplaceProducts";
+import { axiosInstance } from "../libries";
 
 const Home = () => {
   const dispatch = useDispatch();
@@ -92,7 +92,7 @@ const Home = () => {
 
       setCategoryProducts((currentProducts) => {
         const resolvedCategories = currentProducts.filter(
-          (item) => item.categoryKey !== categoryKey
+          (item) => item.categoryKey !== categoryKey,
         );
 
         resolvedCategories.push({
@@ -103,7 +103,7 @@ const Home = () => {
         });
 
         return resolvedCategories.sort(
-          (first, second) => first.categoryOrder - second.categoryOrder
+          (first, second) => first.categoryOrder - second.categoryOrder,
         );
       });
     };
@@ -126,7 +126,7 @@ const Home = () => {
           categoryId != null
             ? `/products/all/category/${categoryId}?key=all&page=1`
             : `/general-search-products?seach_term=${encodeURIComponent(
-                category.searchTerm ?? category.name
+                category.searchTerm ?? category.name,
               )}`;
         const resp = await axiosInstance().get(requestUrl);
         const responseProducts =
@@ -135,7 +135,7 @@ const Home = () => {
             : resp.data.data.search_results;
         products = Array.isArray(responseProducts)
           ? responseProducts
-          : responseProducts?.data ?? [];
+          : (responseProducts?.data ?? []);
       } catch (error) {
         products = [];
       }
