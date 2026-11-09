@@ -1,12 +1,12 @@
-import { useState, useEffect } from "react";
+import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link, useNavigate, useSearchParams } from "react-router-dom";
-import { logout } from "../store/slices/authSlice";
-import { axiosInstance, currency_formatter } from "../libries";
 import shopnigLogo from "../assets/new-imgs/shopnig-logo.png";
-import WithAuth from "../WithAuth";
-import Notifications from "../pages/Notifications";
 import shopnigLogoDark from "../assets/new-imgs/Shopnig-logodark.svg";
+import { axiosInstance, currency_formatter } from "../libries";
+import Notifications from "../pages/Notifications";
+import { logout } from "../store/slices/authSlice";
+import WithAuth from "../WithAuth";
 // import { clearCarts } from "../store/slices/cartSlice";
 
 const fallbackCategories = [
@@ -51,8 +51,7 @@ const Navbar = () => {
   const [suggest, setSuggest] = useState([]);
   const [suggestionsActive, setSuggestionsActive] = useState(false);
   const [value, setValue] = useState("");
-  const [searchParams, ] = useSearchParams();
-
+  const [searchParams] = useSearchParams();
 
   // getting the popular categories here to display on the navbar
   const { popularCategories } = useSelector((state) => state.cache);
@@ -95,7 +94,7 @@ const Navbar = () => {
       logout({
         accessToken: null,
         userDetails: null,
-      })
+      }),
     );
 
     localStorage.removeItem("app_state");
@@ -108,7 +107,7 @@ const Navbar = () => {
 
     if (query.length > 1) {
       let filterSuggestions = search_suggestions?.filter(
-        (el) => el.name.toLowerCase().indexOf(query) > -1
+        (el) => el.name.toLowerCase().indexOf(query) > -1,
       );
 
       filterSuggestions = filterSuggestions?.map(({ id, name, category }) => ({
@@ -130,7 +129,7 @@ const Navbar = () => {
   // resetting brand and filter option when a popular category is selected from the navbar
   const handlePopularCategorySel = () => {
     searchParams.delete("filter");
-    console.log("here...")
+    console.log("here...");
   };
 
   return (
@@ -715,7 +714,11 @@ const Navbar = () => {
                             onMouseLeave={() => setActiveCategoryId(null)}
                             onFocus={() => setActiveCategoryId(itm.id)}
                             onBlur={(event) => {
-                              if (!event.currentTarget.contains(event.relatedTarget)) {
+                              if (
+                                !event.currentTarget.contains(
+                                  event.relatedTarget,
+                                )
+                              ) {
                                 setActiveCategoryId(null);
                               }
                             }}

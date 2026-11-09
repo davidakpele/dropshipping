@@ -3,6 +3,7 @@ import { useSelector, useDispatch } from "react-redux";
 import {
   setBanners,
   setBestDeal,
+  setCategories,
   setLatestProduct,
   setPopularCategories,
 } from "../store/slices/cacheSlice";
@@ -11,6 +12,7 @@ import {
 import { axiosInstance } from "../libries";
 import Layout from "../containers/Layout";
 import { Banner } from "../components/Banners";
+import HomeCategorySidebar from "../components/HomeCategorySidebar";
 import Products from "../components/Products";
 import ProductCategories from "../components/PopularCategories";
 import BestBrand from "../components/BestBrand";
@@ -29,9 +31,8 @@ const Home = () => {
   const welcomePopup = useSelector((state) => state.auth.welcomePopup);
 
   // populating the banners, popular categories, latest product, best deal from global store
-  const { banners, popularCategories, latestProduct, bestDeal } = useSelector(
-    (state) => state.cache
-  );
+  const { banners, popularCategories, latestProduct, bestDeal, categories } =
+    useSelector((state) => state.cache);
 
   useEffect(() => {
     axiosInstance()
@@ -67,6 +68,17 @@ const Home = () => {
   }, [dispatch]);
 
   useEffect(() => {
+    if (Array.isArray(categories)) return;
+
+    axiosInstance()
+      .get(`/categories`)
+      .then((resp) => {
+        dispatch(setCategories(resp.data.data.category));
+      })
+      .catch(console.error);
+  }, [categories, dispatch]);
+
+  useEffect(() => {
     axiosInstance()
       .get(`/banner/home-top`)
       .then((resp) => {
@@ -83,7 +95,10 @@ const Home = () => {
   return (
     <>
       <Layout topPadding>
-        <Banner />
+        <div className="home-hero">
+          <HomeCategorySidebar />
+          <Banner />
+        </div>
         <section className="container home-categories">
           <div className="home-categories__category">
             <ion-icon name="bus-outline"></ion-icon>
